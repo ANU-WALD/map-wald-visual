@@ -1,0 +1,86 @@
+{
+  "name": "map-wald-visual",
+  "version": "0.1.0",
+  "main": "dist/bundles/map-wald-visual.umd.js",
+  "typings": "./dist/index.d.ts",
+  "ngPackage": {
+    "lib": {
+      "entryFile": "src/index.ts"
+    }
+  },
+  "scripts": {
+    "build3": "ng-packagr -p package.json",
+    "build": "ng-packagr -p package.json -c ./tsconfig.json",
+    "build-old": "ngc -p tsconfig.json",
+    "lint": "tslint --type-check --project tsconfig.json src/**/*.ts",
+    "test": "tsc && karma start",
+    "tsc": "tsc",
+    "watch": "watch 'npm run build' src --filter=./watchfilter.js",
+    "watch:old": "watch 'npm run tsc' src --filter=./watchfilter.js",
+    "build:watch": "watch 'npm run build' src --filter=./watchfilter.js",
+    "start": "npm run watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ANU-WALD/map-wald-visual"
+  },
+  "author": {
+    "name": "Joel Rahman",
+    "email": "joel@flowmatters.com.au"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ANU-WALD/map-wald-visual"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "@agm/core": "^1.0.0-beta.7",
+    "dap-query-js": "github:flowmatters/dap-query-js",
+    "ngx-pipes": "1.6.5",
+    "plotly.js": "git+https://github.com/arlowhite/plotly.js#no-polyfill",
+    "proj4": "^2.3.17"
+  },
+  "devDependencies": {
+    "@agm/core": "^1.0.0-beta.7",
+    "@angular/animations": "^8.2.10",
+    "@angular/common": "^8.2.10",
+    "@angular/compiler": "^8.2.10",
+    "@angular/compiler-cli": "^8.2.10",
+    "@angular/core": "^8.2.10",
+    "@angular/forms": "^8.2.10",
+    "@angular/platform-browser": "^8.2.10",
+    "@angular/platform-browser-dynamic": "^8.2.10",
+    "@angular/platform-server": "^8.2.10",
+    "@angular/router": "^8.2.10",
+    "@ng-bootstrap/ng-bootstrap": "^4.0.0",
+    "@types/es6-shim": "^0.31.32",
+    "@types/geojson": "^1.0.3",
+    "@types/googlemaps": "^3.26.7",
+    "@types/jasmine": "2.8.8",
+    "@types/proj4": "^2.3.4",
+    "@types/selenium-webdriver": "^2.53.39",
+    "@types/storejs": "^2.0.3",
+    "codelyzer": "~4.5.0",
+    "core-js": "^2.5.4",
+    "dap-query-js": "github:flowmatters/dap-query-js",
+    "js-yaml": "^3.13.1",
+    "map-wald": "github:ANU-WALD/map-wald",
+    "merge": "^1.2.1",
+    "ng-packagr": "^5.5.1",
+    "ngx-pipes": "1.6.5",
+    "plotly.js": "git+https://github.com/arlowhite/plotly.js#no-polyfill",
+    "proj4": "^2.3.17",
+    "rxjs": "^6.5.3",
+    "store": "^2.0.12",
+    "tslint": "~5.11.0",
+    "typescript": "~3.5.3",
+    "watch": "latest",
+    "zone.js": "0.9.1"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}
