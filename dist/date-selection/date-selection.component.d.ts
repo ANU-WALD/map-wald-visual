@@ -1,6 +1,6 @@
 import { AfterViewInit, EventEmitter } from '@angular/core';
-import { NgbDateStruct } from "@ng-bootstrap/ng-bootstrap";
-import { TimeUtilsService } from "map-wald";
+import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
+import { TimeUtilsService } from 'map-wald';
 export declare class DateSelectionComponent implements AfterViewInit {
     private timeUtils;
     date: Date;

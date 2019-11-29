@@ -8,7 +8,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const i0 = require("@angular/core");
 const i1 = require("./map-control.component");
-const i2 = require("@agm/core");
+const i2 = require("@agm/core/services/google-maps-api-wrapper");
 var styles_MapControlComponent = [".map-control-content[_ngcontent-%COMP%]{\n  background: transparent;\n}"];
 var RenderType_MapControlComponent = i0.ɵcrt({ encapsulation: 0, styles: styles_MapControlComponent, data: {} });
 exports.RenderType_MapControlComponent = RenderType_MapControlComponent;

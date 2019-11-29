@@ -202,18 +202,18 @@ let MapLegendComponent = class MapLegendComponent {
         if (!this._cbRange || !count) {
             return null;
         }
-        var delta = (this._cbRange[1] - this._cbRange[0]) / (count - 1);
+        var delta = (this._cbRange[1] - this._cbRange[0]) / (count);
         var result = [];
         var lower = this._cbRange[0];
         let decimalPlaces = Math.max(0, 2 - (+Math.log10(this._cbRange[1] - this._cbRange[0]).toFixed()));
         decimalPlaces = Math.min(decimalPlaces, 10);
         var upper;
-        for (let i = 1; i < count; i++) {
+        for (let i = 1; i < (count); i++) {
             upper = this._cbRange[0] + i * delta;
             result.push(`${this.formatValue(lower, decimalPlaces)}-${this.formatValue(upper, decimalPlaces)}`);
             lower = upper;
         }
-        result.push('&ge;' + this._cbRange[1]);
+        result.push('&ge;' + this.formatValue(upper, decimalPlaces));
         result.reverse();
         return result;
     }

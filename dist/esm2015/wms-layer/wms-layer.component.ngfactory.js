@@ -9,7 +9,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const i0 = require("@angular/core");
 const i1 = require("./wms-layer.component");
 const i2 = require("map-wald");
-const i3 = require("@agm/core");
+const i3 = require("@agm/core/services/google-maps-api-wrapper");
 var styles_WMSLayerComponent = [];
 var RenderType_WMSLayerComponent = i0.ɵcrt({ encapsulation: 2, styles: styles_WMSLayerComponent, data: {} });
 exports.RenderType_WMSLayerComponent = RenderType_WMSLayerComponent;
