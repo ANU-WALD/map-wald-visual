@@ -292,10 +292,12 @@ MapLegendComponent = __decorate([
     core.Component({
         selector: 'map-legend',
         template: `<div class="map-legend panel panel-group">
-
+<ng-template #tooltipContent>
+  <span [innerHtml]=helpText></span>
+</ng-template>
 <strong>{{title}} <span *ngIf="mapUnits" [innerHTML]="'('+mapUnits+')'"></span>
         <span *ngIf="helpText"
-              [ngbTooltip]="helpText"
+              [ngbTooltip]="tooltipContent"
               [placement]="tooltipPlacement"
               container="body">
           <i class="fa fa-info-circle"></i>
