@@ -3201,6 +3201,10 @@ let GeocodingService = class GeocodingService {
     geocode(address, bnds) {
         var promise = new Promise((resolve, reject) => {
             this._api.load().then(() => {
+                const SUCCESS_STATUSES = [
+                    google.maps.GeocoderStatus.OK,
+                    google.maps.GeocoderStatus.ZERO_RESULTS
+                ];
                 var service = new google.maps.Geocoder();
                 service.geocode({
                     address: address,
@@ -3209,7 +3213,7 @@ let GeocodingService = class GeocodingService {
                     },
                     region: 'AU'
                 }, (results, status) => {
-                    if (status !== google.maps.GeocoderStatus.OK) {
+                    if (SUCCESS_STATUSES.indexOf(status) < 0) {
                         reject();
                     }
                     else {

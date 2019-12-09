@@ -2691,6 +2691,10 @@ var GeocodingService = /** @class */ (function () {
         var _this = this;
         var promise = new Promise(function (resolve, reject) {
             _this._api.load().then(function () {
+                var SUCCESS_STATUSES = [
+                    google.maps.GeocoderStatus.OK,
+                    google.maps.GeocoderStatus.ZERO_RESULTS
+                ];
                 var service = new google.maps.Geocoder();
                 service.geocode({
                     address: address,
@@ -2699,7 +2703,7 @@ var GeocodingService = /** @class */ (function () {
                     },
                     region: 'AU'
                 }, function (results, status) {
-                    if (status !== google.maps.GeocoderStatus.OK) {
+                    if (SUCCESS_STATUSES.indexOf(status) < 0) {
                         reject();
                     }
                     else {
