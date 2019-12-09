@@ -4,15 +4,24 @@ import {Observable, from} from 'rxjs';
 
 declare var google:any;
 
+export interface GeocodingResult {
+  formatted_address:string;
+  coords: number[]
+}
+
 @Injectable()
 export class GeocodingService {
   constructor(private _api:MapsAPILoader){
 
   }
 
-  geocode(address:string,bnds?:any):Observable<any>{
-    var promise = new Promise((resolve,reject)=>{
+  geocode(address:string,bnds?:any):Observable<GeocodingResult[]>{
+    var promise = new Promise<GeocodingResult[]>((resolve,reject)=>{
       this._api.load().then(()=>{
+        const SUCCESS_STATUSES = [
+          google.maps.GeocoderStatus.OK,
+          google.maps.GeocoderStatus.ZERO_RESULTS
+        ];
         var service = new google.maps.Geocoder();
         service.geocode({
           address:address,
@@ -20,8 +29,8 @@ export class GeocodingService {
             country: 'AU'
           },
           region:'AU'
-        },(results:any,status:any)=>{
-          if(status!==google.maps.GeocoderStatus.OK){
+        },(results:GeocodingResult[],status:any)=>{
+          if(SUCCESS_STATUSES.indexOf(status)<0){
             reject();
           } else {
             resolve(results.filter(function(r:any){
