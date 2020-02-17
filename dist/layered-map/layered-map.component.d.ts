@@ -8,6 +8,7 @@ export interface SimpleMarker {
     value: string;
     open: boolean;
     iconUrl: string;
+    html?: string;
 }
 export declare class LayeredMapComponent implements AfterViewInit, OnChanges {
     private _zone;
