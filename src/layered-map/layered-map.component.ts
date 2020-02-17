@@ -10,6 +10,7 @@ export interface SimpleMarker {
   value:string;
   open:boolean;
   iconUrl:string;
+  html?:string;
 }
 
 @Component({
@@ -35,6 +36,7 @@ scaleControl="true"
             [iconUrl]="marker.iconUrl">
   <agm-info-window #infoWindows [disableAutoPan]="true">
     <strong>{{marker.value}}</strong>
+    <span *ngIf="marker.html" [innerHTML]="marker.html"></span>
   </agm-info-window>
 </agm-marker>
 
@@ -49,7 +51,6 @@ scaleControl="true"
                 [geoJson]="mp.staticData"
                 [style]="mp._styleFunc"
                 (layerClick)="clicked($event)"
-
                 >
   </agm-data-layer>
 
