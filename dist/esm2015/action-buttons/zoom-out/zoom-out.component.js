@@ -1,17 +1,11 @@
 "use strict";
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ZoomOutComponent = void 0;
 const core_1 = require("@angular/core");
 const layered_map_component_1 = require("../../layered-map/layered-map.component");
-let ZoomOutComponent = class ZoomOutComponent {
+const i0 = require("@angular/core");
+const i1 = require("@ng-bootstrap/ng-bootstrap");
+class ZoomOutComponent {
     constructor() {
         this.minZoom = 1;
     }
@@ -23,25 +17,28 @@ let ZoomOutComponent = class ZoomOutComponent {
         }
         this.map.zoom = Math.max(this.minZoom, this.map.zoom - 1);
     }
-};
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", layered_map_component_1.LayeredMapComponent)
-], ZoomOutComponent.prototype, "map", void 0);
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", Number)
-], ZoomOutComponent.prototype, "minZoom", void 0);
-ZoomOutComponent = __decorate([
-    core_1.Component({
-        selector: 'zoom-out',
-        template: `<button class="btn btn-secondary btn-sm"
+}
+exports.ZoomOutComponent = ZoomOutComponent;
+ZoomOutComponent.ɵfac = function ZoomOutComponent_Factory(t) { return new (t || ZoomOutComponent)(); };
+ZoomOutComponent.ɵcmp = i0.ɵɵdefineComponent({ type: ZoomOutComponent, selectors: [["zoom-out"]], inputs: { map: "map", minZoom: "minZoom" }, decls: 2, vars: 0, consts: [["ngbTooltip", "Zoom out", "placement", "right", 1, "btn", "btn-secondary", "btn-sm", 3, "click"], [1, "fa", "fa-minus"]], template: function ZoomOutComponent_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "button", 0);
+        i0.ɵɵlistener("click", function ZoomOutComponent_Template_button_click_0_listener() { return ctx.zoomOut(); });
+        i0.ɵɵelement(1, "i", 1);
+        i0.ɵɵelementEnd();
+    } }, directives: [i1.NgbTooltip], encapsulation: 2 });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ZoomOutComponent, [{
+        type: core_1.Component,
+        args: [{
+                selector: 'zoom-out',
+                template: `<button class="btn btn-secondary btn-sm"
         ngbTooltip="Zoom out"
         placement="right"
         (click)="zoomOut()"
-><i class="fa fa-minus"></i></button>`
-    }),
-    __metadata("design:paramtypes", [])
-], ZoomOutComponent);
-exports.ZoomOutComponent = ZoomOutComponent;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiem9vbS1vdXQuY29tcG9uZW50LmpzIiwic291cmNlUm9vdCI6Im5nOi8vbWFwLXdhbGQtdmlzdWFsLyIsInNvdXJjZXMiOlsiYWN0aW9uLWJ1dHRvbnMvem9vbS1vdXQvem9vbS1vdXQuY29tcG9uZW50LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7O0FBQUEsd0NBQXVGO0FBQ3ZGLG1GQUE4RTtBQVk5RSxJQUFhLGdCQUFnQixHQUE3QixNQUFhLGdCQUFnQjtJQUczQjtRQURTLFlBQU8sR0FBVSxDQUFDLENBQUM7SUFHNUIsQ0FBQztJQUVELGVBQWU7SUFFZixDQUFDO0lBRUQsT0FBTztRQUNMLElBQUcsQ0FBQyxJQUFJLENBQUMsR0FBRyxFQUFDO1lBQ1gsT0FBTztTQUNSO1FBQ0QsSUFBSSxDQUFDLEdBQUcsQ0FBQyxJQUFJLEdBQUcsSUFBSSxDQUFDLEdBQUcsQ0FBQyxJQUFJLENBQUMsT0FBTyxFQUFFLElBQUksQ0FBQyxHQUFHLENBQUMsSUFBSSxHQUFHLENBQUMsQ0FBQyxDQUFDO0lBQzVELENBQUM7Q0FDRixDQUFBO0FBaEJVO0lBQVIsWUFBSyxFQUFFOzhCQUFLLDJDQUFtQjs2Q0FBQztBQUN4QjtJQUFSLFlBQUssRUFBRTs7aURBQW9CO0FBRmpCLGdCQUFnQjtJQVA1QixnQkFBUyxDQUFDO1FBQ1QsUUFBUSxFQUFFLFVBQVU7UUFDcEIsUUFBUSxFQUFFOzs7O3NDQUkwQjtLQUFZLENBQUM7O0dBQ3RDLGdCQUFnQixDQWlCNUI7QUFqQlksNENBQWdCIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQ29tcG9uZW50LCBJbnB1dCwgVmlld0NoaWxkLCBBZnRlclZpZXdJbml0LCBFbGVtZW50UmVmIH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5pbXBvcnQgeyBMYXllcmVkTWFwQ29tcG9uZW50IH0gZnJvbSAnLi4vLi4vbGF5ZXJlZC1tYXAvbGF5ZXJlZC1tYXAuY29tcG9uZW50JztcblxuXG5kZWNsYXJlIHZhciBQbG90bHk6IGFueTtcblxuQENvbXBvbmVudCh7XG4gIHNlbGVjdG9yOiAnem9vbS1vdXQnLFxuICB0ZW1wbGF0ZTogYDxidXR0b24gY2xhc3M9XCJidG4gYnRuLXNlY29uZGFyeSBidG4tc21cIlxuICAgICAgICBuZ2JUb29sdGlwPVwiWm9vbSBvdXRcIlxuICAgICAgICBwbGFjZW1lbnQ9XCJyaWdodFwiXG4gICAgICAgIChjbGljayk9XCJ6b29tT3V0KClcIlxuPjxpIGNsYXNzPVwiZmEgZmEtbWludXNcIj48L2k+PC9idXR0b24+YCxzdHlsZXM6IFtdfSlcbmV4cG9ydCBjbGFzcyBab29tT3V0Q29tcG9uZW50IGltcGxlbWVudHMgQWZ0ZXJWaWV3SW5pdCAge1xuICBASW5wdXQoKSBtYXA6TGF5ZXJlZE1hcENvbXBvbmVudDtcbiAgQElucHV0KCkgbWluWm9vbTpudW1iZXIgPSAxO1xuICBjb25zdHJ1Y3Rvcigpe1xuXG4gIH1cblxuICBuZ0FmdGVyVmlld0luaXQoKXtcblxuICB9XG5cbiAgem9vbU91dCgpe1xuICAgIGlmKCF0aGlzLm1hcCl7XG4gICAgICByZXR1cm47XG4gICAgfVxuICAgIHRoaXMubWFwLnpvb20gPSBNYXRoLm1heCh0aGlzLm1pblpvb20sIHRoaXMubWFwLnpvb20gLSAxKTtcbiAgfVxufVxuIl19
+><i class="fa fa-minus"></i></button>`, styles: []
+            }]
+    }], function () { return []; }, { map: [{
+            type: core_1.Input
+        }], minZoom: [{
+            type: core_1.Input
+        }] }); })();
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiem9vbS1vdXQuY29tcG9uZW50LmpzIiwic291cmNlUm9vdCI6Im5nOi8vbWFwLXdhbGQtdmlzdWFsLyIsInNvdXJjZXMiOlsiYWN0aW9uLWJ1dHRvbnMvem9vbS1vdXQvem9vbS1vdXQuY29tcG9uZW50LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7OztBQUFBLHdDQUF1RjtBQUN2RixtRkFBOEU7OztBQUs5RSxNQU9hLGdCQUFnQjtJQUczQjtRQURTLFlBQU8sR0FBVSxDQUFDLENBQUM7SUFHNUIsQ0FBQztJQUVELGVBQWU7SUFFZixDQUFDO0lBRUQsT0FBTztRQUNMLElBQUcsQ0FBQyxJQUFJLENBQUMsR0FBRyxFQUFDO1lBQ1gsT0FBTztTQUNSO1FBQ0QsSUFBSSxDQUFDLEdBQUcsQ0FBQyxJQUFJLEdBQUcsSUFBSSxDQUFDLEdBQUcsQ0FBQyxJQUFJLENBQUMsT0FBTyxFQUFFLElBQUksQ0FBQyxHQUFHLENBQUMsSUFBSSxHQUFHLENBQUMsQ0FBQyxDQUFDO0lBQzVELENBQUM7O0FBdkJILDRDQXdCQztnRkFqQlksZ0JBQWdCO3FEQUFoQixnQkFBZ0I7UUFMaEIsaUNBSVo7UUFETyw2RkFBUyxhQUFTLElBQUM7UUFDMUIsdUJBQTJCO1FBQUEsaUJBQVM7O2tEQUN4QixnQkFBZ0I7Y0FQNUIsZ0JBQVM7ZUFBQztnQkFDVCxRQUFRLEVBQUUsVUFBVTtnQkFDcEIsUUFBUSxFQUFFOzs7O3NDQUkwQixFQUFDLE1BQU0sRUFBRSxFQUFFO2FBQUM7c0NBRXZDLEdBQUc7a0JBQVgsWUFBSztZQUNHLE9BQU87a0JBQWYsWUFBSyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IENvbXBvbmVudCwgSW5wdXQsIFZpZXdDaGlsZCwgQWZ0ZXJWaWV3SW5pdCwgRWxlbWVudFJlZiB9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuaW1wb3J0IHsgTGF5ZXJlZE1hcENvbXBvbmVudCB9IGZyb20gJy4uLy4uL2xheWVyZWQtbWFwL2xheWVyZWQtbWFwLmNvbXBvbmVudCc7XG5cblxuZGVjbGFyZSB2YXIgUGxvdGx5OiBhbnk7XG5cbkBDb21wb25lbnQoe1xuICBzZWxlY3RvcjogJ3pvb20tb3V0JyxcbiAgdGVtcGxhdGU6IGA8YnV0dG9uIGNsYXNzPVwiYnRuIGJ0bi1zZWNvbmRhcnkgYnRuLXNtXCJcbiAgICAgICAgbmdiVG9vbHRpcD1cIlpvb20gb3V0XCJcbiAgICAgICAgcGxhY2VtZW50PVwicmlnaHRcIlxuICAgICAgICAoY2xpY2spPVwiem9vbU91dCgpXCJcbj48aSBjbGFzcz1cImZhIGZhLW1pbnVzXCI+PC9pPjwvYnV0dG9uPmAsc3R5bGVzOiBbXX0pXG5leHBvcnQgY2xhc3MgWm9vbU91dENvbXBvbmVudCBpbXBsZW1lbnRzIEFmdGVyVmlld0luaXQgIHtcbiAgQElucHV0KCkgbWFwOkxheWVyZWRNYXBDb21wb25lbnQ7XG4gIEBJbnB1dCgpIG1pblpvb206bnVtYmVyID0gMTtcbiAgY29uc3RydWN0b3IoKXtcblxuICB9XG5cbiAgbmdBZnRlclZpZXdJbml0KCl7XG5cbiAgfVxuXG4gIHpvb21PdXQoKXtcbiAgICBpZighdGhpcy5tYXApe1xuICAgICAgcmV0dXJuO1xuICAgIH1cbiAgICB0aGlzLm1hcC56b29tID0gTWF0aC5tYXgodGhpcy5taW5ab29tLCB0aGlzLm1hcC56b29tIC0gMSk7XG4gIH1cbn1cbiJdfQ==

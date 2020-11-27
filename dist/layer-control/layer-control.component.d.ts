@@ -1,6 +1,7 @@
 import { AfterViewInit, OnChanges, SimpleChanges, EventEmitter } from '@angular/core';
 import { MappedLayer, MetadataService } from "map-wald";
 import { LayeredMapComponent } from '../layered-map/layered-map.component';
+import * as i0 from "@angular/core";
 export declare class LayerControlComponent implements AfterViewInit, OnChanges {
     private metadata;
     layers: MappedLayer[];
@@ -25,4 +26,6 @@ export declare class LayerControlComponent implements AfterViewInit, OnChanges {
     layerPropertyChanged(l: MappedLayer): void;
     private _changed;
     fetchMetadata(): void;
+    static ɵfac: i0.ɵɵFactoryDef<LayerControlComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<LayerControlComponent, "layer-control", never, { "layers": "layers"; "map": "map"; "allowRemove": "allowRemove"; "showLegends": "showLegends"; "allowReorder": "allowReorder"; }, { "layersChange": "layersChange"; }, never, never>;
 }

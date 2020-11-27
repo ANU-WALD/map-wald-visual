@@ -3,6 +3,7 @@ import { MappedLayer, Bounds, LayerSelection, StaticDataService, MetadataService
 import { DataMouseEvent, LatLng, AgmMap, AgmInfoWindow } from '@agm/core';
 import { Feature, Point, GeometryObject } from 'geojson';
 import { MapTypeControlOptions } from '@agm/core/services/google-maps-types';
+import * as i0 from "@angular/core";
 export interface SimpleMarker {
     loc: LatLng;
     value: string;
@@ -19,7 +20,7 @@ export declare class LayeredMapComponent implements AfterViewInit, OnChanges {
     mapTypeId: string;
     layersChange: EventEmitter<MappedLayer[]>;
     featureSelected: EventEmitter<{
-        feature: Feature<GeometryObject, any>;
+        feature: Feature<GeometryObject>;
         layer?: MappedLayer;
     }>;
     pointSelected: EventEmitter<LatLng>;
@@ -48,4 +49,6 @@ export declare class LayeredMapComponent implements AfterViewInit, OnChanges {
     mapClick(event: any): void;
     zoomToBounds(bounds: Bounds): void;
     zoomChanged(): void;
+    static ɵfac: i0.ɵɵFactoryDef<LayeredMapComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<LayeredMapComponent, "layered-map", never, { "layers": "layers"; "markers": "markers"; "mapTypeId": "mapTypeId"; "mapTypePosition": "mapTypePosition"; "streetViewControl": "streetViewControl"; "zoom": "zoom"; "showMapType": "showMapType"; "lat": "lat"; "lng": "lng"; "bounds": "bounds"; }, { "layersChange": "layersChange"; "featureSelected": "featureSelected"; "pointSelected": "pointSelected"; }, never, [".map-control.top-center", ".map-control.top-left", ".map-control.top-right", ".map-control.left-top", ".map-control.right-top", ".map-control.left-center", ".map-control.right-center", ".map-control.left-bottom", ".map-control.right-bottom", ".map-control.bottom-center", ".map-control.bottom-left", ".map-control.bottom-right"]>;
 }

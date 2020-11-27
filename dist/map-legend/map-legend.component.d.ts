@@ -1,5 +1,6 @@
 import { OnInit } from '@angular/core';
 import { PaletteService } from 'map-wald';
+import * as i0 from "@angular/core";
 export declare class MapLegendComponent implements OnInit {
     private _palettes;
     imageURL: string;
@@ -16,13 +17,19 @@ export declare class MapLegendComponent implements OnInit {
     _cbCount: number;
     _cbReverse: boolean;
     _cbRange: Array<number>;
-    cbPalette: string;
-    cbCount: number;
-    cbReverse: boolean;
-    cbRange: Array<number>;
+    set cbPalette(cbp: string);
+    get cbPalette(): string;
+    set cbCount(cbc: number);
+    get cbCount(): number;
+    set cbReverse(cbr: boolean);
+    get cbReverse(): boolean;
+    set cbRange(cbr: Array<number>);
+    get cbRange(): Array<number>;
     generateLabels(count: number): Array<string> | null;
     generatePalette(): void;
     formatValue: (val: number, decimalPlaces: number) => string;
     constructor(_palettes: PaletteService);
     ngOnInit(): void;
+    static ɵfac: i0.ɵɵFactoryDef<MapLegendComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<MapLegendComponent, "map-legend", never, { "imageURL": "imageURL"; "colours": "colours"; "labels": "labels"; "title": "title"; "mapUnits": "mapUnits"; "helpText": "helpText"; "tooltipPlacement": "tooltipPlacement"; "attribution": "attribution"; "attributionLink": "attributionLink"; "cbPalette": "cbPalette"; "cbCount": "cbCount"; "cbReverse": "cbReverse"; "cbRange": "cbRange"; }, {}, never, never>;
 }

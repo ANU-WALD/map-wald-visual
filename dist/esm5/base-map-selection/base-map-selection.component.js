@@ -1,28 +1,28 @@
 "use strict";
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.BaseMapSelectionComponent = void 0;
 var core_1 = require("@angular/core");
+var i0 = require("@angular/core");
 var BaseMapSelectionComponent = /** @class */ (function () {
     function BaseMapSelectionComponent() {
     }
     BaseMapSelectionComponent.prototype.ngAfterViewInit = function () {
     };
-    BaseMapSelectionComponent = __decorate([
-        core_1.Component({
-            selector: 'base-map-selection',
-            template: "<p>base-map-selection Component</p>"
-        }),
-        __metadata("design:paramtypes", [])
-    ], BaseMapSelectionComponent);
+    BaseMapSelectionComponent.ɵfac = function BaseMapSelectionComponent_Factory(t) { return new (t || BaseMapSelectionComponent)(); };
+    BaseMapSelectionComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BaseMapSelectionComponent, selectors: [["base-map-selection"]], decls: 2, vars: 0, template: function BaseMapSelectionComponent_Template(rf, ctx) { if (rf & 1) {
+            i0.ɵɵelementStart(0, "p");
+            i0.ɵɵtext(1, "base-map-selection Component");
+            i0.ɵɵelementEnd();
+        } }, encapsulation: 2 });
     return BaseMapSelectionComponent;
 }());
 exports.BaseMapSelectionComponent = BaseMapSelectionComponent;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYmFzZS1tYXAtc2VsZWN0aW9uLmNvbXBvbmVudC5qcyIsInNvdXJjZVJvb3QiOiJuZzovL21hcC13YWxkLXZpc3VhbC8iLCJzb3VyY2VzIjpbImJhc2UtbWFwLXNlbGVjdGlvbi9iYXNlLW1hcC1zZWxlY3Rpb24uY29tcG9uZW50LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7O0FBQUEsc0NBQXVGO0FBUXZGO0lBRUU7SUFFQSxDQUFDO0lBRUQsbURBQWUsR0FBZjtJQUVBLENBQUM7SUFSVSx5QkFBeUI7UUFIckMsZ0JBQVMsQ0FBQztZQUNULFFBQVEsRUFBRSxvQkFBb0I7WUFDOUIsUUFBUSxFQUFFLHFDQUFxQztTQUFZLENBQUM7O09BQ2pELHlCQUF5QixDQVNyQztJQUFELGdDQUFDO0NBQUEsQUFURCxJQVNDO0FBVFksOERBQXlCIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQ29tcG9uZW50LCBJbnB1dCwgVmlld0NoaWxkLCBBZnRlclZpZXdJbml0LCBFbGVtZW50UmVmIH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5cblxuZGVjbGFyZSB2YXIgUGxvdGx5OiBhbnk7XG5cbkBDb21wb25lbnQoe1xuICBzZWxlY3RvcjogJ2Jhc2UtbWFwLXNlbGVjdGlvbicsXG4gIHRlbXBsYXRlOiBgPHA+YmFzZS1tYXAtc2VsZWN0aW9uIENvbXBvbmVudDwvcD5gLHN0eWxlczogW119KVxuZXhwb3J0IGNsYXNzIEJhc2VNYXBTZWxlY3Rpb25Db21wb25lbnQgaW1wbGVtZW50cyBBZnRlclZpZXdJbml0ICB7XG5cbiAgY29uc3RydWN0b3IoKXtcblxuICB9XG5cbiAgbmdBZnRlclZpZXdJbml0KCl7XG5cbiAgfVxufSJdfQ==
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(BaseMapSelectionComponent, [{
+        type: core_1.Component,
+        args: [{
+                selector: 'base-map-selection',
+                template: "<p>base-map-selection Component</p>",
+                styles: []
+            }]
+    }], function () { return []; }, null); })();
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYmFzZS1tYXAtc2VsZWN0aW9uLmNvbXBvbmVudC5qcyIsInNvdXJjZVJvb3QiOiJuZzovL21hcC13YWxkLXZpc3VhbC8iLCJzb3VyY2VzIjpbImJhc2UtbWFwLXNlbGVjdGlvbi9iYXNlLW1hcC1zZWxlY3Rpb24uY29tcG9uZW50LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7OztBQUFBLHNDQUF1Rjs7QUFLdkY7SUFLRTtJQUVBLENBQUM7SUFFRCxtREFBZSxHQUFmO0lBRUEsQ0FBQztzR0FSVSx5QkFBeUI7a0VBQXpCLHlCQUF5QjtZQUR6Qix5QkFBRztZQUFBLDRDQUE0QjtZQUFBLGlCQUFJOztvQ0FQaEQ7Q0FpQkMsQUFaRCxJQVlDO0FBVFksOERBQXlCO2tEQUF6Qix5QkFBeUI7Y0FIckMsZ0JBQVM7ZUFBQztnQkFDVCxRQUFRLEVBQUUsb0JBQW9CO2dCQUM5QixRQUFRLEVBQUUscUNBQXFDO2dCQUFDLE1BQU0sRUFBRSxFQUFFO2FBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBDb21wb25lbnQsIElucHV0LCBWaWV3Q2hpbGQsIEFmdGVyVmlld0luaXQsIEVsZW1lbnRSZWYgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcblxuXG5kZWNsYXJlIHZhciBQbG90bHk6IGFueTtcblxuQENvbXBvbmVudCh7XG4gIHNlbGVjdG9yOiAnYmFzZS1tYXAtc2VsZWN0aW9uJyxcbiAgdGVtcGxhdGU6IGA8cD5iYXNlLW1hcC1zZWxlY3Rpb24gQ29tcG9uZW50PC9wPmAsc3R5bGVzOiBbXX0pXG5leHBvcnQgY2xhc3MgQmFzZU1hcFNlbGVjdGlvbkNvbXBvbmVudCBpbXBsZW1lbnRzIEFmdGVyVmlld0luaXQgIHtcblxuICBjb25zdHJ1Y3Rvcigpe1xuXG4gIH1cblxuICBuZ0FmdGVyVmlld0luaXQoKXtcblxuICB9XG59Il19

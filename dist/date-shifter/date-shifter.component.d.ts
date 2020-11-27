@@ -1,4 +1,5 @@
 import { AfterViewInit, OnChanges, SimpleChanges, EventEmitter } from '@angular/core';
+import * as i0 from "@angular/core";
 export declare class DateShifterComponent implements AfterViewInit, OnChanges {
     interval: number;
     limits: Date[];
@@ -17,4 +18,6 @@ export declare class DateShifterComponent implements AfterViewInit, OnChanges {
     setDateText(): any;
     sliderMoved(): void;
     setLabel(): void;
+    static ɵfac: i0.ɵɵFactoryDef<DateShifterComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<DateShifterComponent, "date-shifter", never, { "interval": "interval"; "limits": "limits"; "date": "date"; }, { "dateChange": "dateChange"; }, never, never>;
 }

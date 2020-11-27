@@ -32,20 +32,15 @@ function getCjsExportFromNamespace (n) {
 
 var wmsLayer_component = createCommonjsModule(function (module, exports) {
 "use strict";
-var __decorate = (commonjsGlobal && commonjsGlobal.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (commonjsGlobal && commonjsGlobal.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.WMSLayerComponent = void 0;
 
 
 
-let WMSLayerComponent = class WMSLayerComponent {
+const i0 = core;
+const i1 = mapWald;
+const i2 = core$1;
+class WMSLayerComponent {
     constructor(_wmsService, _wrapper) {
         this._wmsService = _wmsService;
         this._wrapper = _wrapper;
@@ -98,36 +93,25 @@ let WMSLayerComponent = class WMSLayerComponent {
             }
         });
     }
-};
-WMSLayerComponent.ctorParameters = () => [
-    { type: mapWald.WMSService },
-    { type: core$1.GoogleMapsAPIWrapper }
-];
-__decorate([
-    core.Input(),
-    __metadata("design:type", String)
-], WMSLayerComponent.prototype, "url", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], WMSLayerComponent.prototype, "params", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Number)
-], WMSLayerComponent.prototype, "opacity", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Number)
-], WMSLayerComponent.prototype, "position", void 0);
-WMSLayerComponent = __decorate([
-    core.Component({
-        selector: 'wms-layer',
-        template: ''
-    }),
-    __metadata("design:paramtypes", [mapWald.WMSService,
-        core$1.GoogleMapsAPIWrapper])
-], WMSLayerComponent);
+}
 exports.WMSLayerComponent = WMSLayerComponent;
+WMSLayerComponent.ɵfac = function WMSLayerComponent_Factory(t) { return new (t || WMSLayerComponent)(i0.ɵɵdirectiveInject(i1.WMSService), i0.ɵɵdirectiveInject(i2.GoogleMapsAPIWrapper)); };
+WMSLayerComponent.ɵcmp = i0.ɵɵdefineComponent({ type: WMSLayerComponent, selectors: [["wms-layer"]], inputs: { url: "url", params: "params", opacity: "opacity", position: "position" }, features: [i0.ɵɵNgOnChangesFeature], decls: 0, vars: 0, template: function WMSLayerComponent_Template(rf, ctx) { }, encapsulation: 2 });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(WMSLayerComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'wms-layer',
+                template: '',
+            }]
+    }], function () { return [{ type: i1.WMSService }, { type: i2.GoogleMapsAPIWrapper }]; }, { url: [{
+            type: core.Input
+        }], params: [{
+            type: core.Input
+        }], opacity: [{
+            type: core.Input
+        }], position: [{
+            type: core.Input
+        }] }); })();
 
 });
 
@@ -136,19 +120,98 @@ var wmsLayer_component_1 = wmsLayer_component.WMSLayerComponent;
 
 var mapLegend_component = createCommonjsModule(function (module, exports) {
 "use strict";
-var __decorate = (commonjsGlobal && commonjsGlobal.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (commonjsGlobal && commonjsGlobal.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.MapLegendComponent = void 0;
 
 
-let MapLegendComponent = class MapLegendComponent {
+const i0 = core;
+const i1 = mapWald;
+
+
+function MapLegendComponent_ng_template_1_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelement(0, "span", 5);
+} if (rf & 2) {
+    const ctx_r1 = i0.ɵɵnextContext();
+    i0.ɵɵproperty("innerHtml", ctx_r1.helpText, i0.ɵɵsanitizeHtml);
+} }
+function MapLegendComponent_span_5_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelement(0, "span", 6);
+} if (rf & 2) {
+    const ctx_r2 = i0.ɵɵnextContext();
+    i0.ɵɵproperty("innerHTML", "(" + ctx_r2.mapUnits + ")", i0.ɵɵsanitizeHtml);
+} }
+function MapLegendComponent_span_6_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "span", 7);
+    i0.ɵɵelement(1, "i", 8);
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r3 = i0.ɵɵnextContext();
+    const _r0 = i0.ɵɵreference(2);
+    i0.ɵɵproperty("ngbTooltip", _r0)("placement", ctx_r3.tooltipPlacement);
+} }
+const _c0 = function (a0) { return { background: a0 }; };
+function MapLegendComponent_div_7_div_2_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "div", 11);
+    i0.ɵɵelementStart(1, "div", 12);
+    i0.ɵɵelement(2, "i", 13);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementStart(3, "div", 14);
+    i0.ɵɵelement(4, "span", 6);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const colour_r9 = ctx.$implicit;
+    const i_r10 = ctx.index;
+    const ctx_r8 = i0.ɵɵnextContext(2);
+    i0.ɵɵadvance(2);
+    i0.ɵɵproperty("ngStyle", i0.ɵɵpureFunction1(2, _c0, colour_r9));
+    i0.ɵɵadvance(2);
+    i0.ɵɵproperty("innerHTML", ctx_r8.generatedLabels[i_r10], i0.ɵɵsanitizeHtml);
+} }
+function MapLegendComponent_div_7_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "div");
+    i0.ɵɵelementStart(1, "div", 9);
+    i0.ɵɵtemplate(2, MapLegendComponent_div_7_div_2_Template, 5, 4, "div", 10);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r4 = i0.ɵɵnextContext();
+    i0.ɵɵadvance(2);
+    i0.ɵɵproperty("ngForOf", ctx_r4.colours);
+} }
+function MapLegendComponent_div_8_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "div");
+    i0.ɵɵelement(1, "img", 15);
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r5 = i0.ɵɵnextContext();
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("src", ctx_r5.imageURL, i0.ɵɵsanitizeUrl);
+} }
+function MapLegendComponent_p_9_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "p");
+    i0.ɵɵtext(1, "Source: ");
+    i0.ɵɵelementStart(2, "a", 16);
+    i0.ɵɵtext(3);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r6 = i0.ɵɵnextContext();
+    i0.ɵɵadvance(2);
+    i0.ɵɵproperty("href", ctx_r6.attributionLink, i0.ɵɵsanitizeUrl);
+    i0.ɵɵadvance(1);
+    i0.ɵɵtextInterpolate(ctx_r6.attribution || "details");
+} }
+function MapLegendComponent_p_10_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "p");
+    i0.ɵɵtext(1);
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r7 = i0.ɵɵnextContext();
+    i0.ɵɵadvance(1);
+    i0.ɵɵtextInterpolate1("Source: ", ctx_r7.attribution, "");
+} }
+class MapLegendComponent {
     constructor(_palettes) {
         this._palettes = _palettes;
         this.colours = ['red', 'white', 'blue'];
@@ -228,70 +291,43 @@ let MapLegendComponent = class MapLegendComponent {
         });
     }
     ngOnInit() { }
-};
-MapLegendComponent.ctorParameters = () => [
-    { type: mapWald.PaletteService }
-];
-__decorate([
-    core.Input(),
-    __metadata("design:type", String)
-], MapLegendComponent.prototype, "imageURL", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Array)
-], MapLegendComponent.prototype, "colours", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Array)
-], MapLegendComponent.prototype, "labels", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", String)
-], MapLegendComponent.prototype, "title", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", String)
-], MapLegendComponent.prototype, "mapUnits", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", String)
-], MapLegendComponent.prototype, "helpText", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", String)
-], MapLegendComponent.prototype, "tooltipPlacement", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", String)
-], MapLegendComponent.prototype, "attribution", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", String)
-], MapLegendComponent.prototype, "attributionLink", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", String),
-    __metadata("design:paramtypes", [String])
-], MapLegendComponent.prototype, "cbPalette", null);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Number),
-    __metadata("design:paramtypes", [Number])
-], MapLegendComponent.prototype, "cbCount", null);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Boolean),
-    __metadata("design:paramtypes", [Boolean])
-], MapLegendComponent.prototype, "cbReverse", null);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Array),
-    __metadata("design:paramtypes", [Array])
-], MapLegendComponent.prototype, "cbRange", null);
-MapLegendComponent = __decorate([
-    core.Component({
-        selector: 'map-legend',
-        template: `<div class="map-legend panel panel-group">
+}
+exports.MapLegendComponent = MapLegendComponent;
+MapLegendComponent.ɵfac = function MapLegendComponent_Factory(t) { return new (t || MapLegendComponent)(i0.ɵɵdirectiveInject(i1.PaletteService)); };
+MapLegendComponent.ɵcmp = i0.ɵɵdefineComponent({ type: MapLegendComponent, selectors: [["map-legend"]], inputs: { imageURL: "imageURL", colours: "colours", labels: "labels", title: "title", mapUnits: "mapUnits", helpText: "helpText", tooltipPlacement: "tooltipPlacement", attribution: "attribution", attributionLink: "attributionLink", cbPalette: "cbPalette", cbCount: "cbCount", cbReverse: "cbReverse", cbRange: "cbRange" }, decls: 11, vars: 7, consts: [[1, "map-legend", "panel", "panel-group"], ["tooltipContent", ""], [3, "innerHTML", 4, "ngIf"], ["container", "body", 3, "ngbTooltip", "placement", 4, "ngIf"], [4, "ngIf"], [3, "innerHtml"], [3, "innerHTML"], ["container", "body", 3, "ngbTooltip", "placement"], [1, "fa", "fa-info-circle"], [2, "display", "table", "line-height", "15px"], ["style", "display:table-row;padding:0;", 4, "ngFor", "ngForOf"], [2, "display", "table-row", "padding", "0"], [1, "legend-colour"], [1, "legend-entry", 3, "ngStyle"], [1, "legend-label"], [3, "src"], [3, "href"]], template: function MapLegendComponent_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 0);
+        i0.ɵɵtemplate(1, MapLegendComponent_ng_template_1_Template, 1, 1, "ng-template", null, 1, i0.ɵɵtemplateRefExtractor);
+        i0.ɵɵelementStart(3, "strong");
+        i0.ɵɵtext(4);
+        i0.ɵɵtemplate(5, MapLegendComponent_span_5_Template, 1, 1, "span", 2);
+        i0.ɵɵtemplate(6, MapLegendComponent_span_6_Template, 2, 2, "span", 3);
+        i0.ɵɵelementEnd();
+        i0.ɵɵtemplate(7, MapLegendComponent_div_7_Template, 3, 1, "div", 4);
+        i0.ɵɵtemplate(8, MapLegendComponent_div_8_Template, 2, 1, "div", 4);
+        i0.ɵɵtemplate(9, MapLegendComponent_p_9_Template, 4, 2, "p", 4);
+        i0.ɵɵtemplate(10, MapLegendComponent_p_10_Template, 2, 1, "p", 4);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        i0.ɵɵadvance(4);
+        i0.ɵɵtextInterpolate1("", ctx.title, " ");
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx.mapUnits);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx.helpText);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !ctx.imageURL);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx.imageURL);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx.attributionLink);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx.attribution && !ctx.attributionLink);
+    } }, directives: [common.NgIf, ngBootstrap.NgbTooltip, common.NgForOf, common.NgStyle], styles: [".map-legend[_ngcontent-%COMP%]{\n  display:block;\n  background: white;\n}\n\n.legend-colour[_ngcontent-%COMP%]{\n  display:table-cell;\n  padding:0px;\n}\n\n.legend-label[_ngcontent-%COMP%]{\n  display:table-cell;\n  padding:0px 4px 2px 2px;\n  font-size:10px;\n  vertical-align:middle;\n}\n\n.legend-entry[_ngcontent-%COMP%] {\n  float: left;\n  width: 15px !important;\n  height: 15px !important;\n}"] });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(MapLegendComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'map-legend',
+                template: `<div class="map-legend panel panel-group">
 <ng-template #tooltipContent>
   <span [innerHtml]=helpText></span>
 </ng-template>
@@ -324,8 +360,7 @@ MapLegendComponent = __decorate([
   <p *ngIf="attributionLink">Source: <a [href]="attributionLink">{{attribution || 'details'}}</a></p>
   <p *ngIf="attribution&&!attributionLink">Source: {{attribution}}</p>
 </div>
-`,
-        styles: [`
+`, styles: [`
 .map-legend{
   display:block;
   background: white;
@@ -349,10 +384,34 @@ MapLegendComponent = __decorate([
   height: 15px !important;
 }
 `]
-    }),
-    __metadata("design:paramtypes", [mapWald.PaletteService])
-], MapLegendComponent);
-exports.MapLegendComponent = MapLegendComponent;
+            }]
+    }], function () { return [{ type: i1.PaletteService }]; }, { imageURL: [{
+            type: core.Input
+        }], colours: [{
+            type: core.Input
+        }], labels: [{
+            type: core.Input
+        }], title: [{
+            type: core.Input
+        }], mapUnits: [{
+            type: core.Input
+        }], helpText: [{
+            type: core.Input
+        }], tooltipPlacement: [{
+            type: core.Input
+        }], attribution: [{
+            type: core.Input
+        }], attributionLink: [{
+            type: core.Input
+        }], cbPalette: [{
+            type: core.Input
+        }], cbCount: [{
+            type: core.Input
+        }], cbReverse: [{
+            type: core.Input
+        }], cbRange: [{
+            type: core.Input
+        }] }); })();
 
 });
 
@@ -361,19 +420,15 @@ var mapLegend_component_1 = mapLegend_component.MapLegendComponent;
 
 var mapControl_component = createCommonjsModule(function (module, exports) {
 "use strict";
-var __decorate = (commonjsGlobal && commonjsGlobal.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (commonjsGlobal && commonjsGlobal.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.MapControlComponent = void 0;
 
 
-let MapControlComponent = class MapControlComponent {
+const i0 = core;
+const i1 = core$1;
+const _c0 = ["mapControl"];
+const _c1 = ["*"];
+class MapControlComponent {
     constructor(_el, _wrapper) {
         this._el = _el;
         this._wrapper = _wrapper;
@@ -394,34 +449,38 @@ let MapControlComponent = class MapControlComponent {
             m.controls[window.google.maps.ControlPosition[this.position]].push(content);
         });
     }
-};
-MapControlComponent.ctorParameters = () => [
-    { type: core.ElementRef },
-    { type: core$1.GoogleMapsAPIWrapper }
-];
-__decorate([
-    core.ViewChild('mapControl', { static: false }),
-    __metadata("design:type", core.Component)
-], MapControlComponent.prototype, "mapControl", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", String)
-], MapControlComponent.prototype, "position", void 0);
-MapControlComponent = __decorate([
-    core.Component({
-        selector: 'map-control',
-        template: `<div #mapControl class="map-control-content">
+}
+exports.MapControlComponent = MapControlComponent;
+MapControlComponent.ɵfac = function MapControlComponent_Factory(t) { return new (t || MapControlComponent)(i0.ɵɵdirectiveInject(i0.ElementRef), i0.ɵɵdirectiveInject(i1.GoogleMapsAPIWrapper)); };
+MapControlComponent.ɵcmp = i0.ɵɵdefineComponent({ type: MapControlComponent, selectors: [["map-control"]], viewQuery: function MapControlComponent_Query(rf, ctx) { if (rf & 1) {
+        i0.ɵɵviewQuery(_c0, true);
+    } if (rf & 2) {
+        let _t;
+        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.mapControl = _t.first);
+    } }, inputs: { position: "position" }, ngContentSelectors: _c1, decls: 3, vars: 0, consts: [[1, "map-control-content"], ["mapControl", ""]], template: function MapControlComponent_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵprojectionDef();
+        i0.ɵɵelementStart(0, "div", 0, 1);
+        i0.ɵɵprojection(2);
+        i0.ɵɵelementEnd();
+    } }, styles: [".map-control-content[_ngcontent-%COMP%]{\n  background: transparent;\n}"] });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(MapControlComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'map-control',
+                template: `<div #mapControl class="map-control-content">
   <ng-content></ng-content>
 </div>
-`,
-        styles: [`.map-control-content{
+`, styles: [`.map-control-content{
   background: transparent;
 }
-`]
-    }),
-    __metadata("design:paramtypes", [core.ElementRef, core$1.GoogleMapsAPIWrapper])
-], MapControlComponent);
-exports.MapControlComponent = MapControlComponent;
+`],
+            }]
+    }], function () { return [{ type: i0.ElementRef }, { type: i1.GoogleMapsAPIWrapper }]; }, { mapControl: [{
+            type: core.ViewChild,
+            args: ['mapControl', { static: false }]
+        }], position: [{
+            type: core.Input
+        }] }); })();
 
 });
 
@@ -430,18 +489,12 @@ var mapControl_component_1 = mapControl_component.MapControlComponent;
 
 var dateShifter_component = createCommonjsModule(function (module, exports) {
 "use strict";
-var __decorate = (commonjsGlobal && commonjsGlobal.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (commonjsGlobal && commonjsGlobal.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.DateShifterComponent = void 0;
 
-let DateShifterComponent = class DateShifterComponent {
+const i0 = core;
+
+class DateShifterComponent {
     constructor() {
         this.interval = 2000;
         this.limits = null;
@@ -532,27 +585,34 @@ let DateShifterComponent = class DateShifterComponent {
                 break;
         }
     }
-};
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], DateShifterComponent.prototype, "interval", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Array)
-], DateShifterComponent.prototype, "limits", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], DateShifterComponent.prototype, "date", void 0);
-__decorate([
-    core.Output(),
-    __metadata("design:type", Object)
-], DateShifterComponent.prototype, "dateChange", void 0);
-DateShifterComponent = __decorate([
-    core.Component({
-        selector: 'date-shifter',
-        template: `<div>
+}
+exports.DateShifterComponent = DateShifterComponent;
+DateShifterComponent.ɵfac = function DateShifterComponent_Factory(t) { return new (t || DateShifterComponent)(); };
+DateShifterComponent.ɵcmp = i0.ɵɵdefineComponent({ type: DateShifterComponent, selectors: [["date-shifter"]], inputs: { interval: "interval", limits: "limits", date: "date" }, outputs: { dateChange: "dateChange" }, features: [i0.ɵɵNgOnChangesFeature], decls: 6, vars: 4, consts: [["type", "range", "min", "-4", "step", "1", 1, "form-control", 3, "max", "ngModel", "ngModelChange", "mouseup"]], template: function DateShifterComponent_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div");
+        i0.ɵɵelementStart(1, "h3");
+        i0.ɵɵtext(2);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(3, "input", 0);
+        i0.ɵɵlistener("ngModelChange", function DateShifterComponent_Template_input_ngModelChange_3_listener($event) { return ctx.value = $event; })("ngModelChange", function DateShifterComponent_Template_input_ngModelChange_3_listener() { return ctx.sliderMoved(); })("mouseup", function DateShifterComponent_Template_input_mouseup_3_listener() { return ctx.reset(); });
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "h4");
+        i0.ɵɵtext(5);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        i0.ɵɵadvance(2);
+        i0.ɵɵtextInterpolate(ctx.dateText);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("max", 4)("ngModel", ctx.value);
+        i0.ɵɵadvance(2);
+        i0.ɵɵtextInterpolate(ctx.label);
+    } }, directives: [forms.RangeValueAccessor, forms.DefaultValueAccessor, forms.NgControlStatus, forms.NgModel], styles: [""] });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DateShifterComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'date-shifter',
+                template: `<div>
   <h3>{{dateText}}</h3>
   <input type="range"
          class="form-control"
@@ -566,11 +626,17 @@ DateShifterComponent = __decorate([
 </div>
 
   `,
-        styles: [``]
-    }),
-    __metadata("design:paramtypes", [])
-], DateShifterComponent);
-exports.DateShifterComponent = DateShifterComponent;
+                styles: [``]
+            }]
+    }], function () { return []; }, { interval: [{
+            type: core.Input
+        }], limits: [{
+            type: core.Input
+        }], date: [{
+            type: core.Input
+        }], dateChange: [{
+            type: core.Output
+        }] }); })();
 
 });
 
@@ -579,20 +645,62 @@ var dateShifter_component_1 = dateShifter_component.DateShifterComponent;
 
 var oneTimeSplash_component = createCommonjsModule(function (module, exports) {
 "use strict";
-var __decorate = (commonjsGlobal && commonjsGlobal.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (commonjsGlobal && commonjsGlobal.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.OneTimeSplashComponent = void 0;
 
 
 
-let OneTimeSplashComponent = class OneTimeSplashComponent {
+const i0 = core;
+const i1 = ngBootstrap;
+
+
+const _c0 = ["splashTemplate"];
+function OneTimeSplashComponent_ng_template_0_label_9_Template(rf, ctx) { if (rf & 1) {
+    const _r6 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "label");
+    i0.ɵɵelementStart(1, "input", 9);
+    i0.ɵɵlistener("ngModelChange", function OneTimeSplashComponent_ng_template_0_label_9_Template_input_ngModelChange_1_listener($event) { i0.ɵɵrestoreView(_r6); const ctx_r5 = i0.ɵɵnextContext(2); return ctx_r5.doNotShow = $event; })("ngModelChange", function OneTimeSplashComponent_ng_template_0_label_9_Template_input_ngModelChange_1_listener() { i0.ɵɵrestoreView(_r6); const ctx_r7 = i0.ɵɵnextContext(2); return ctx_r7.doNotShowClicked(); });
+    i0.ɵɵelementEnd();
+    i0.ɵɵtext(2);
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r4 = i0.ɵɵnextContext(2);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngModel", ctx_r4.doNotShow);
+    i0.ɵɵadvance(1);
+    i0.ɵɵtextInterpolate1(" \u00A0 ", ctx_r4.hideMessage, " ");
+} }
+function OneTimeSplashComponent_ng_template_0_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "div", 1);
+    i0.ɵɵelementStart(1, "h4", 2);
+    i0.ɵɵtext(2);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementStart(3, "button", 3);
+    i0.ɵɵlistener("click", function OneTimeSplashComponent_ng_template_0_Template_button_click_3_listener() { const d_r3 = ctx.dismiss; return d_r3("Cross click"); });
+    i0.ɵɵelementStart(4, "span", 4);
+    i0.ɵɵtext(5, "\u00D7");
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementStart(6, "div", 5);
+    i0.ɵɵprojection(7);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementStart(8, "div", 6);
+    i0.ɵɵtemplate(9, OneTimeSplashComponent_ng_template_0_label_9_Template, 3, 2, "label", 7);
+    i0.ɵɵelementStart(10, "button", 8);
+    i0.ɵɵlistener("click", function OneTimeSplashComponent_ng_template_0_Template_button_click_10_listener() { const c_r2 = ctx.close; return c_r2("Close click"); });
+    i0.ɵɵtext(11, "Close");
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r1 = i0.ɵɵnextContext();
+    i0.ɵɵadvance(2);
+    i0.ɵɵtextInterpolate1(" ", ctx_r1.label, "");
+    i0.ɵɵadvance(7);
+    i0.ɵɵproperty("ngIf", ctx_r1.application);
+} }
+const _c1 = ["*"];
+class OneTimeSplashComponent {
     constructor(modalService) {
         this.modalService = modalService;
         this.label = 'About';
@@ -635,34 +743,23 @@ let OneTimeSplashComponent = class OneTimeSplashComponent {
         }
         store.set(key, this.doNotShow);
     }
-};
-OneTimeSplashComponent.ctorParameters = () => [
-    { type: ngBootstrap.NgbModal }
-];
-__decorate([
-    core.ViewChild('splashTemplate', { static: false }),
-    __metadata("design:type", Object)
-], OneTimeSplashComponent.prototype, "splashTemplate", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", String)
-], OneTimeSplashComponent.prototype, "application", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], OneTimeSplashComponent.prototype, "label", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], OneTimeSplashComponent.prototype, "hideMessage", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", String)
-], OneTimeSplashComponent.prototype, "klass", void 0);
-OneTimeSplashComponent = __decorate([
-    core.Component({
-        selector: 'one-time-splash',
-        template: `<ng-template #splashTemplate let-c="close" let-d="dismiss">
+}
+exports.OneTimeSplashComponent = OneTimeSplashComponent;
+OneTimeSplashComponent.ɵfac = function OneTimeSplashComponent_Factory(t) { return new (t || OneTimeSplashComponent)(i0.ɵɵdirectiveInject(i1.NgbModal)); };
+OneTimeSplashComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OneTimeSplashComponent, selectors: [["one-time-splash"]], viewQuery: function OneTimeSplashComponent_Query(rf, ctx) { if (rf & 1) {
+        i0.ɵɵviewQuery(_c0, true);
+    } if (rf & 2) {
+        let _t;
+        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.splashTemplate = _t.first);
+    } }, inputs: { application: "application", label: "label", hideMessage: "hideMessage", klass: "klass" }, ngContentSelectors: _c1, decls: 2, vars: 0, consts: [["splashTemplate", ""], [1, "modal-header"], [1, "modal-title"], ["type", "button", "aria-label", "Close", 1, "close", 3, "click"], ["aria-hidden", "true"], [1, "modal-body"], [1, "modal-footer"], [4, "ngIf"], ["type", "button", 1, "btn", "btn-secondary", 3, "click"], ["type", "checkbox", 3, "ngModel", "ngModelChange"]], template: function OneTimeSplashComponent_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵprojectionDef();
+        i0.ɵɵtemplate(0, OneTimeSplashComponent_ng_template_0_Template, 12, 2, "ng-template", null, 0, i0.ɵɵtemplateRefExtractor);
+    } }, directives: [common.NgIf, forms.CheckboxControlValueAccessor, forms.NgControlStatus, forms.NgModel], styles: [""] });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(OneTimeSplashComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'one-time-splash',
+                template: `<ng-template #splashTemplate let-c="close" let-d="dismiss">
   <div class="modal-header">
     <h4 class="modal-title">
       {{label}}</h4>
@@ -682,11 +779,20 @@ OneTimeSplashComponent = __decorate([
   </div>
   </ng-template>
 `,
-        styles: [``]
-    }),
-    __metadata("design:paramtypes", [ngBootstrap.NgbModal])
-], OneTimeSplashComponent);
-exports.OneTimeSplashComponent = OneTimeSplashComponent;
+                styles: [``]
+            }]
+    }], function () { return [{ type: i1.NgbModal }]; }, { splashTemplate: [{
+            type: core.ViewChild,
+            args: ['splashTemplate', { static: false }]
+        }], application: [{
+            type: core.Input
+        }], label: [{
+            type: core.Input
+        }], hideMessage: [{
+            type: core.Input
+        }], klass: [{
+            type: core.Input
+        }] }); })();
 
 });
 
@@ -695,18 +801,11 @@ var oneTimeSplash_component_1 = oneTimeSplash_component.OneTimeSplashComponent;
 
 var dateElement_component = createCommonjsModule(function (module, exports) {
 "use strict";
-var __decorate = (commonjsGlobal && commonjsGlobal.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (commonjsGlobal && commonjsGlobal.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.DateElementComponent = void 0;
 
-let DateElementComponent = class DateElementComponent {
+const i0 = core;
+class DateElementComponent {
     constructor() {
         this.step = 1;
         this.changed = new core.EventEmitter();
@@ -717,31 +816,43 @@ let DateElementComponent = class DateElementComponent {
         this.src[this.property] += n;
         this.changed.emit(this.src);
     }
-};
-__decorate([
-    core.Input(),
-    __metadata("design:type", String)
-], DateElementComponent.prototype, "label", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", String)
-], DateElementComponent.prototype, "property", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], DateElementComponent.prototype, "src", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], DateElementComponent.prototype, "step", void 0);
-__decorate([
-    core.Output(),
-    __metadata("design:type", Object)
-], DateElementComponent.prototype, "changed", void 0);
-DateElementComponent = __decorate([
-    core.Component({
-        selector: 'date-element',
-        template: `<div class="row no-gutters">
+}
+exports.DateElementComponent = DateElementComponent;
+DateElementComponent.ɵfac = function DateElementComponent_Factory(t) { return new (t || DateElementComponent)(); };
+DateElementComponent.ɵcmp = i0.ɵɵdefineComponent({ type: DateElementComponent, selectors: [["date-element"]], inputs: { label: "label", property: "property", src: "src", step: "step" }, outputs: { changed: "changed" }, decls: 12, vars: 2, consts: [[1, "row", "no-gutters"], [1, "col-4"], [1, "col-2"], [1, "btn", "btn-secondary", "btn-sm", 3, "click"], [1, "fa", "fa-angle-left"], [1, "btn", "btn-link", "btn-sm"], [1, "fa", "fa-angle-right"]], template: function DateElementComponent_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 0);
+        i0.ɵɵelementStart(1, "div", 1);
+        i0.ɵɵtext(2);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(3, "div", 2);
+        i0.ɵɵelementStart(4, "button", 3);
+        i0.ɵɵlistener("click", function DateElementComponent_Template_button_click_4_listener() { return ctx.move(-ctx.step); });
+        i0.ɵɵelement(5, "i", 4);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(6, "div", 1);
+        i0.ɵɵelementStart(7, "button", 5);
+        i0.ɵɵtext(8);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(9, "div", 2);
+        i0.ɵɵelementStart(10, "button", 3);
+        i0.ɵɵlistener("click", function DateElementComponent_Template_button_click_10_listener() { return ctx.move(ctx.step); });
+        i0.ɵɵelement(11, "i", 6);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        i0.ɵɵadvance(2);
+        i0.ɵɵtextInterpolate(ctx.label);
+        i0.ɵɵadvance(6);
+        i0.ɵɵtextInterpolate(ctx.src[ctx.property]);
+    } }, encapsulation: 2 });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DateElementComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'date-element',
+                template: `<div class="row no-gutters">
   <div class="col-4">{{label}}</div>
   <div class="col-2">
     <button class="btn btn-secondary btn-sm" (click)="move(-step)">
@@ -755,11 +866,19 @@ DateElementComponent = __decorate([
     </button>
   </div>
 </div>
-`
-    }),
-    __metadata("design:paramtypes", [])
-], DateElementComponent);
-exports.DateElementComponent = DateElementComponent;
+`, styles: []
+            }]
+    }], function () { return []; }, { label: [{
+            type: core.Input
+        }], property: [{
+            type: core.Input
+        }], src: [{
+            type: core.Input
+        }], step: [{
+            type: core.Input
+        }], changed: [{
+            type: core.Output
+        }] }); })();
 
 });
 
@@ -768,36 +887,38 @@ var dateElement_component_1 = dateElement_component.DateElementComponent;
 
 var shareView_component = createCommonjsModule(function (module, exports) {
 "use strict";
-var __decorate = (commonjsGlobal && commonjsGlobal.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (commonjsGlobal && commonjsGlobal.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ShareViewComponent = void 0;
 
-let ShareViewComponent = class ShareViewComponent {
+const i0 = core;
+
+class ShareViewComponent {
     constructor() {
     }
     ngAfterViewInit() {
     }
-};
-ShareViewComponent = __decorate([
-    core.Component({
-        selector: 'share-view',
-        template: `<button class="btn btn-secondary btn-sm"
+}
+exports.ShareViewComponent = ShareViewComponent;
+ShareViewComponent.ɵfac = function ShareViewComponent_Factory(t) { return new (t || ShareViewComponent)(); };
+ShareViewComponent.ɵcmp = i0.ɵɵdefineComponent({ type: ShareViewComponent, selectors: [["share-view"]], decls: 2, vars: 1, consts: [["ngbTooltip", "Share current view", "placement", "right", 1, "btn", "btn-secondary", "btn-sm", 3, "disabled"], [1, "fa", "fa-share-alt"]], template: function ShareViewComponent_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "button", 0);
+        i0.ɵɵelement(1, "i", 1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        i0.ɵɵproperty("disabled", true);
+    } }, directives: [ngBootstrap.NgbTooltip], encapsulation: 2 });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ShareViewComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'share-view',
+                template: `<button class="btn btn-secondary btn-sm"
         ngbTooltip="Share current view"
         placement="right"
         [disabled]="true"
 ><i class="fa fa-share-alt"></i></button>
-`
-    }),
-    __metadata("design:paramtypes", [])
-], ShareViewComponent);
-exports.ShareViewComponent = ShareViewComponent;
+`, styles: []
+            }]
+    }], function () { return []; }, null); })();
 
 });
 
@@ -806,37 +927,39 @@ var shareView_component_1 = shareView_component.ShareViewComponent;
 
 var locationSearch_component = createCommonjsModule(function (module, exports) {
 "use strict";
-var __decorate = (commonjsGlobal && commonjsGlobal.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (commonjsGlobal && commonjsGlobal.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.LocationSearchComponent = void 0;
 
-let LocationSearchComponent = class LocationSearchComponent {
+const i0 = core;
+
+class LocationSearchComponent {
     constructor() {
     }
     ngAfterViewInit() {
     }
-};
-LocationSearchComponent = __decorate([
-    core.Component({
-        selector: 'location-search',
-        template: `<button class="btn btn-secondary btn-sm"
+}
+exports.LocationSearchComponent = LocationSearchComponent;
+LocationSearchComponent.ɵfac = function LocationSearchComponent_Factory(t) { return new (t || LocationSearchComponent)(); };
+LocationSearchComponent.ɵcmp = i0.ɵɵdefineComponent({ type: LocationSearchComponent, selectors: [["location-search"]], decls: 2, vars: 1, consts: [["ngbTooltip", "Location search", "placement", "right", 1, "btn", "btn-secondary", "btn-sm", 3, "disabled"], [1, "fa", "fa-search"]], template: function LocationSearchComponent_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "button", 0);
+        i0.ɵɵelement(1, "i", 1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        i0.ɵɵproperty("disabled", true);
+    } }, directives: [ngBootstrap.NgbTooltip], encapsulation: 2 });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(LocationSearchComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'location-search',
+                template: `<button class="btn btn-secondary btn-sm"
         ngbTooltip="Location search"
         placement="right"
         [disabled]="true"
 
 ><i class="fa fa-search"></i></button>
-`
-    }),
-    __metadata("design:paramtypes", [])
-], LocationSearchComponent);
-exports.LocationSearchComponent = LocationSearchComponent;
+`, styles: []
+            }]
+    }], function () { return []; }, null); })();
 
 });
 
@@ -845,21 +968,100 @@ var locationSearch_component_1 = locationSearch_component.LocationSearchComponen
 
 var layeredMap_component = createCommonjsModule(function (module, exports) {
 "use strict";
-var __decorate = (commonjsGlobal && commonjsGlobal.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (commonjsGlobal && commonjsGlobal.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.LayeredMapComponent = void 0;
 
 
 
 
-let LayeredMapComponent = class LayeredMapComponent {
+const i0 = core;
+const i1 = mapWald;
+const i2 = core$1;
+
+
+
+
+const _c0 = ["infoWindows"];
+function LayeredMapComponent_agm_marker_2_span_5_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelement(0, "span", 20);
+} if (rf & 2) {
+    const marker_r3 = i0.ɵɵnextContext().$implicit;
+    i0.ɵɵproperty("innerHTML", marker_r3.html, i0.ɵɵsanitizeHtml);
+} }
+function LayeredMapComponent_agm_marker_2_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "agm-marker", 16);
+    i0.ɵɵelementStart(1, "agm-info-window", 17, 18);
+    i0.ɵɵelementStart(3, "strong");
+    i0.ɵɵtext(4);
+    i0.ɵɵelementEnd();
+    i0.ɵɵtemplate(5, LayeredMapComponent_agm_marker_2_span_5_Template, 1, 1, "span", 19);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const marker_r3 = ctx.$implicit;
+    i0.ɵɵproperty("longitude", marker_r3.loc.lng)("latitude", marker_r3.loc.lat)("iconUrl", marker_r3.iconUrl);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("disableAutoPan", true);
+    i0.ɵɵadvance(3);
+    i0.ɵɵtextInterpolate(marker_r3.value);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngIf", marker_r3.html);
+} }
+function LayeredMapComponent_ng_container_3_wms_layer_1_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelement(0, "wms-layer", 25);
+} if (rf & 2) {
+    const mp_r7 = i0.ɵɵnextContext().$implicit;
+    i0.ɵɵproperty("url", mp_r7.url)("params", mp_r7.wmsParameters)("opacity", mp_r7.opacity)("position", mp_r7.options.position);
+} }
+function LayeredMapComponent_ng_container_3_agm_data_layer_2_Template(rf, ctx) { if (rf & 1) {
+    const _r14 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "agm-data-layer", 26);
+    i0.ɵɵlistener("layerClick", function LayeredMapComponent_ng_container_3_agm_data_layer_2_Template_agm_data_layer_layerClick_0_listener($event) { i0.ɵɵrestoreView(_r14); const ctx_r13 = i0.ɵɵnextContext(2); return ctx_r13.clicked($event); });
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const mp_r7 = i0.ɵɵnextContext().$implicit;
+    i0.ɵɵstyleMap(mp_r7._styleFunc);
+    i0.ɵɵproperty("geoJson", mp_r7.staticData);
+} }
+function LayeredMapComponent_ng_container_3_ng_container_3_agm_circle_1_Template(rf, ctx) { if (rf & 1) {
+    const _r21 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "agm-circle", 28);
+    i0.ɵɵlistener("circleClick", function LayeredMapComponent_ng_container_3_ng_container_3_agm_circle_1_Template_agm_circle_circleClick_0_listener() { i0.ɵɵrestoreView(_r21); const f_r17 = ctx.$implicit; const mp_r7 = i0.ɵɵnextContext(2).$implicit; const ctx_r19 = i0.ɵɵnextContext(); return ctx_r19.circleClicked(mp_r7, f_r17); });
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const f_r17 = ctx.$implicit;
+    const mp_r7 = i0.ɵɵnextContext(2).$implicit;
+    const ctx_r16 = i0.ɵɵnextContext();
+    i0.ɵɵproperty("latitude", f_r17.geometry.coordinates[1])("longitude", f_r17.geometry.coordinates[0])("radius", 10000000 / (ctx_r16.zoom * ctx_r16.zoom * ctx_r16.zoom * ctx_r16.zoom))("fillColor", (mp_r7.flattenedSettings == null ? null : mp_r7.flattenedSettings.styles == null ? null : mp_r7.flattenedSettings.styles.fillColor) || "black")("fillOpacity", (mp_r7.flattenedSettings == null ? null : mp_r7.flattenedSettings.styles == null ? null : mp_r7.flattenedSettings.styles.fillOpacity) || 1)("strokeColor", (mp_r7.flattenedSettings == null ? null : mp_r7.flattenedSettings.styles == null ? null : mp_r7.flattenedSettings.styles.strokeColor) || "black")("strokeOpacity", (mp_r7.flattenedSettings == null ? null : mp_r7.flattenedSettings.styles == null ? null : mp_r7.flattenedSettings.styles.strokeOpacity) || 1)("strokePosition", 0)("strokeWeight", f_r17 === ctx_r16.selectedFeature ? 3 : (mp_r7.flattenedSettings == null ? null : mp_r7.flattenedSettings.styles == null ? null : mp_r7.flattenedSettings.styles.strokeWeight) || 0.5);
+} }
+function LayeredMapComponent_ng_container_3_ng_container_3_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementContainerStart(0);
+    i0.ɵɵtemplate(1, LayeredMapComponent_ng_container_3_ng_container_3_agm_circle_1_Template, 1, 9, "agm-circle", 27);
+    i0.ɵɵelementContainerEnd();
+} if (rf & 2) {
+    const mp_r7 = i0.ɵɵnextContext().$implicit;
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngForOf", mp_r7.staticData.features);
+} }
+function LayeredMapComponent_ng_container_3_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementContainerStart(0, 21);
+    i0.ɵɵtemplate(1, LayeredMapComponent_ng_container_3_wms_layer_1_Template, 1, 4, "wms-layer", 22);
+    i0.ɵɵtemplate(2, LayeredMapComponent_ng_container_3_agm_data_layer_2_Template, 1, 3, "agm-data-layer", 23);
+    i0.ɵɵtemplate(3, LayeredMapComponent_ng_container_3_ng_container_3_Template, 2, 1, "ng-container", 24);
+    i0.ɵɵelementContainerEnd();
+} if (rf & 2) {
+    const mp_r7 = ctx.$implicit;
+    i0.ɵɵproperty("ngSwitch", mp_r7.layerType);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngSwitchCase", "wms");
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngSwitchCase", "vector");
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngSwitchCase", "circle");
+} }
+const _c1 = [[["", 8, "map-control", "top-center"]], [["", 8, "map-control", "top-left"]], [["", 8, "map-control", "top-right"]], [["", 8, "map-control", "left-top"]], [["", 8, "map-control", "right-top"]], [["", 8, "map-control", "left-center"]], [["", 8, "map-control", "right-center"]], [["", 8, "map-control", "left-bottom"]], [["", 8, "map-control", "right-bottom"]], [["", 8, "map-control", "bottom-center"]], [["", 8, "map-control", "bottom-left"]], [["", 8, "map-control", "bottom-right"]]];
+const _c2 = [".map-control.top-center", ".map-control.top-left", ".map-control.top-right", ".map-control.left-top", ".map-control.right-top", ".map-control.left-center", ".map-control.right-center", ".map-control.left-bottom", ".map-control.right-bottom", ".map-control.bottom-center", ".map-control.bottom-left", ".map-control.bottom-right"];
+class LayeredMapComponent {
     constructor(_zone, staticData, metadata) {
         this._zone = _zone;
         this.staticData = staticData;
@@ -999,76 +1201,72 @@ let LayeredMapComponent = class LayeredMapComponent {
     zoomChanged() {
         this.layers = this.layers.slice();
     }
-};
-LayeredMapComponent.ctorParameters = () => [
-    { type: core.NgZone },
-    { type: mapWald.StaticDataService },
-    { type: mapWald.MetadataService }
-];
-__decorate([
-    core.Input(),
-    __metadata("design:type", Array)
-], LayeredMapComponent.prototype, "layers", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Array)
-], LayeredMapComponent.prototype, "markers", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", String)
-], LayeredMapComponent.prototype, "mapTypeId", void 0);
-__decorate([
-    core.Output(),
-    __metadata("design:type", Object)
-], LayeredMapComponent.prototype, "layersChange", void 0);
-__decorate([
-    core.Output(),
-    __metadata("design:type", Object)
-], LayeredMapComponent.prototype, "featureSelected", void 0);
-__decorate([
-    core.Output(),
-    __metadata("design:type", Object)
-], LayeredMapComponent.prototype, "pointSelected", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Number)
-], LayeredMapComponent.prototype, "mapTypePosition", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], LayeredMapComponent.prototype, "streetViewControl", void 0);
-__decorate([
-    core.ViewChild(core$1.AgmMap, { static: false }),
-    __metadata("design:type", core$1.AgmMap)
-], LayeredMapComponent.prototype, "theMap", void 0);
-__decorate([
-    core.ViewChildren('infoWindows'),
-    __metadata("design:type", core.QueryList)
-], LayeredMapComponent.prototype, "infoWindows", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Number)
-], LayeredMapComponent.prototype, "zoom", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], LayeredMapComponent.prototype, "showMapType", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Number)
-], LayeredMapComponent.prototype, "lat", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Number)
-], LayeredMapComponent.prototype, "lng", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], LayeredMapComponent.prototype, "bounds", void 0);
-LayeredMapComponent = __decorate([
-    core.Component({
-        selector: 'layered-map',
-        template: `<agm-map #theMap
+}
+exports.LayeredMapComponent = LayeredMapComponent;
+LayeredMapComponent.ɵfac = function LayeredMapComponent_Factory(t) { return new (t || LayeredMapComponent)(i0.ɵɵdirectiveInject(i0.NgZone), i0.ɵɵdirectiveInject(i1.StaticDataService), i0.ɵɵdirectiveInject(i1.MetadataService)); };
+LayeredMapComponent.ɵcmp = i0.ɵɵdefineComponent({ type: LayeredMapComponent, selectors: [["layered-map"]], viewQuery: function LayeredMapComponent_Query(rf, ctx) { if (rf & 1) {
+        i0.ɵɵviewQuery(core$1.AgmMap, true);
+        i0.ɵɵviewQuery(_c0, true);
+    } if (rf & 2) {
+        let _t;
+        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.theMap = _t.first);
+        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.infoWindows = _t);
+    } }, inputs: { layers: "layers", markers: "markers", mapTypeId: "mapTypeId", mapTypePosition: "mapTypePosition", streetViewControl: "streetViewControl", zoom: "zoom", showMapType: "showMapType", lat: "lat", lng: "lng", bounds: "bounds" }, outputs: { layersChange: "layersChange", featureSelected: "featureSelected", pointSelected: "pointSelected" }, features: [i0.ɵɵNgOnChangesFeature], ngContentSelectors: _c2, decls: 29, vars: 14, consts: [["scaleControl", "true", 3, "latitude", "longitude", "zoom", "disableDefaultUI", "zoomControl", "mapTypeId", "mapTypeControl", "mapTypeControlOptions", "streetViewControl", "fitBounds", "latitudeChange", "longitudeChange", "zoomChange", "mapClick"], ["theMap", ""], [3, "longitude", "latitude", "iconUrl", 4, "ngFor", "ngForOf"], [3, "ngSwitch", 4, "ngFor", "ngForOf"], ["position", "TOP_CENTER"], ["position", "TOP_LEFT"], ["position", "TOP_RIGHT"], ["position", "LEFT_TOP"], ["position", "RIGHT_TOP"], ["position", "LEFT_CENTER"], ["position", "RIGHT_CENTER"], ["position", "LEFT_BOTTOM"], ["position", "RIGHT_BOTTOM"], ["position", "BOTTOM_CENTER"], ["position", "BOTTOM_LEFT"], ["position", "BOTTOM_RIGHT"], [3, "longitude", "latitude", "iconUrl"], [3, "disableAutoPan"], ["infoWindows", ""], [3, "innerHTML", 4, "ngIf"], [3, "innerHTML"], [3, "ngSwitch"], [3, "url", "params", "opacity", "position", 4, "ngSwitchCase"], [3, "geoJson", "style", "layerClick", 4, "ngSwitchCase"], [4, "ngSwitchCase"], [3, "url", "params", "opacity", "position"], [3, "geoJson", "layerClick"], [3, "latitude", "longitude", "radius", "fillColor", "fillOpacity", "strokeColor", "strokeOpacity", "strokePosition", "strokeWeight", "circleClick", 4, "ngFor", "ngForOf"], [3, "latitude", "longitude", "radius", "fillColor", "fillOpacity", "strokeColor", "strokeOpacity", "strokePosition", "strokeWeight", "circleClick"]], template: function LayeredMapComponent_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵprojectionDef(_c1);
+        i0.ɵɵelementStart(0, "agm-map", 0, 1);
+        i0.ɵɵlistener("latitudeChange", function LayeredMapComponent_Template_agm_map_latitudeChange_0_listener($event) { return ctx.lat = $event; })("longitudeChange", function LayeredMapComponent_Template_agm_map_longitudeChange_0_listener($event) { return ctx.lng = $event; })("zoomChange", function LayeredMapComponent_Template_agm_map_zoomChange_0_listener($event) { return ctx.zoom = $event; })("zoomChange", function LayeredMapComponent_Template_agm_map_zoomChange_0_listener() { return ctx.zoomChanged(); })("mapClick", function LayeredMapComponent_Template_agm_map_mapClick_0_listener($event) { return ctx.mapClick($event); });
+        i0.ɵɵtemplate(2, LayeredMapComponent_agm_marker_2_Template, 6, 6, "agm-marker", 2);
+        i0.ɵɵtemplate(3, LayeredMapComponent_ng_container_3_Template, 4, 4, "ng-container", 3);
+        i0.ɵɵpipe(4, "reverse");
+        i0.ɵɵelementStart(5, "map-control", 4);
+        i0.ɵɵprojection(6);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(7, "map-control", 5);
+        i0.ɵɵprojection(8, 1);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(9, "map-control", 6);
+        i0.ɵɵprojection(10, 2);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(11, "map-control", 7);
+        i0.ɵɵprojection(12, 3);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(13, "map-control", 8);
+        i0.ɵɵprojection(14, 4);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(15, "map-control", 9);
+        i0.ɵɵprojection(16, 5);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(17, "map-control", 10);
+        i0.ɵɵprojection(18, 6);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(19, "map-control", 11);
+        i0.ɵɵprojection(20, 7);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(21, "map-control", 12);
+        i0.ɵɵprojection(22, 8);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(23, "map-control", 13);
+        i0.ɵɵprojection(24, 9);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(25, "map-control", 14);
+        i0.ɵɵprojection(26, 10);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(27, "map-control", 15);
+        i0.ɵɵprojection(28, 11);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        i0.ɵɵproperty("latitude", ctx.lat)("longitude", ctx.lng)("zoom", ctx.zoom)("disableDefaultUI", false)("zoomControl", false)("mapTypeId", ctx.mapTypeId)("mapTypeControl", ctx.showMapType)("mapTypeControlOptions", ctx.mapTypeOptions)("streetViewControl", ctx.streetViewControl)("fitBounds", ctx._bounds);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngForOf", ctx.markers);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngForOf", i0.ɵɵpipeBind1(4, 12, ctx.layers.slice()));
+    } }, directives: [i2.AgmMap, common.NgForOf, mapControl_component.MapControlComponent, i2.AgmMarker, i2.AgmInfoWindow, common.NgIf, common.NgSwitch, common.NgSwitchCase, wmsLayer_component.WMSLayerComponent, i2.AgmDataLayer, i2.AgmCircle], pipes: [ngxPipes.ReversePipe], encapsulation: 2 });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(LayeredMapComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'layered-map',
+                template: `<agm-map #theMap
 [(latitude)]="lat"
 [(longitude)]="lng"
 [(zoom)]="zoom"
@@ -1178,13 +1376,41 @@ scaleControl="true"
 
 </agm-map>
 
-`
-    }),
-    __metadata("design:paramtypes", [core.NgZone,
-        mapWald.StaticDataService,
-        mapWald.MetadataService])
-], LayeredMapComponent);
-exports.LayeredMapComponent = LayeredMapComponent;
+`, styles: []
+            }]
+    }], function () { return [{ type: i0.NgZone }, { type: i1.StaticDataService }, { type: i1.MetadataService }]; }, { layers: [{
+            type: core.Input
+        }], markers: [{
+            type: core.Input
+        }], mapTypeId: [{
+            type: core.Input
+        }], layersChange: [{
+            type: core.Output
+        }], featureSelected: [{
+            type: core.Output
+        }], pointSelected: [{
+            type: core.Output
+        }], mapTypePosition: [{
+            type: core.Input
+        }], streetViewControl: [{
+            type: core.Input
+        }], theMap: [{
+            type: core.ViewChild,
+            args: [core$1.AgmMap, { static: false }]
+        }], infoWindows: [{
+            type: core.ViewChildren,
+            args: ['infoWindows']
+        }], zoom: [{
+            type: core.Input
+        }], showMapType: [{
+            type: core.Input
+        }], lat: [{
+            type: core.Input
+        }], lng: [{
+            type: core.Input
+        }], bounds: [{
+            type: core.Input
+        }] }); })();
 
 });
 
@@ -1193,20 +1419,14 @@ var layeredMap_component_1 = layeredMap_component.LayeredMapComponent;
 
 var zoomLayer_component = createCommonjsModule(function (module, exports) {
 "use strict";
-var __decorate = (commonjsGlobal && commonjsGlobal.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (commonjsGlobal && commonjsGlobal.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ZoomLayerComponent = void 0;
 
 
 
-let ZoomLayerComponent = class ZoomLayerComponent {
+const i0 = core;
+
+class ZoomLayerComponent {
     constructor() {
     }
     ngAfterViewInit() {
@@ -1223,33 +1443,36 @@ let ZoomLayerComponent = class ZoomLayerComponent {
             this.map.zoomToBounds(Object.assign({}, this.fullBounds));
         }
     }
-};
-__decorate([
-    core.Input(),
-    __metadata("design:type", layeredMap_component.LayeredMapComponent)
-], ZoomLayerComponent.prototype, "map", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", mapWald.MappedLayer)
-], ZoomLayerComponent.prototype, "layer", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], ZoomLayerComponent.prototype, "fullBounds", void 0);
-ZoomLayerComponent = __decorate([
-    core.Component({
-        selector: 'zoom-layer',
-        template: `<button type="button" [disabled]="!layer" class="btn btn-secondary btn-sm"
+}
+exports.ZoomLayerComponent = ZoomLayerComponent;
+ZoomLayerComponent.ɵfac = function ZoomLayerComponent_Factory(t) { return new (t || ZoomLayerComponent)(); };
+ZoomLayerComponent.ɵcmp = i0.ɵɵdefineComponent({ type: ZoomLayerComponent, selectors: [["zoom-layer"]], inputs: { map: "map", layer: "layer", fullBounds: "fullBounds" }, decls: 2, vars: 1, consts: [["type", "button", "ngbTooltip", "Zoom to selected layer", "placement", "right", 1, "btn", "btn-secondary", "btn-sm", 3, "disabled", "click"], [1, "fa", "fa-compress"]], template: function ZoomLayerComponent_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "button", 0);
+        i0.ɵɵlistener("click", function ZoomLayerComponent_Template_button_click_0_listener() { return ctx.zoomToLayer(); });
+        i0.ɵɵelement(1, "i", 1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        i0.ɵɵproperty("disabled", !ctx.layer);
+    } }, directives: [ngBootstrap.NgbTooltip], encapsulation: 2 });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ZoomLayerComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'zoom-layer',
+                template: `<button type="button" [disabled]="!layer" class="btn btn-secondary btn-sm"
         ngbTooltip="Zoom to selected layer"
         placement="right"
         (click)="zoomToLayer()"
 ><i class="fa fa-compress"></i>
 </button>
-`
-    }),
-    __metadata("design:paramtypes", [])
-], ZoomLayerComponent);
-exports.ZoomLayerComponent = ZoomLayerComponent;
+`, styles: []
+            }]
+    }], function () { return []; }, { map: [{
+            type: core.Input
+        }], layer: [{
+            type: core.Input
+        }], fullBounds: [{
+            type: core.Input
+        }] }); })();
 
 });
 
@@ -1258,19 +1481,13 @@ var zoomLayer_component_1 = zoomLayer_component.ZoomLayerComponent;
 
 var zoomFull_component = createCommonjsModule(function (module, exports) {
 "use strict";
-var __decorate = (commonjsGlobal && commonjsGlobal.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (commonjsGlobal && commonjsGlobal.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ZoomFullComponent = void 0;
 
 
-let ZoomFullComponent = class ZoomFullComponent {
+const i0 = core;
+
+class ZoomFullComponent {
     constructor() {
     }
     ngAfterViewInit() {
@@ -1278,28 +1495,31 @@ let ZoomFullComponent = class ZoomFullComponent {
     zoomToBounds() {
         this.map.zoomToBounds(Object.assign({}, this.bounds));
     }
-};
-__decorate([
-    core.Input(),
-    __metadata("design:type", layeredMap_component.LayeredMapComponent)
-], ZoomFullComponent.prototype, "map", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], ZoomFullComponent.prototype, "bounds", void 0);
-ZoomFullComponent = __decorate([
-    core.Component({
-        selector: 'zoom-full',
-        template: `<button class="btn btn-secondary btn-sm"
+}
+exports.ZoomFullComponent = ZoomFullComponent;
+ZoomFullComponent.ɵfac = function ZoomFullComponent_Factory(t) { return new (t || ZoomFullComponent)(); };
+ZoomFullComponent.ɵcmp = i0.ɵɵdefineComponent({ type: ZoomFullComponent, selectors: [["zoom-full"]], inputs: { map: "map", bounds: "bounds" }, decls: 2, vars: 0, consts: [["ngbTooltip", "Zoom to full extent", "placement", "right", 1, "btn", "btn-secondary", "btn-sm", 3, "click"], [1, "fa", "fa-arrows-alt"]], template: function ZoomFullComponent_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "button", 0);
+        i0.ɵɵlistener("click", function ZoomFullComponent_Template_button_click_0_listener() { return ctx.zoomToBounds(); });
+        i0.ɵɵelement(1, "i", 1);
+        i0.ɵɵelementEnd();
+    } }, directives: [ngBootstrap.NgbTooltip], encapsulation: 2 });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ZoomFullComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'zoom-full',
+                template: `<button class="btn btn-secondary btn-sm"
         ngbTooltip="Zoom to full extent"
         placement="right"
         (click)="zoomToBounds()"
 ><i class="fa fa-arrows-alt"></i></button>
-`
-    }),
-    __metadata("design:paramtypes", [])
-], ZoomFullComponent);
-exports.ZoomFullComponent = ZoomFullComponent;
+`, styles: []
+            }]
+    }], function () { return []; }, { map: [{
+            type: core.Input
+        }], bounds: [{
+            type: core.Input
+        }] }); })();
 
 });
 
@@ -1308,19 +1528,13 @@ var zoomFull_component_1 = zoomFull_component.ZoomFullComponent;
 
 var zoomOut_component = createCommonjsModule(function (module, exports) {
 "use strict";
-var __decorate = (commonjsGlobal && commonjsGlobal.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (commonjsGlobal && commonjsGlobal.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ZoomOutComponent = void 0;
 
 
-let ZoomOutComponent = class ZoomOutComponent {
+const i0 = core;
+
+class ZoomOutComponent {
     constructor() {
         this.minZoom = 1;
     }
@@ -1332,27 +1546,30 @@ let ZoomOutComponent = class ZoomOutComponent {
         }
         this.map.zoom = Math.max(this.minZoom, this.map.zoom - 1);
     }
-};
-__decorate([
-    core.Input(),
-    __metadata("design:type", layeredMap_component.LayeredMapComponent)
-], ZoomOutComponent.prototype, "map", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Number)
-], ZoomOutComponent.prototype, "minZoom", void 0);
-ZoomOutComponent = __decorate([
-    core.Component({
-        selector: 'zoom-out',
-        template: `<button class="btn btn-secondary btn-sm"
+}
+exports.ZoomOutComponent = ZoomOutComponent;
+ZoomOutComponent.ɵfac = function ZoomOutComponent_Factory(t) { return new (t || ZoomOutComponent)(); };
+ZoomOutComponent.ɵcmp = i0.ɵɵdefineComponent({ type: ZoomOutComponent, selectors: [["zoom-out"]], inputs: { map: "map", minZoom: "minZoom" }, decls: 2, vars: 0, consts: [["ngbTooltip", "Zoom out", "placement", "right", 1, "btn", "btn-secondary", "btn-sm", 3, "click"], [1, "fa", "fa-minus"]], template: function ZoomOutComponent_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "button", 0);
+        i0.ɵɵlistener("click", function ZoomOutComponent_Template_button_click_0_listener() { return ctx.zoomOut(); });
+        i0.ɵɵelement(1, "i", 1);
+        i0.ɵɵelementEnd();
+    } }, directives: [ngBootstrap.NgbTooltip], encapsulation: 2 });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ZoomOutComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'zoom-out',
+                template: `<button class="btn btn-secondary btn-sm"
         ngbTooltip="Zoom out"
         placement="right"
         (click)="zoomOut()"
-><i class="fa fa-minus"></i></button>`
-    }),
-    __metadata("design:paramtypes", [])
-], ZoomOutComponent);
-exports.ZoomOutComponent = ZoomOutComponent;
+><i class="fa fa-minus"></i></button>`, styles: []
+            }]
+    }], function () { return []; }, { map: [{
+            type: core.Input
+        }], minZoom: [{
+            type: core.Input
+        }] }); })();
 
 });
 
@@ -1361,19 +1578,13 @@ var zoomOut_component_1 = zoomOut_component.ZoomOutComponent;
 
 var zoomIn_component = createCommonjsModule(function (module, exports) {
 "use strict";
-var __decorate = (commonjsGlobal && commonjsGlobal.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (commonjsGlobal && commonjsGlobal.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ZoomInComponent = void 0;
 
 
-let ZoomInComponent = class ZoomInComponent {
+const i0 = core;
+
+class ZoomInComponent {
     constructor() {
         this.maxZoom = 32;
     }
@@ -1385,27 +1596,30 @@ let ZoomInComponent = class ZoomInComponent {
         }
         this.map.zoom = Math.min(this.maxZoom, this.map.zoom + 1);
     }
-};
-__decorate([
-    core.Input(),
-    __metadata("design:type", layeredMap_component.LayeredMapComponent)
-], ZoomInComponent.prototype, "map", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Number)
-], ZoomInComponent.prototype, "maxZoom", void 0);
-ZoomInComponent = __decorate([
-    core.Component({
-        selector: 'zoom-in',
-        template: `<button class="btn btn-secondary btn-sm"
+}
+exports.ZoomInComponent = ZoomInComponent;
+ZoomInComponent.ɵfac = function ZoomInComponent_Factory(t) { return new (t || ZoomInComponent)(); };
+ZoomInComponent.ɵcmp = i0.ɵɵdefineComponent({ type: ZoomInComponent, selectors: [["zoom-in"]], inputs: { map: "map", maxZoom: "maxZoom" }, decls: 2, vars: 0, consts: [["ngbTooltip", "Zoom in", "placement", "right", 1, "btn", "btn-secondary", "btn-sm", 3, "click"], [1, "fa", "fa-plus"]], template: function ZoomInComponent_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "button", 0);
+        i0.ɵɵlistener("click", function ZoomInComponent_Template_button_click_0_listener() { return ctx.zoomIn(); });
+        i0.ɵɵelement(1, "i", 1);
+        i0.ɵɵelementEnd();
+    } }, directives: [ngBootstrap.NgbTooltip], encapsulation: 2 });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ZoomInComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'zoom-in',
+                template: `<button class="btn btn-secondary btn-sm"
         ngbTooltip="Zoom in"
         placement="right"
         (click)="zoomIn()"
-><i class="fa fa-plus"></i></button>`
-    }),
-    __metadata("design:paramtypes", [])
-], ZoomInComponent);
-exports.ZoomInComponent = ZoomInComponent;
+><i class="fa fa-plus"></i></button>`, styles: []
+            }]
+    }], function () { return []; }, { map: [{
+            type: core.Input
+        }], maxZoom: [{
+            type: core.Input
+        }] }); })();
 
 });
 
@@ -1414,19 +1628,14 @@ var zoomIn_component_1 = zoomIn_component.ZoomInComponent;
 
 var cycleBaseMap_component = createCommonjsModule(function (module, exports) {
 "use strict";
-var __decorate = (commonjsGlobal && commonjsGlobal.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (commonjsGlobal && commonjsGlobal.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.CycleBaseMapComponent = void 0;
 
 
-let CycleBaseMapComponent = class CycleBaseMapComponent {
+const i0 = core;
+
+
+class CycleBaseMapComponent {
     constructor() {
         this.maxZoom = 32;
         this.baseLayers = [
@@ -1459,38 +1668,39 @@ let CycleBaseMapComponent = class CycleBaseMapComponent {
             this.baseLayer.map_type_id :
             null;
     }
-};
-__decorate([
-    core.Input(),
-    __metadata("design:type", layeredMap_component.LayeredMapComponent)
-], CycleBaseMapComponent.prototype, "map", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Number)
-], CycleBaseMapComponent.prototype, "maxZoom", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Array)
-], CycleBaseMapComponent.prototype, "baseLayers", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], CycleBaseMapComponent.prototype, "baseLayer", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], CycleBaseMapComponent.prototype, "tooltip", void 0);
-CycleBaseMapComponent = __decorate([
-    core.Component({
-        selector: 'cycle-base-map',
-        template: `<button class="btn btn-secondary btn-sm" (click)="toggleBaseLayer()" [ngbTooltip]="tooltip"
+}
+exports.CycleBaseMapComponent = CycleBaseMapComponent;
+CycleBaseMapComponent.ɵfac = function CycleBaseMapComponent_Factory(t) { return new (t || CycleBaseMapComponent)(); };
+CycleBaseMapComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CycleBaseMapComponent, selectors: [["cycle-base-map"]], inputs: { map: "map", maxZoom: "maxZoom", baseLayers: "baseLayers", baseLayer: "baseLayer", tooltip: "tooltip" }, features: [i0.ɵɵNgOnChangesFeature], decls: 2, vars: 2, consts: [["placement", "right", 1, "btn", "btn-secondary", "btn-sm", 3, "ngbTooltip", "click"], [1, "fa", 3, "ngClass"]], template: function CycleBaseMapComponent_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "button", 0);
+        i0.ɵɵlistener("click", function CycleBaseMapComponent_Template_button_click_0_listener() { return ctx.toggleBaseLayer(); });
+        i0.ɵɵelement(1, "i", 1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        i0.ɵɵproperty("ngbTooltip", ctx.tooltip);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngClass", (ctx.baseLayer == null ? null : ctx.baseLayer.label) === "Road Map" ? "fa-road" : "fa-globe");
+    } }, directives: [ngBootstrap.NgbTooltip, common.NgClass], encapsulation: 2 });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CycleBaseMapComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'cycle-base-map',
+                template: `<button class="btn btn-secondary btn-sm" (click)="toggleBaseLayer()" [ngbTooltip]="tooltip"
                      placement="right">
   <i class="fa" [ngClass]="baseLayer?.label==='Road Map'?'fa-road':'fa-globe'"></i>
-</button>`
-    }),
-    __metadata("design:paramtypes", [])
-], CycleBaseMapComponent);
-exports.CycleBaseMapComponent = CycleBaseMapComponent;
+</button>`, styles: []
+            }]
+    }], function () { return []; }, { map: [{
+            type: core.Input
+        }], maxZoom: [{
+            type: core.Input
+        }], baseLayers: [{
+            type: core.Input
+        }], baseLayer: [{
+            type: core.Input
+        }], tooltip: [{
+            type: core.Input
+        }] }); })();
 
 });
 
@@ -1499,19 +1709,14 @@ var cycleBaseMap_component_1 = cycleBaseMap_component.CycleBaseMapComponent;
 
 var cycleOpacity_component = createCommonjsModule(function (module, exports) {
 "use strict";
-var __decorate = (commonjsGlobal && commonjsGlobal.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (commonjsGlobal && commonjsGlobal.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.CycleOpacityComponent = void 0;
 
 
-let CycleOpacityComponent = class CycleOpacityComponent {
+const i0 = core;
+
+
+class CycleOpacityComponent {
     constructor() {
         this.maxZoom = 32;
         this.tooltip = 'Adjust transparency of grid layer';
@@ -1535,40 +1740,41 @@ let CycleOpacityComponent = class CycleOpacityComponent {
     updateLayers() {
         this.map.layers.forEach(l => l.opacity = this.layerOpacity);
     }
-};
-__decorate([
-    core.Input(),
-    __metadata("design:type", layeredMap_component.LayeredMapComponent)
-], CycleOpacityComponent.prototype, "map", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], CycleOpacityComponent.prototype, "maxZoom", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], CycleOpacityComponent.prototype, "tooltip", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], CycleOpacityComponent.prototype, "layerOpacity", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], CycleOpacityComponent.prototype, "step", void 0);
-CycleOpacityComponent = __decorate([
-    core.Component({
-        selector: 'cycle-opacity',
-        template: `<button class="btn btn-secondary btn-sm"
+}
+exports.CycleOpacityComponent = CycleOpacityComponent;
+CycleOpacityComponent.ɵfac = function CycleOpacityComponent_Factory(t) { return new (t || CycleOpacityComponent)(); };
+CycleOpacityComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CycleOpacityComponent, selectors: [["cycle-opacity"]], inputs: { map: "map", maxZoom: "maxZoom", tooltip: "tooltip", layerOpacity: "layerOpacity", step: "step" }, features: [i0.ɵɵNgOnChangesFeature], decls: 2, vars: 2, consts: [["placement", "right", 1, "btn", "btn-secondary", "btn-sm", 3, "ngbTooltip", "click"], [1, "fa", 3, "ngClass"]], template: function CycleOpacityComponent_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "button", 0);
+        i0.ɵɵlistener("click", function CycleOpacityComponent_Template_button_click_0_listener() { return ctx.cycleTransparency(); });
+        i0.ɵɵelement(1, "i", 1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        i0.ɵɵproperty("ngbTooltip", ctx.tooltip);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngClass", ctx.layerOpacity < 0.5 ? "fa-circle-o" : ctx.layerOpacity < 0.9 ? "fa-adjust" : "fa-circle");
+    } }, directives: [ngBootstrap.NgbTooltip, common.NgClass], encapsulation: 2 });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CycleOpacityComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'cycle-opacity',
+                template: `<button class="btn btn-secondary btn-sm"
                      (click)="cycleTransparency()"
                      [ngbTooltip]="tooltip"
                      placement="right">
 <i class="fa" [ngClass]="(layerOpacity<0.5)?'fa-circle-o':((layerOpacity<0.9)?'fa-adjust':'fa-circle')"></i>
-</button>`
-    }),
-    __metadata("design:paramtypes", [])
-], CycleOpacityComponent);
-exports.CycleOpacityComponent = CycleOpacityComponent;
+</button>`, styles: []
+            }]
+    }], function () { return []; }, { map: [{
+            type: core.Input
+        }], maxZoom: [{
+            type: core.Input
+        }], tooltip: [{
+            type: core.Input
+        }], layerOpacity: [{
+            type: core.Input
+        }], step: [{
+            type: core.Input
+        }] }); })();
 
 });
 
@@ -1577,37 +1783,37 @@ var cycleOpacity_component_1 = cycleOpacity_component.CycleOpacityComponent;
 
 var buttonBar_component = createCommonjsModule(function (module, exports) {
 "use strict";
-var __decorate = (commonjsGlobal && commonjsGlobal.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (commonjsGlobal && commonjsGlobal.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ButtonBarComponent = void 0;
 
-let ButtonBarComponent = class ButtonBarComponent {
+const i0 = core;
+const _c0 = ["*"];
+class ButtonBarComponent {
     constructor() {
     }
     ngAfterViewInit() {
     }
-};
-ButtonBarComponent = __decorate([
-    core.Component({
-        selector: 'button-bar',
-        template: `<div class="button-bar bb-vertical">
+}
+exports.ButtonBarComponent = ButtonBarComponent;
+ButtonBarComponent.ɵfac = function ButtonBarComponent_Factory(t) { return new (t || ButtonBarComponent)(); };
+ButtonBarComponent.ɵcmp = i0.ɵɵdefineComponent({ type: ButtonBarComponent, selectors: [["button-bar"]], ngContentSelectors: _c0, decls: 2, vars: 0, consts: [[1, "button-bar", "bb-vertical"]], template: function ButtonBarComponent_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵprojectionDef();
+        i0.ɵɵelementStart(0, "div", 0);
+        i0.ɵɵprojection(1);
+        i0.ɵɵelementEnd();
+    } }, styles: [""] });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ButtonBarComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'button-bar',
+                template: `<div class="button-bar bb-vertical">
   <ng-content></ng-content>
 </div>
 
-`,
-        styles: [`
+`, styles: [`
 `]
-    }),
-    __metadata("design:paramtypes", [])
-], ButtonBarComponent);
-exports.ButtonBarComponent = ButtonBarComponent;
+            }]
+    }], function () { return []; }, null); })();
 
 });
 
@@ -1616,24 +1822,18 @@ var buttonBar_component_1 = buttonBar_component.ButtonBarComponent;
 
 var timeseriesChart_component = createCommonjsModule(function (module, exports) {
 "use strict";
-/// <reference path="../decs.d.ts" />
-var __decorate = (commonjsGlobal && commonjsGlobal.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (commonjsGlobal && commonjsGlobal.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.TimeseriesChartComponent = void 0;
+/// <reference path="../decs.d.ts" />
+/// <reference path="../decs.d.ts" />
 
 //import * as Plotly from 'plotly.js/dist/plotly-basic';
 //declare var Plotly: any;
 //const Plotly = require('plotly.js/dist/plotly-basic');
 
+const i0 = core;
 // import * as Plotly from 'plotly.js';
-let TimeseriesChartComponent = class TimeseriesChartComponent {
+class TimeseriesChartComponent {
     constructor(_element) {
         this._element = _element;
         this.timeSeries = [];
@@ -1691,48 +1891,35 @@ let TimeseriesChartComponent = class TimeseriesChartComponent {
             };
         }), layout);
     }
-};
-TimeseriesChartComponent.ctorParameters = () => [
-    { type: core.ElementRef }
-];
-__decorate([
-    core.Input(),
-    __metadata("design:type", String)
-], TimeseriesChartComponent.prototype, "title", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Array)
-], TimeseriesChartComponent.prototype, "timeSeries", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Number)
-], TimeseriesChartComponent.prototype, "marginLeft", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Number)
-], TimeseriesChartComponent.prototype, "marginRight", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Number)
-], TimeseriesChartComponent.prototype, "marginTop", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Number)
-], TimeseriesChartComponent.prototype, "marginBottom", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], TimeseriesChartComponent.prototype, "titlefont", void 0);
-TimeseriesChartComponent = __decorate([
-    core.Component({
-        selector: 'timeseries-chart',
-        template: `<div class="our-chart">
-</div>
-`
-    }),
-    __metadata("design:paramtypes", [core.ElementRef])
-], TimeseriesChartComponent);
+}
 exports.TimeseriesChartComponent = TimeseriesChartComponent;
+TimeseriesChartComponent.ɵfac = function TimeseriesChartComponent_Factory(t) { return new (t || TimeseriesChartComponent)(i0.ɵɵdirectiveInject(i0.ElementRef)); };
+TimeseriesChartComponent.ɵcmp = i0.ɵɵdefineComponent({ type: TimeseriesChartComponent, selectors: [["timeseries-chart"]], inputs: { title: "title", timeSeries: "timeSeries", marginLeft: "marginLeft", marginRight: "marginRight", marginTop: "marginTop", marginBottom: "marginBottom", titlefont: "titlefont" }, features: [i0.ɵɵNgOnChangesFeature], decls: 1, vars: 0, consts: [[1, "our-chart"]], template: function TimeseriesChartComponent_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "div", 0);
+    } }, encapsulation: 2 });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TimeseriesChartComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'timeseries-chart',
+                template: `<div class="our-chart">
+</div>
+`, styles: []
+            }]
+    }], function () { return [{ type: i0.ElementRef }]; }, { title: [{
+            type: core.Input
+        }], timeSeries: [{
+            type: core.Input
+        }], marginLeft: [{
+            type: core.Input
+        }], marginRight: [{
+            type: core.Input
+        }], marginTop: [{
+            type: core.Input
+        }], marginBottom: [{
+            type: core.Input
+        }], titlefont: [{
+            type: core.Input
+        }] }); })();
 
 });
 
@@ -1741,18 +1928,100 @@ var timeseriesChart_component_1 = timeseriesChart_component.TimeseriesChartCompo
 
 var featureTable_component = createCommonjsModule(function (module, exports) {
 "use strict";
-var __decorate = (commonjsGlobal && commonjsGlobal.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (commonjsGlobal && commonjsGlobal.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.FeatureTableComponent = void 0;
 
-let FeatureTableComponent = class FeatureTableComponent {
+const i0 = core;
+
+function FeatureTableComponent_table_0_tr_16_td_4_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "td");
+    i0.ɵɵtext(1);
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const prop_r2 = i0.ɵɵnextContext().$implicit;
+    const ctx_r3 = i0.ɵɵnextContext(2);
+    i0.ɵɵadvance(1);
+    i0.ɵɵtextInterpolate(ctx_r3.feature.properties[prop_r2]);
+} }
+function FeatureTableComponent_table_0_tr_16_td_5_a_1_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "a", 5);
+    i0.ɵɵtext(1);
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const prop_r2 = i0.ɵɵnextContext(2).$implicit;
+    const ctx_r6 = i0.ɵɵnextContext(2);
+    i0.ɵɵproperty("href", ctx_r6.feature.properties[prop_r2], i0.ɵɵsanitizeUrl);
+    i0.ɵɵadvance(1);
+    i0.ɵɵtextInterpolate1(" ", ctx_r6.feature.properties[prop_r2], " ");
+} }
+function FeatureTableComponent_table_0_tr_16_td_5_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "td");
+    i0.ɵɵtemplate(1, FeatureTableComponent_table_0_tr_16_td_5_a_1_Template, 2, 2, "a", 4);
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const prop_r2 = i0.ɵɵnextContext().$implicit;
+    const ctx_r4 = i0.ɵɵnextContext(2);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngIf", ctx_r4.styles[prop_r2].hyperlink);
+} }
+function FeatureTableComponent_table_0_tr_16_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "tr");
+    i0.ɵɵelementStart(1, "td");
+    i0.ɵɵelementStart(2, "strong");
+    i0.ɵɵtext(3);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+    i0.ɵɵtemplate(4, FeatureTableComponent_table_0_tr_16_td_4_Template, 2, 1, "td", 3);
+    i0.ɵɵtemplate(5, FeatureTableComponent_table_0_tr_16_td_5_Template, 2, 1, "td", 3);
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const prop_r2 = ctx.$implicit;
+    const ctx_r1 = i0.ɵɵnextContext(2);
+    i0.ɵɵadvance(3);
+    i0.ɵɵtextInterpolate(prop_r2);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngIf", !ctx_r1.styles || !ctx_r1.styles[prop_r2]);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngIf", ctx_r1.styles && ctx_r1.styles[prop_r2]);
+} }
+function FeatureTableComponent_table_0_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "table", 1);
+    i0.ɵɵelementStart(1, "thead");
+    i0.ɵɵelementStart(2, "tr");
+    i0.ɵɵelementStart(3, "td");
+    i0.ɵɵelementStart(4, "strong");
+    i0.ɵɵtext(5, "Property");
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementStart(6, "td");
+    i0.ɵɵelementStart(7, "strong");
+    i0.ɵɵtext(8, "Value");
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementStart(9, "tbody");
+    i0.ɵɵelementStart(10, "tr");
+    i0.ɵɵelementStart(11, "td");
+    i0.ɵɵelementStart(12, "strong");
+    i0.ɵɵtext(13, "Geometry");
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementStart(14, "td");
+    i0.ɵɵtext(15);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+    i0.ɵɵtemplate(16, FeatureTableComponent_table_0_tr_16_Template, 6, 3, "tr", 2);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r0 = i0.ɵɵnextContext();
+    i0.ɵɵadvance(15);
+    i0.ɵɵtextInterpolate(ctx_r0.feature.geometry.type);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngForOf", ctx_r0._keys(ctx_r0.feature.properties));
+} }
+class FeatureTableComponent {
     constructor() {
         this.styles = {};
         this._keys = Object.keys;
@@ -1764,19 +2033,19 @@ let FeatureTableComponent = class FeatureTableComponent {
             this.styles = {};
         }
     }
-};
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], FeatureTableComponent.prototype, "feature", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], FeatureTableComponent.prototype, "styles", void 0);
-FeatureTableComponent = __decorate([
-    core.Component({
-        selector: 'feature-table',
-        template: `<table *ngIf="feature" class="table table-striped table-sm feature-table">
+}
+exports.FeatureTableComponent = FeatureTableComponent;
+FeatureTableComponent.ɵfac = function FeatureTableComponent_Factory(t) { return new (t || FeatureTableComponent)(); };
+FeatureTableComponent.ɵcmp = i0.ɵɵdefineComponent({ type: FeatureTableComponent, selectors: [["feature-table"]], inputs: { feature: "feature", styles: "styles" }, features: [i0.ɵɵNgOnChangesFeature], decls: 1, vars: 1, consts: [["class", "table table-striped table-sm feature-table", 4, "ngIf"], [1, "table", "table-striped", "table-sm", "feature-table"], [4, "ngFor", "ngForOf"], [4, "ngIf"], ["target", "_blank", 3, "href", 4, "ngIf"], ["target", "_blank", 3, "href"]], template: function FeatureTableComponent_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵtemplate(0, FeatureTableComponent_table_0_Template, 17, 2, "table", 0);
+    } if (rf & 2) {
+        i0.ɵɵproperty("ngIf", ctx.feature);
+    } }, directives: [common.NgIf, common.NgForOf], styles: [".feature-table[_ngcontent-%COMP%]{\n  max-width:300px;\n}"] });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(FeatureTableComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'feature-table',
+                template: `<table *ngIf="feature" class="table table-striped table-sm feature-table">
   <thead>
     <tr>
       <td><strong>Property</strong></td>
@@ -1798,14 +2067,15 @@ FeatureTableComponent = __decorate([
       </td>
     </tr>
   </tbody>
-</table>`,
-        styles: [`.feature-table{
+</table>`, styles: [`.feature-table{
   max-width:300px;
 }`]
-    }),
-    __metadata("design:paramtypes", [])
-], FeatureTableComponent);
-exports.FeatureTableComponent = FeatureTableComponent;
+            }]
+    }], function () { return []; }, { feature: [{
+            type: core.Input
+        }], styles: [{
+            type: core.Input
+        }] }); })();
 
 });
 
@@ -1814,39 +2084,59 @@ var featureTable_component_1 = featureTable_component.FeatureTableComponent;
 
 var collapsibleMapControl_component = createCommonjsModule(function (module, exports) {
 "use strict";
-var __decorate = (commonjsGlobal && commonjsGlobal.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (commonjsGlobal && commonjsGlobal.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.CollapsibleMapControlComponent = void 0;
 
-let CollapsibleMapControlComponent = class CollapsibleMapControlComponent {
+const i0 = core;
+
+
+function CollapsibleMapControlComponent_span_5_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelement(0, "span", 7);
+} }
+function CollapsibleMapControlComponent_span_6_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelement(0, "span", 8);
+} }
+const _c0 = ["*"];
+class CollapsibleMapControlComponent {
     constructor() {
     }
     ngAfterViewInit() {
     }
-};
-__decorate([
-    core.Input(),
-    __metadata("design:type", Boolean)
-], CollapsibleMapControlComponent.prototype, "isCollapsed", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", String)
-], CollapsibleMapControlComponent.prototype, "heading", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", String)
-], CollapsibleMapControlComponent.prototype, "direction", void 0);
-CollapsibleMapControlComponent = __decorate([
-    core.Component({
-        selector: 'collapsible-map-control',
-        template: `<div class="card map-control collapsible-control">
+}
+exports.CollapsibleMapControlComponent = CollapsibleMapControlComponent;
+CollapsibleMapControlComponent.ɵfac = function CollapsibleMapControlComponent_Factory(t) { return new (t || CollapsibleMapControlComponent)(); };
+CollapsibleMapControlComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CollapsibleMapControlComponent, selectors: [["collapsible-map-control"]], inputs: { isCollapsed: "isCollapsed", heading: "heading", direction: "direction" }, ngContentSelectors: _c0, decls: 9, vars: 4, consts: [[1, "card", "map-control", "collapsible-control"], [3, "click"], [1, "card-header"], [1, "mb-0"], ["class", "float-right fa fa-caret-up\n            collapse-arrow", "aria-hidden", "true", 4, "ngIf"], ["class", "float-right fa fa-caret-down\n            collapse-arrow", "aria-hidden", "true", 4, "ngIf"], [1, "ngbCollapse", 3, "ngbCollapse"], ["aria-hidden", "true", 1, "float-right", "fa", "fa-caret-up", "collapse-arrow"], ["aria-hidden", "true", 1, "float-right", "fa", "fa-caret-down", "collapse-arrow"]], template: function CollapsibleMapControlComponent_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵprojectionDef();
+        i0.ɵɵelementStart(0, "div", 0);
+        i0.ɵɵelementStart(1, "a", 1);
+        i0.ɵɵlistener("click", function CollapsibleMapControlComponent_Template_a_click_1_listener() { return ctx.isCollapsed = !ctx.isCollapsed; });
+        i0.ɵɵelementStart(2, "div", 2);
+        i0.ɵɵelementStart(3, "h6", 3);
+        i0.ɵɵtext(4);
+        i0.ɵɵtemplate(5, CollapsibleMapControlComponent_span_5_Template, 1, 0, "span", 4);
+        i0.ɵɵtemplate(6, CollapsibleMapControlComponent_span_6_Template, 1, 0, "span", 5);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(7, "div", 6);
+        i0.ɵɵprojection(8);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        i0.ɵɵadvance(4);
+        i0.ɵɵtextInterpolate1(" ", ctx.heading, " ");
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx.isCollapsed);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !ctx.isCollapsed);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngbCollapse", ctx.isCollapsed);
+    } }, directives: [common.NgIf, ngBootstrap.NgbCollapse], styles: [".collapsible-control[_ngcontent-%COMP%]{\n  margin:3px;\n}"] });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CollapsibleMapControlComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'collapsible-map-control',
+                template: `<div class="card map-control collapsible-control">
     <a (click)="isCollapsed = !isCollapsed">
       <div class="card-header">
         <h6 class="mb-0">
@@ -1863,14 +2153,17 @@ CollapsibleMapControlComponent = __decorate([
       <ng-content></ng-content>
     </div>
   </div>
-`,
-        styles: [`.collapsible-control{
+`, styles: [`.collapsible-control{
   margin:3px;
 }`]
-    }),
-    __metadata("design:paramtypes", [])
-], CollapsibleMapControlComponent);
-exports.CollapsibleMapControlComponent = CollapsibleMapControlComponent;
+            }]
+    }], function () { return []; }, { isCollapsed: [{
+            type: core.Input
+        }], heading: [{
+            type: core.Input
+        }], direction: [{
+            type: core.Input
+        }] }); })();
 
 });
 
@@ -1879,31 +2172,30 @@ var collapsibleMapControl_component_1 = collapsibleMapControl_component.Collapsi
 
 var baseMapSelection_component = createCommonjsModule(function (module, exports) {
 "use strict";
-var __decorate = (commonjsGlobal && commonjsGlobal.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (commonjsGlobal && commonjsGlobal.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.BaseMapSelectionComponent = void 0;
 
-let BaseMapSelectionComponent = class BaseMapSelectionComponent {
+const i0 = core;
+class BaseMapSelectionComponent {
     constructor() {
     }
     ngAfterViewInit() {
     }
-};
-BaseMapSelectionComponent = __decorate([
-    core.Component({
-        selector: 'base-map-selection',
-        template: `<p>base-map-selection Component</p>`
-    }),
-    __metadata("design:paramtypes", [])
-], BaseMapSelectionComponent);
+}
 exports.BaseMapSelectionComponent = BaseMapSelectionComponent;
+BaseMapSelectionComponent.ɵfac = function BaseMapSelectionComponent_Factory(t) { return new (t || BaseMapSelectionComponent)(); };
+BaseMapSelectionComponent.ɵcmp = i0.ɵɵdefineComponent({ type: BaseMapSelectionComponent, selectors: [["base-map-selection"]], decls: 2, vars: 0, template: function BaseMapSelectionComponent_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "p");
+        i0.ɵɵtext(1, "base-map-selection Component");
+        i0.ɵɵelementEnd();
+    } }, encapsulation: 2 });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(BaseMapSelectionComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'base-map-selection',
+                template: `<p>base-map-selection Component</p>`, styles: []
+            }]
+    }], function () { return []; }, null); })();
 
 });
 
@@ -1912,18 +2204,35 @@ var baseMapSelection_component_1 = baseMapSelection_component.BaseMapSelectionCo
 
 var simpleTreeNode_component = createCommonjsModule(function (module, exports) {
 "use strict";
-var __decorate = (commonjsGlobal && commonjsGlobal.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (commonjsGlobal && commonjsGlobal.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.SimpleTreeNodeComponent = void 0;
 
-let SimpleTreeNodeComponent = class SimpleTreeNodeComponent {
+const i0 = core;
+
+
+function SimpleTreeNodeComponent_span_6_i_2_Template(rf, ctx) { if (rf & 1) {
+    const _r4 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "i", 6);
+    i0.ɵɵlistener("click", function SimpleTreeNodeComponent_span_6_i_2_Template_i_click_0_listener() { i0.ɵɵrestoreView(_r4); const a_r2 = ctx.$implicit; const ctx_r3 = i0.ɵɵnextContext(2); return a_r2.action(ctx_r3.tree); });
+    i0.ɵɵpipe(1, "async");
+    i0.ɵɵtext(2, "\u00A0");
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const a_r2 = ctx.$implicit;
+    i0.ɵɵpropertyInterpolate("ngbTooltip", i0.ɵɵpipeBind1(1, 2, a_r2.tooltip));
+    i0.ɵɵproperty("ngClass", a_r2.icon);
+} }
+function SimpleTreeNodeComponent_span_6_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "span", 4);
+    i0.ɵɵtext(1, " \u00A0 ");
+    i0.ɵɵtemplate(2, SimpleTreeNodeComponent_span_6_i_2_Template, 3, 4, "i", 5);
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r0 = i0.ɵɵnextContext();
+    i0.ɵɵadvance(2);
+    i0.ɵɵproperty("ngForOf", ctx_r0.tree.actions);
+} }
+class SimpleTreeNodeComponent {
     constructor() {
         this.options = {};
         this.nodeSelected = new core.EventEmitter();
@@ -1968,23 +2277,36 @@ let SimpleTreeNodeComponent = class SimpleTreeNodeComponent {
             this.icon = this.options.leafIcon;
         }
     }
-};
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], SimpleTreeNodeComponent.prototype, "tree", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], SimpleTreeNodeComponent.prototype, "options", void 0);
-__decorate([
-    core.Output(),
-    __metadata("design:type", Object)
-], SimpleTreeNodeComponent.prototype, "nodeSelected", void 0);
-SimpleTreeNodeComponent = __decorate([
-    core.Component({
-        selector: 'simple-tree-node',
-        template: `<a href="#"
+}
+exports.SimpleTreeNodeComponent = SimpleTreeNodeComponent;
+SimpleTreeNodeComponent.ɵfac = function SimpleTreeNodeComponent_Factory(t) { return new (t || SimpleTreeNodeComponent)(); };
+SimpleTreeNodeComponent.ɵcmp = i0.ɵɵdefineComponent({ type: SimpleTreeNodeComponent, selectors: [["simple-tree-node"]], inputs: { tree: "tree", options: "options" }, outputs: { nodeSelected: "nodeSelected" }, features: [i0.ɵɵNgOnChangesFeature], decls: 7, vars: 7, consts: [["href", "#", 3, "ngClass", "click"], [3, "ngClass"], ["placement", "right", "container", "body", 3, "ngbTooltip"], ["class", "float-right", 4, "ngIf"], [1, "float-right"], ["placement", "right", "container", "body", 3, "ngClass", "ngbTooltip", "click", 4, "ngFor", "ngForOf"], ["placement", "right", "container", "body", 3, "ngClass", "ngbTooltip", "click"]], template: function SimpleTreeNodeComponent_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "a", 0);
+        i0.ɵɵlistener("click", function SimpleTreeNodeComponent_Template_a_click_0_listener($event) { return ctx.treeClick($event); });
+        i0.ɵɵelement(1, "i", 1);
+        i0.ɵɵtext(2, " \u00A0 ");
+        i0.ɵɵelementStart(3, "span", 2);
+        i0.ɵɵpipe(4, "async");
+        i0.ɵɵtext(5);
+        i0.ɵɵelementEnd();
+        i0.ɵɵtemplate(6, SimpleTreeNodeComponent_span_6_Template, 3, 1, "span", 3);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        i0.ɵɵproperty("ngClass", ctx.tree.klass);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngClass", ctx.icon);
+        i0.ɵɵadvance(2);
+        i0.ɵɵpropertyInterpolate("ngbTooltip", i0.ɵɵpipeBind1(4, 5, ctx.tree.tooltip));
+        i0.ɵɵadvance(2);
+        i0.ɵɵtextInterpolate(ctx.tree.label);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx.tree.actions);
+    } }, directives: [common.NgClass, ngBootstrap.NgbTooltip, common.NgIf, common.NgForOf], pipes: [common.AsyncPipe], encapsulation: 2 });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SimpleTreeNodeComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'simple-tree-node',
+                template: `<a href="#"
                 (click)="treeClick($event)"
                 [ngClass]="tree.klass"><i [ngClass]="icon"></i>
   &nbsp;
@@ -2002,10 +2324,15 @@ SimpleTreeNodeComponent = __decorate([
        (click)="a.action(tree)">&nbsp;</i>
   </span>
 </a>
-`
-    })
-], SimpleTreeNodeComponent);
-exports.SimpleTreeNodeComponent = SimpleTreeNodeComponent;
+`, styles: []
+            }]
+    }], null, { tree: [{
+            type: core.Input
+        }], options: [{
+            type: core.Input
+        }], nodeSelected: [{
+            type: core.Output
+        }] }); })();
 
 });
 
@@ -2014,18 +2341,130 @@ var simpleTreeNode_component_1 = simpleTreeNode_component.SimpleTreeNodeComponen
 
 var simpleTree_component = createCommonjsModule(function (module, exports) {
 "use strict";
-var __decorate = (commonjsGlobal && commonjsGlobal.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (commonjsGlobal && commonjsGlobal.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.SimpleTreeComponent = void 0;
 
-let SimpleTreeComponent = class SimpleTreeComponent {
+const i0 = core;
+
+
+function SimpleTreeComponent_div_0_div_1_ul_3_simple_tree_1_Template(rf, ctx) { if (rf & 1) {
+    const _r8 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "simple-tree", 7);
+    i0.ɵɵlistener("nodeSelected", function SimpleTreeComponent_div_0_div_1_ul_3_simple_tree_1_Template_simple_tree_nodeSelected_0_listener($event) { i0.ɵɵrestoreView(_r8); const ctx_r7 = i0.ɵɵnextContext(4); return ctx_r7.childSelected($event); });
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const t_r6 = ctx.$implicit;
+    const ctx_r5 = i0.ɵɵnextContext(4);
+    i0.ɵɵproperty("tree", t_r6)("inner", true)("options", ctx_r5.options);
+} }
+function SimpleTreeComponent_div_0_div_1_ul_3_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "ul", 5);
+    i0.ɵɵtemplate(1, SimpleTreeComponent_div_0_div_1_ul_3_simple_tree_1_Template, 1, 3, "simple-tree", 6);
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r4 = i0.ɵɵnextContext(3);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngForOf", ctx_r4.tree.children);
+} }
+function SimpleTreeComponent_div_0_div_1_Template(rf, ctx) { if (rf & 1) {
+    const _r10 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "div");
+    i0.ɵɵelementStart(1, "li");
+    i0.ɵɵelementStart(2, "simple-tree-node", 3);
+    i0.ɵɵlistener("nodeSelected", function SimpleTreeComponent_div_0_div_1_Template_simple_tree_node_nodeSelected_2_listener($event) { i0.ɵɵrestoreView(_r10); const ctx_r9 = i0.ɵɵnextContext(2); return ctx_r9.childSelected($event); });
+    i0.ɵɵelementEnd();
+    i0.ɵɵtemplate(3, SimpleTreeComponent_div_0_div_1_ul_3_Template, 2, 1, "ul", 4);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r1 = i0.ɵɵnextContext(2);
+    i0.ɵɵadvance(2);
+    i0.ɵɵproperty("tree", ctx_r1.tree)("options", ctx_r1.options);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngIf", ctx_r1.tree.children && ctx_r1.tree.expanded);
+} }
+function SimpleTreeComponent_div_0_div_2_ul_4_simple_tree_1_Template(rf, ctx) { if (rf & 1) {
+    const _r15 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "simple-tree", 7);
+    i0.ɵɵlistener("nodeSelected", function SimpleTreeComponent_div_0_div_2_ul_4_simple_tree_1_Template_simple_tree_nodeSelected_0_listener($event) { i0.ɵɵrestoreView(_r15); const ctx_r14 = i0.ɵɵnextContext(4); return ctx_r14.childSelected($event); });
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const t_r13 = ctx.$implicit;
+    const ctx_r12 = i0.ɵɵnextContext(4);
+    i0.ɵɵproperty("tree", t_r13)("inner", true)("options", ctx_r12.options);
+} }
+function SimpleTreeComponent_div_0_div_2_ul_4_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "ul", 5);
+    i0.ɵɵtemplate(1, SimpleTreeComponent_div_0_div_2_ul_4_simple_tree_1_Template, 1, 3, "simple-tree", 6);
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r11 = i0.ɵɵnextContext(3);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngForOf", ctx_r11.tree.children);
+} }
+function SimpleTreeComponent_div_0_div_2_Template(rf, ctx) { if (rf & 1) {
+    const _r17 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "div");
+    i0.ɵɵelementStart(1, "ul", 8);
+    i0.ɵɵelementStart(2, "li");
+    i0.ɵɵelementStart(3, "simple-tree-node", 3);
+    i0.ɵɵlistener("nodeSelected", function SimpleTreeComponent_div_0_div_2_Template_simple_tree_node_nodeSelected_3_listener($event) { i0.ɵɵrestoreView(_r17); const ctx_r16 = i0.ɵɵnextContext(2); return ctx_r16.childSelected($event); });
+    i0.ɵɵelementEnd();
+    i0.ɵɵtemplate(4, SimpleTreeComponent_div_0_div_2_ul_4_Template, 2, 1, "ul", 4);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r2 = i0.ɵɵnextContext(2);
+    i0.ɵɵadvance(3);
+    i0.ɵɵproperty("tree", ctx_r2.tree)("options", ctx_r2.options);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngIf", ctx_r2.tree.children && ctx_r2.tree.expanded);
+} }
+function SimpleTreeComponent_div_0_div_3_ul_1_simple_tree_1_Template(rf, ctx) { if (rf & 1) {
+    const _r22 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "simple-tree", 7);
+    i0.ɵɵlistener("nodeSelected", function SimpleTreeComponent_div_0_div_3_ul_1_simple_tree_1_Template_simple_tree_nodeSelected_0_listener($event) { i0.ɵɵrestoreView(_r22); const ctx_r21 = i0.ɵɵnextContext(4); return ctx_r21.childSelected($event); });
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const t_r20 = ctx.$implicit;
+    const ctx_r19 = i0.ɵɵnextContext(4);
+    i0.ɵɵproperty("tree", t_r20)("inner", true)("options", ctx_r19.options);
+} }
+function SimpleTreeComponent_div_0_div_3_ul_1_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "ul", 8);
+    i0.ɵɵtemplate(1, SimpleTreeComponent_div_0_div_3_ul_1_simple_tree_1_Template, 1, 3, "simple-tree", 6);
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r18 = i0.ɵɵnextContext(3);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngForOf", ctx_r18.tree.children);
+} }
+function SimpleTreeComponent_div_0_div_3_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "div");
+    i0.ɵɵtemplate(1, SimpleTreeComponent_div_0_div_3_ul_1_Template, 2, 1, "ul", 9);
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r3 = i0.ɵɵnextContext(2);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngIf", ctx_r3.tree.children && ctx_r3.tree.expanded);
+} }
+function SimpleTreeComponent_div_0_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "div", 1);
+    i0.ɵɵtemplate(1, SimpleTreeComponent_div_0_div_1_Template, 4, 3, "div", 2);
+    i0.ɵɵtemplate(2, SimpleTreeComponent_div_0_div_2_Template, 5, 3, "div", 2);
+    i0.ɵɵtemplate(3, SimpleTreeComponent_div_0_div_3_Template, 2, 1, "div", 2);
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r0 = i0.ɵɵnextContext();
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngIf", ctx_r0.inner);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngIf", !ctx_r0.inner && ctx_r0.showTop);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngIf", !ctx_r0.inner && !ctx_r0.showTop);
+} }
+class SimpleTreeComponent {
     constructor() {
         this.showTop = true;
         this.collapsedIcon = 'fa fa-caret-right';
@@ -2049,43 +2488,19 @@ let SimpleTreeComponent = class SimpleTreeComponent {
     childSelected(node) {
         this.nodeSelected.emit(node);
     }
-};
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], SimpleTreeComponent.prototype, "tree", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Boolean)
-], SimpleTreeComponent.prototype, "showTop", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Boolean)
-], SimpleTreeComponent.prototype, "inner", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], SimpleTreeComponent.prototype, "collapsedIcon", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], SimpleTreeComponent.prototype, "expandedIcon", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], SimpleTreeComponent.prototype, "leafIcon", void 0);
-__decorate([
-    core.Output(),
-    __metadata("design:type", Object)
-], SimpleTreeComponent.prototype, "nodeSelected", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], SimpleTreeComponent.prototype, "options", void 0);
-SimpleTreeComponent = __decorate([
-    core.Component({
-        selector: 'simple-tree',
-        template: `<div *ngIf="tree&&tree.visible" class="simple-tree">
+}
+exports.SimpleTreeComponent = SimpleTreeComponent;
+SimpleTreeComponent.ɵfac = function SimpleTreeComponent_Factory(t) { return new (t || SimpleTreeComponent)(); };
+SimpleTreeComponent.ɵcmp = i0.ɵɵdefineComponent({ type: SimpleTreeComponent, selectors: [["simple-tree"]], inputs: { tree: "tree", showTop: "showTop", inner: "inner", collapsedIcon: "collapsedIcon", expandedIcon: "expandedIcon", leafIcon: "leafIcon", options: "options" }, outputs: { nodeSelected: "nodeSelected" }, features: [i0.ɵɵNgOnChangesFeature], decls: 1, vars: 1, consts: [["class", "simple-tree", 4, "ngIf"], [1, "simple-tree"], [4, "ngIf"], [3, "tree", "options", "nodeSelected"], ["class", "inner-list", 4, "ngIf"], [1, "inner-list"], [3, "tree", "inner", "options", "nodeSelected", 4, "ngFor", "ngForOf"], [3, "tree", "inner", "options", "nodeSelected"], [1, "outer-list"], ["class", "outer-list", 4, "ngIf"]], template: function SimpleTreeComponent_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵtemplate(0, SimpleTreeComponent_div_0_Template, 4, 3, "div", 0);
+    } if (rf & 2) {
+        i0.ɵɵproperty("ngIf", ctx.tree && ctx.tree.visible);
+    } }, directives: [common.NgIf, simpleTreeNode_component.SimpleTreeNodeComponent, common.NgForOf, SimpleTreeComponent], styles: [".simple-tree[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%]{\n  list-style-type: none\n}\n\nul.outer-list[_ngcontent-%COMP%]{\n  padding-left:5px;\n}\n\nul.inner-list[_ngcontent-%COMP%]{\n  padding-left:15px;\n}"] });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SimpleTreeComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'simple-tree',
+                template: `<div *ngIf="tree&&tree.visible" class="simple-tree">
 
   <div *ngIf="inner">
     <li ><simple-tree-node [tree]="tree"
@@ -2121,8 +2536,7 @@ SimpleTreeComponent = __decorate([
     </div>
 
 </div>
-`,
-        styles: [`
+`, styles: [`
 .simple-tree ul{
   list-style-type: none
 }
@@ -2134,10 +2548,24 @@ ul.outer-list{
 ul.inner-list{
   padding-left:15px;
 }`]
-    }),
-    __metadata("design:paramtypes", [])
-], SimpleTreeComponent);
-exports.SimpleTreeComponent = SimpleTreeComponent;
+            }]
+    }], function () { return []; }, { tree: [{
+            type: core.Input
+        }], showTop: [{
+            type: core.Input
+        }], inner: [{
+            type: core.Input
+        }], collapsedIcon: [{
+            type: core.Input
+        }], expandedIcon: [{
+            type: core.Input
+        }], leafIcon: [{
+            type: core.Input
+        }], nodeSelected: [{
+            type: core.Output
+        }], options: [{
+            type: core.Input
+        }] }); })();
 
 });
 
@@ -2146,21 +2574,24 @@ var simpleTree_component_1 = simpleTree_component.SimpleTreeComponent;
 
 var catalog_component = createCommonjsModule(function (module, exports) {
 "use strict";
-var __decorate = (commonjsGlobal && commonjsGlobal.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (commonjsGlobal && commonjsGlobal.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.CatalogComponent = void 0;
 
 
 
 
-let CatalogComponent = class CatalogComponent {
+const i0 = core;
+const i1 = mapWald;
+
+
+
+function CatalogComponent_i_3_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelement(0, "i", 8);
+} }
+function CatalogComponent_i_4_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelement(0, "i", 9);
+} }
+class CatalogComponent {
     constructor(filterService, metadata) {
         this.metadata = metadata;
         this.showPlaceholders = true;
@@ -2320,47 +2751,42 @@ let CatalogComponent = class CatalogComponent {
         }
         return false;
     }
-};
-CatalogComponent.ctorParameters = () => [
-    { type: mapWald.TreeFilterService },
-    { type: mapWald.MetadataService }
-];
-__decorate([
-    core.Input(),
-    __metadata("design:type", mapWald.Catalog)
-], CatalogComponent.prototype, "catalog", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], CatalogComponent.prototype, "showPlaceholders", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], CatalogComponent.prototype, "defaultAction", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Array)
-], CatalogComponent.prototype, "layerActions", void 0);
-__decorate([
-    core.Output(),
-    __metadata("design:type", core.EventEmitter)
-], CatalogComponent.prototype, "layerSelected", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], CatalogComponent.prototype, "collapsedIcon", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], CatalogComponent.prototype, "expandedIcon", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], CatalogComponent.prototype, "leafIcon", void 0);
-CatalogComponent = __decorate([
-    core.Component({
-        selector: 'catalog',
-        template: `<div class="input-group">
+}
+exports.CatalogComponent = CatalogComponent;
+CatalogComponent.ɵfac = function CatalogComponent_Factory(t) { return new (t || CatalogComponent)(i0.ɵɵdirectiveInject(i1.TreeFilterService), i0.ɵɵdirectiveInject(i1.MetadataService)); };
+CatalogComponent.ɵcmp = i0.ɵɵdefineComponent({ type: CatalogComponent, selectors: [["catalog"]], inputs: { catalog: "catalog", showPlaceholders: "showPlaceholders", defaultAction: "defaultAction", layerActions: "layerActions", collapsedIcon: "collapsedIcon", expandedIcon: "expandedIcon", leafIcon: "leafIcon" }, outputs: { layerSelected: "layerSelected" }, features: [i0.ɵɵNgOnChangesFeature], decls: 8, vars: 9, consts: [[1, "input-group"], [1, "input-group-btn"], ["type", "button", 1, "btn", 3, "disabled", "click"], ["class", "fa fa-times", "aria-hidden", "true", 4, "ngIf"], ["class", "fa fa-search", "aria-hidden", "true", 4, "ngIf"], ["type", "text", "placeholder", "Catalog search...", 1, "form-control", 3, "ngModel", "ngModelChange"], ["filterInput", ""], [3, "tree", "showTop", "leafIcon", "collapsedIcon", "expandedIcon", "nodeSelected"], ["aria-hidden", "true", 1, "fa", "fa-times"], ["aria-hidden", "true", 1, "fa", "fa-search"]], template: function CatalogComponent_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 0);
+        i0.ɵɵelementStart(1, "span", 1);
+        i0.ɵɵelementStart(2, "button", 2);
+        i0.ɵɵlistener("click", function CatalogComponent_Template_button_click_2_listener() { return ctx.filterText = ""; });
+        i0.ɵɵtemplate(3, CatalogComponent_i_3_Template, 1, 0, "i", 3);
+        i0.ɵɵtemplate(4, CatalogComponent_i_4_Template, 1, 0, "i", 4);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(5, "input", 5, 6);
+        i0.ɵɵlistener("ngModelChange", function CatalogComponent_Template_input_ngModelChange_5_listener($event) { return ctx.filterText = $event; });
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(7, "simple-tree", 7);
+        i0.ɵɵlistener("nodeSelected", function CatalogComponent_Template_simple_tree_nodeSelected_7_listener($event) { return ctx.nodeSelected($event); });
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("disabled", !ctx.filterText);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx.filterText);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", !ctx.filterText);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngModel", ctx.filterText);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("tree", ctx.filterService.filterTree(ctx.tree, ctx.filterText))("showTop", false)("leafIcon", ctx.leafIcon)("collapsedIcon", ctx.collapsedIcon)("expandedIcon", ctx.expandedIcon);
+    } }, directives: [common.NgIf, forms.DefaultValueAccessor, forms.NgControlStatus, forms.NgModel, simpleTree_component.SimpleTreeComponent], styles: [".node-name[_ngcontent-%COMP%]{\n  font-size:1em;\n}"] });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CatalogComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'catalog',
+                template: `<div class="input-group">
   <span class="input-group-btn">
             <button class="btn" type="button" [disabled]="!filterText"
               (click)="filterText = ''">
@@ -2380,16 +2806,29 @@ CatalogComponent = __decorate([
   [expandedIcon]="expandedIcon"
   (nodeSelected)="nodeSelected($event)">
 </simple-tree>
-`,
-        styles: [`
+`, styles: [`
 .node-name{
   font-size:1em;
 }
-`]
-    }),
-    __metadata("design:paramtypes", [mapWald.TreeFilterService, mapWald.MetadataService])
-], CatalogComponent);
-exports.CatalogComponent = CatalogComponent;
+`],
+            }]
+    }], function () { return [{ type: i1.TreeFilterService }, { type: i1.MetadataService }]; }, { catalog: [{
+            type: core.Input
+        }], showPlaceholders: [{
+            type: core.Input
+        }], defaultAction: [{
+            type: core.Input
+        }], layerActions: [{
+            type: core.Input
+        }], layerSelected: [{
+            type: core.Output
+        }], collapsedIcon: [{
+            type: core.Input
+        }], expandedIcon: [{
+            type: core.Input
+        }], leafIcon: [{
+            type: core.Input
+        }] }); })();
 
 });
 
@@ -2398,20 +2837,80 @@ var catalog_component_1 = catalog_component.CatalogComponent;
 
 var dateSelection_component = createCommonjsModule(function (module, exports) {
 "use strict";
-var __decorate = (commonjsGlobal && commonjsGlobal.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (commonjsGlobal && commonjsGlobal.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.DateSelectionComponent = void 0;
 
 
+const i0 = core;
+const i1 = mapWald;
+
+
+
+
+function DateSelectionComponent_div_1_Template(rf, ctx) { if (rf & 1) {
+    const _r4 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "div", 3);
+    i0.ɵɵelementStart(1, "div", 4);
+    i0.ɵɵelementStart(2, "div", 5);
+    i0.ɵɵelementStart(3, "input", 6, 7);
+    i0.ɵɵlistener("ngModelChange", function DateSelectionComponent_div_1_Template_input_ngModelChange_3_listener($event) { i0.ɵɵrestoreView(_r4); const ctx_r3 = i0.ɵɵnextContext(); return ctx_r3.dateStruct = $event; })("ngModelChange", function DateSelectionComponent_div_1_Template_input_ngModelChange_3_listener() { i0.ɵɵrestoreView(_r4); const ctx_r5 = i0.ɵɵnextContext(); return ctx_r5.dateStructChanged(); });
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementStart(5, "div", 8);
+    i0.ɵɵlistener("click", function DateSelectionComponent_div_1_Template_div_click_5_listener() { i0.ɵɵrestoreView(_r4); const _r2 = i0.ɵɵreference(4); return _r2.toggle(); });
+    i0.ɵɵelement(6, "i", 9);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r0 = i0.ɵɵnextContext();
+    i0.ɵɵadvance(3);
+    i0.ɵɵproperty("ngModel", ctx_r0.dateStruct)("maxDate", ctx_r0.maxDateStruct)("minDate", ctx_r0.minDateStruct);
+} }
+function DateSelectionComponent_div_2_date_element_1_Template(rf, ctx) { if (rf & 1) {
+    const _r11 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "date-element", 12);
+    i0.ɵɵlistener("changed", function DateSelectionComponent_div_2_date_element_1_Template_date_element_changed_0_listener() { i0.ɵɵrestoreView(_r11); const ctx_r10 = i0.ɵɵnextContext(2); return ctx_r10.dateStructChanged(); });
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r7 = i0.ɵɵnextContext(2);
+    i0.ɵɵproperty("src", ctx_r7.dateStruct)("property", "day")("label", "Day")("step", ctx_r7.stepDays);
+} }
+function DateSelectionComponent_div_2_date_element_2_Template(rf, ctx) { if (rf & 1) {
+    const _r13 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "date-element", 13);
+    i0.ɵɵlistener("changed", function DateSelectionComponent_div_2_date_element_2_Template_date_element_changed_0_listener() { i0.ɵɵrestoreView(_r13); const ctx_r12 = i0.ɵɵnextContext(2); return ctx_r12.dateStructChanged(); });
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r8 = i0.ɵɵnextContext(2);
+    i0.ɵɵproperty("src", ctx_r8.dateStruct)("property", "month")("label", "Month");
+} }
+function DateSelectionComponent_div_2_date_element_3_Template(rf, ctx) { if (rf & 1) {
+    const _r15 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "date-element", 13);
+    i0.ɵɵlistener("changed", function DateSelectionComponent_div_2_date_element_3_Template_date_element_changed_0_listener() { i0.ɵɵrestoreView(_r15); const ctx_r14 = i0.ɵɵnextContext(2); return ctx_r14.dateStructChanged(); });
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r9 = i0.ɵɵnextContext(2);
+    i0.ɵɵproperty("src", ctx_r9.dateStruct)("property", "year")("label", "Year");
+} }
+function DateSelectionComponent_div_2_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "div");
+    i0.ɵɵtemplate(1, DateSelectionComponent_div_2_date_element_1_Template, 1, 4, "date-element", 10);
+    i0.ɵɵtemplate(2, DateSelectionComponent_div_2_date_element_2_Template, 1, 3, "date-element", 11);
+    i0.ɵɵtemplate(3, DateSelectionComponent_div_2_date_element_3_Template, 1, 3, "date-element", 11);
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r1 = i0.ɵɵnextContext();
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngIf", ctx_r1.need.day);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngIf", ctx_r1.need.month);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngIf", ctx_r1.need.year);
+} }
 const MILLISECONDS_PER_DAY = 24 * 60 * 60 * 1000;
-let DateSelectionComponent = class DateSelectionComponent {
+class DateSelectionComponent {
     constructor(timeUtils) {
         this.timeUtils = timeUtils;
         this.dateChange = new core.EventEmitter();
@@ -2492,46 +2991,25 @@ let DateSelectionComponent = class DateSelectionComponent {
         this.date = new Date(currentRef.getTime() + Math.round(days) * timeSpan);
         this.dateStruct = this.timeUtils.convertDate(this.date);
     }
-};
-DateSelectionComponent.ctorParameters = () => [
-    { type: mapWald.TimeUtilsService }
-];
-__decorate([
-    core.Input(),
-    __metadata("design:type", Date)
-], DateSelectionComponent.prototype, "date", void 0);
-__decorate([
-    core.Output(),
-    __metadata("design:type", Object)
-], DateSelectionComponent.prototype, "dateChange", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", String)
-], DateSelectionComponent.prototype, "timestep", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], DateSelectionComponent.prototype, "minDate", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], DateSelectionComponent.prototype, "maxDate", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", String)
-], DateSelectionComponent.prototype, "style", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], DateSelectionComponent.prototype, "stepDays", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", String)
-], DateSelectionComponent.prototype, "referenceDate", void 0);
-DateSelectionComponent = __decorate([
-    core.Component({
-        selector: 'date-selection',
-        template: `<div class="date-control container-fluid">
+}
+exports.DateSelectionComponent = DateSelectionComponent;
+DateSelectionComponent.ɵfac = function DateSelectionComponent_Factory(t) { return new (t || DateSelectionComponent)(i0.ɵɵdirectiveInject(i1.TimeUtilsService)); };
+DateSelectionComponent.ɵcmp = i0.ɵɵdefineComponent({ type: DateSelectionComponent, selectors: [["date-selection"]], inputs: { date: "date", timestep: "timestep", minDate: "minDate", maxDate: "maxDate", style: "style", stepDays: "stepDays", referenceDate: "referenceDate" }, outputs: { dateChange: "dateChange" }, features: [i0.ɵɵNgOnChangesFeature], decls: 3, vars: 2, consts: [[1, "date-control", "container-fluid"], ["class", "row no-gutters", 4, "ngIf"], [4, "ngIf"], [1, "row", "no-gutters"], [1, "col-8", "form-group-inline"], [1, "input-group", "input-group-sm"], ["placeholder", "yyyy-mm-dd", "name", "dp", "ngbDatepicker", "", 1, "form-control", "form-control-sm", 3, "ngModel", "maxDate", "minDate", "ngModelChange"], ["d", "ngbDatepicker"], [1, "input-group-addon", 3, "click"], [1, "fa", "fa-calendar"], [3, "src", "property", "label", "step", "changed", 4, "ngIf"], [3, "src", "property", "label", "changed", 4, "ngIf"], [3, "src", "property", "label", "step", "changed"], [3, "src", "property", "label", "changed"]], template: function DateSelectionComponent_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 0);
+        i0.ɵɵtemplate(1, DateSelectionComponent_div_1_Template, 7, 3, "div", 1);
+        i0.ɵɵtemplate(2, DateSelectionComponent_div_2_Template, 4, 3, "div", 2);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx.style !== "arrows");
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx.style === "arrows");
+    } }, directives: [common.NgIf, ngBootstrap.NgbInputDatepicker, forms.DefaultValueAccessor, forms.NgControlStatus, forms.NgModel, dateElement_component.DateElementComponent], encapsulation: 2 });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DateSelectionComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'date-selection',
+                template: `<div class="date-control container-fluid">
   <div *ngIf="style!=='arrows'" class="row no-gutters">
     <div class="col-8 form-group-inline">
         <div class="input-group input-group-sm">
@@ -2563,11 +3041,25 @@ DateSelectionComponent = __decorate([
                   (changed)="dateStructChanged()"></date-element>
   </div>
 </div>
-`
-    }),
-    __metadata("design:paramtypes", [mapWald.TimeUtilsService])
-], DateSelectionComponent);
-exports.DateSelectionComponent = DateSelectionComponent;
+`, styles: []
+            }]
+    }], function () { return [{ type: i1.TimeUtilsService }]; }, { date: [{
+            type: core.Input
+        }], dateChange: [{
+            type: core.Output
+        }], timestep: [{
+            type: core.Input
+        }], minDate: [{
+            type: core.Input
+        }], maxDate: [{
+            type: core.Input
+        }], style: [{
+            type: core.Input
+        }], stepDays: [{
+            type: core.Input
+        }], referenceDate: [{
+            type: core.Input
+        }] }); })();
 
 });
 
@@ -2576,20 +3068,182 @@ var dateSelection_component_1 = dateSelection_component.DateSelectionComponent;
 
 var layerProperties_component = createCommonjsModule(function (module, exports) {
 "use strict";
-var __decorate = (commonjsGlobal && commonjsGlobal.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (commonjsGlobal && commonjsGlobal.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.LayerPropertiesComponent = void 0;
 
 
 
-let LayerPropertiesComponent = class LayerPropertiesComponent {
+const i0 = core;
+const i1 = mapWald;
+
+
+
+
+function LayerPropertiesComponent_span_4_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "span", 3);
+    i0.ɵɵtext(1, " \u00A0");
+    i0.ɵɵelement(2, "i", 4);
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r0 = i0.ɵɵnextContext();
+    i0.ɵɵproperty("ngbTooltip", ctx_r0.layer.description())("placement", ctx_r0.tooltipPlacement);
+} }
+function LayerPropertiesComponent_span_6_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "span");
+    i0.ɵɵelementStart(1, "small");
+    i0.ɵɵelementStart(2, "a", 5);
+    i0.ɵɵelement(3, "i", 6);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r1 = i0.ɵɵnextContext();
+    i0.ɵɵadvance(2);
+    i0.ɵɵproperty("href", ctx_r1.layer.interpolatedDownloadURL, i0.ɵɵsanitizeUrl)("ngbTooltip", "Download data");
+} }
+function LayerPropertiesComponent_div_7_span_1_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "span");
+    i0.ɵɵtext(1, "Timestep ");
+    i0.ɵɵelementEnd();
+} }
+function LayerPropertiesComponent_div_7_span_2_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "span");
+    i0.ɵɵtext(1);
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r9 = i0.ɵɵnextContext(2);
+    i0.ɵɵadvance(1);
+    i0.ɵɵtextInterpolate1("", ctx_r9.layer.layer.options.publicationLabel || "Variable", " ");
+} }
+function LayerPropertiesComponent_div_7_option_4_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "option", 9);
+    i0.ɵɵtext(1);
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const p_r11 = ctx.$implicit;
+    const i_r12 = ctx.index;
+    i0.ɵɵproperty("ngValue", i_r12);
+    i0.ɵɵadvance(1);
+    i0.ɵɵtextInterpolate(p_r11.label || p_r11.timestep);
+} }
+function LayerPropertiesComponent_div_7_Template(rf, ctx) { if (rf & 1) {
+    const _r14 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "div");
+    i0.ɵɵtemplate(1, LayerPropertiesComponent_div_7_span_1_Template, 2, 0, "span", 2);
+    i0.ɵɵtemplate(2, LayerPropertiesComponent_div_7_span_2_Template, 2, 1, "span", 2);
+    i0.ɵɵelementStart(3, "select", 7);
+    i0.ɵɵlistener("ngModelChange", function LayerPropertiesComponent_div_7_Template_select_ngModelChange_3_listener($event) { i0.ɵɵrestoreView(_r14); const ctx_r13 = i0.ɵɵnextContext(); return ctx_r13.layer.options.publication = $event; })("ngModelChange", function LayerPropertiesComponent_div_7_Template_select_ngModelChange_3_listener($event) { i0.ɵɵrestoreView(_r14); const ctx_r15 = i0.ɵɵnextContext(); return ctx_r15.publicationSelected($event); });
+    i0.ɵɵtemplate(4, LayerPropertiesComponent_div_7_option_4_Template, 2, 2, "option", 8);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r2 = i0.ɵɵnextContext();
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngIf", ctx_r2.layer.layer.publications[0].timestep);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngIf", !ctx_r2.layer.layer.publications[0].timestep);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngModel", ctx_r2.layer.options.publication);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngForOf", ctx_r2.layer.layer.publications);
+} }
+function LayerPropertiesComponent_div_8_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "div");
+    i0.ɵɵtext(1);
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r3 = i0.ɵɵnextContext();
+    i0.ɵɵadvance(1);
+    i0.ɵɵtextInterpolate1(" ", ctx_r3.publication == null ? null : ctx_r3.publication.label, " ");
+} }
+function LayerPropertiesComponent_div_9_Template(rf, ctx) { if (rf & 1) {
+    const _r17 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "div");
+    i0.ɵɵelement(1, "hr");
+    i0.ɵɵelementStart(2, "date-selection", 10);
+    i0.ɵɵlistener("dateChange", function LayerPropertiesComponent_div_9_Template_date_selection_dateChange_2_listener($event) { i0.ɵɵrestoreView(_r17); const ctx_r16 = i0.ɵɵnextContext(); return ctx_r16.layer.options.date = $event; })("dateChange", function LayerPropertiesComponent_div_9_Template_date_selection_dateChange_2_listener($event) { i0.ɵɵrestoreView(_r17); const ctx_r18 = i0.ɵɵnextContext(); return ctx_r18.update($event); });
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r4 = i0.ɵɵnextContext();
+    i0.ɵɵadvance(2);
+    i0.ɵɵproperty("date", ctx_r4.layer.options.date)("timestep", ctx_r4.publication.timestep)("stepDays", ctx_r4.publication.timestepMultiplier || 1)("referenceDate", ctx_r4.publication.timestepReference)("minDate", ctx_r4.publication.options.start)("maxDate", ctx_r4.publication.options.end);
+} }
+function LayerPropertiesComponent_div_10_Template(rf, ctx) { if (rf & 1) {
+    const _r20 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "div");
+    i0.ɵɵelement(1, "hr");
+    i0.ɵɵelementStart(2, "button", 11);
+    i0.ɵɵlistener("click", function LayerPropertiesComponent_div_10_Template_button_click_2_listener() { i0.ɵɵrestoreView(_r20); const ctx_r19 = i0.ɵɵnextContext(); return ctx_r19.zoomToExtent(); });
+    i0.ɵɵtext(3, "Zoom to Extent");
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+} }
+function LayerPropertiesComponent_div_11_div_1_option_3_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "option", 9);
+    i0.ɵɵtext(1);
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const val_r24 = ctx.$implicit;
+    i0.ɵɵproperty("ngValue", val_r24.value);
+    i0.ɵɵadvance(1);
+    i0.ɵɵtextInterpolate(val_r24.label);
+} }
+function LayerPropertiesComponent_div_11_div_1_Template(rf, ctx) { if (rf & 1) {
+    const _r26 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "div");
+    i0.ɵɵtext(1);
+    i0.ɵɵelementStart(2, "select", 7);
+    i0.ɵɵlistener("ngModelChange", function LayerPropertiesComponent_div_11_div_1_Template_select_ngModelChange_2_listener($event) { i0.ɵɵrestoreView(_r26); const tag_r22 = ctx.$implicit; const ctx_r25 = i0.ɵɵnextContext(2); return (ctx_r25.tags[tag_r22] = $event); })("ngModelChange", function LayerPropertiesComponent_div_11_div_1_Template_select_ngModelChange_2_listener() { i0.ɵɵrestoreView(_r26); const tag_r22 = ctx.$implicit; const ctx_r27 = i0.ɵɵnextContext(2); return ctx_r27.tagChanged(tag_r22); });
+    i0.ɵɵtemplate(3, LayerPropertiesComponent_div_11_div_1_option_3_Template, 2, 2, "option", 8);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const tag_r22 = ctx.$implicit;
+    const ctx_r21 = i0.ɵɵnextContext(2);
+    i0.ɵɵadvance(1);
+    i0.ɵɵtextInterpolate1(" ", tag_r22, " ");
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngModel", ctx_r21.tags[tag_r22]);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngForOf", ctx_r21.availableTags[tag_r22]);
+} }
+function LayerPropertiesComponent_div_11_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "div");
+    i0.ɵɵtemplate(1, LayerPropertiesComponent_div_11_div_1_Template, 4, 3, "div", 12);
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r6 = i0.ɵɵnextContext();
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngForOf", ctx_r6.getKeys(ctx_r6.availableTags));
+} }
+function LayerPropertiesComponent_div_12_option_3_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "option", 9);
+    i0.ɵɵtext(1);
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const v_r29 = ctx.$implicit;
+    i0.ɵɵproperty("ngValue", v_r29.value);
+    i0.ɵɵadvance(1);
+    i0.ɵɵtextInterpolate(v_r29.label);
+} }
+function LayerPropertiesComponent_div_12_Template(rf, ctx) { if (rf & 1) {
+    const _r31 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "div");
+    i0.ɵɵtext(1, " Variable: ");
+    i0.ɵɵelementStart(2, "select", 7);
+    i0.ɵɵlistener("ngModelChange", function LayerPropertiesComponent_div_12_Template_select_ngModelChange_2_listener($event) { i0.ɵɵrestoreView(_r31); const ctx_r30 = i0.ɵɵnextContext(); return ctx_r30.selectedVariable = $event; })("ngModelChange", function LayerPropertiesComponent_div_12_Template_select_ngModelChange_2_listener() { i0.ɵɵrestoreView(_r31); const ctx_r32 = i0.ɵɵnextContext(); return ctx_r32.queryPointData(); });
+    i0.ɵɵtemplate(3, LayerPropertiesComponent_div_12_option_3_Template, 2, 2, "option", 8);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r7 = i0.ɵɵnextContext();
+    i0.ɵɵadvance(2);
+    i0.ɵɵproperty("ngModel", ctx_r7.selectedVariable);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngForOf", ctx_r7.pointVariables);
+} }
+class LayerPropertiesComponent {
     constructor(pointSelectionService) {
         this.pointSelectionService = pointSelectionService;
         this.getKeys = Object.keys;
@@ -2755,30 +3409,51 @@ let LayerPropertiesComponent = class LayerPropertiesComponent {
     pointSelectionChanged() {
         this.pointSelectionService.pointSelection(this.pointSelection());
     }
-};
-LayerPropertiesComponent.ctorParameters = () => [
-    { type: mapWald.PointSelectionService }
-];
-__decorate([
-    core.Input(),
-    __metadata("design:type", mapWald.MappedLayer)
-], LayerPropertiesComponent.prototype, "layer", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", layeredMap_component.LayeredMapComponent)
-], LayerPropertiesComponent.prototype, "map", void 0);
-__decorate([
-    core.Output(),
-    __metadata("design:type", Object)
-], LayerPropertiesComponent.prototype, "propertyChanged", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", String)
-], LayerPropertiesComponent.prototype, "tooltipPlacement", void 0);
-LayerPropertiesComponent = __decorate([
-    core.Component({
-        selector: 'layer-properties',
-        template: `<div class="container-fluid">
+}
+exports.LayerPropertiesComponent = LayerPropertiesComponent;
+LayerPropertiesComponent.ɵfac = function LayerPropertiesComponent_Factory(t) { return new (t || LayerPropertiesComponent)(i0.ɵɵdirectiveInject(i1.PointSelectionService)); };
+LayerPropertiesComponent.ɵcmp = i0.ɵɵdefineComponent({ type: LayerPropertiesComponent, selectors: [["layer-properties"]], inputs: { layer: "layer", map: "map", tooltipPlacement: "tooltipPlacement" }, outputs: { propertyChanged: "propertyChanged" }, decls: 13, vars: 9, consts: [[1, "container-fluid"], ["class", "layer-info-target", "container", "body", 3, "ngbTooltip", "placement", 4, "ngIf"], [4, "ngIf"], ["container", "body", 1, "layer-info-target", 3, "ngbTooltip", "placement"], [1, "fa", "fa-info-circle"], ["target", "_blank", "container", "body", 3, "href", "ngbTooltip"], [1, "fa", "fa-download"], [3, "ngModel", "ngModelChange"], [3, "ngValue", 4, "ngFor", "ngForOf"], [3, "ngValue"], [3, "date", "timestep", "stepDays", "referenceDate", "minDate", "maxDate", "dateChange"], [1, "btn", "btn-sm", "btn-primary", 3, "click"], [4, "ngFor", "ngForOf"]], template: function LayerPropertiesComponent_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 0);
+        i0.ɵɵelementStart(1, "p");
+        i0.ɵɵelementStart(2, "strong");
+        i0.ɵɵtext(3);
+        i0.ɵɵelementEnd();
+        i0.ɵɵtemplate(4, LayerPropertiesComponent_span_4_Template, 3, 2, "span", 1);
+        i0.ɵɵtext(5, " \u00A0");
+        i0.ɵɵtemplate(6, LayerPropertiesComponent_span_6_Template, 4, 2, "span", 2);
+        i0.ɵɵelementEnd();
+        i0.ɵɵtemplate(7, LayerPropertiesComponent_div_7_Template, 5, 4, "div", 2);
+        i0.ɵɵtemplate(8, LayerPropertiesComponent_div_8_Template, 2, 1, "div", 2);
+        i0.ɵɵtemplate(9, LayerPropertiesComponent_div_9_Template, 3, 6, "div", 2);
+        i0.ɵɵtemplate(10, LayerPropertiesComponent_div_10_Template, 4, 0, "div", 2);
+        i0.ɵɵtemplate(11, LayerPropertiesComponent_div_11_Template, 2, 1, "div", 2);
+        i0.ɵɵtemplate(12, LayerPropertiesComponent_div_12_Template, 4, 2, "div", 2);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        i0.ɵɵadvance(3);
+        i0.ɵɵtextInterpolate(ctx.layer == null ? null : ctx.layer.title);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx.layer.description());
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", ctx.layer.interpolatedDownloadURL);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", (ctx.layer == null ? null : ctx.layer.layer.publications.length) > 1);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", (ctx.layer == null ? null : ctx.layer.layer.publications.length) === 1);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx.publication && ctx.publication.timestep);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx.layer.layer.options.smallExtent);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx.availableTags);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx.publication == null ? null : ctx.publication.pointdata);
+    } }, directives: [common.NgIf, ngBootstrap.NgbTooltip, forms.SelectControlValueAccessor, forms.NgControlStatus, forms.NgModel, common.NgForOf, forms.NgSelectOption, forms.ɵangular_packages_forms_forms_x, dateSelection_component.DateSelectionComponent], encapsulation: 2 });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(LayerPropertiesComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'layer-properties',
+                template: `<div class="container-fluid">
   <p><strong>{{layer?.title}}</strong>
     <span *ngIf="layer.description()"
     [ngbTooltip]="layer.description()"
@@ -2853,11 +3528,17 @@ LayerPropertiesComponent = __decorate([
   </div>
   <button (click)="update()">Force update...</button>
   -->
-</div>`
-    }),
-    __metadata("design:paramtypes", [mapWald.PointSelectionService])
-], LayerPropertiesComponent);
-exports.LayerPropertiesComponent = LayerPropertiesComponent;
+</div>`, styles: []
+            }]
+    }], function () { return [{ type: i1.PointSelectionService }]; }, { layer: [{
+            type: core.Input
+        }], map: [{
+            type: core.Input
+        }], propertyChanged: [{
+            type: core.Output
+        }], tooltipPlacement: [{
+            type: core.Input
+        }] }); })();
 
 });
 
@@ -2866,20 +3547,202 @@ var layerProperties_component_1 = layerProperties_component.LayerPropertiesCompo
 
 var layerControl_component = createCommonjsModule(function (module, exports) {
 "use strict";
-var __decorate = (commonjsGlobal && commonjsGlobal.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (commonjsGlobal && commonjsGlobal.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.LayerControlComponent = void 0;
 
 
 
-let LayerControlComponent = class LayerControlComponent {
+const i0 = core;
+const i1 = mapWald;
+
+
+
+
+function LayerControlComponent_div_1_Template(rf, ctx) { if (rf & 1) {
+    const _r3 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "div", 3);
+    i0.ɵɵelementStart(1, "div", 4);
+    i0.ɵɵelementStart(2, "i", 5);
+    i0.ɵɵlistener("click", function LayerControlComponent_div_1_Template_i_click_2_listener() { i0.ɵɵrestoreView(_r3); const ctx_r2 = i0.ɵɵnextContext(); return ctx_r2.allLegends(false); });
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementStart(3, "i", 6);
+    i0.ɵɵlistener("click", function LayerControlComponent_div_1_Template_i_click_3_listener() { i0.ɵɵrestoreView(_r3); const ctx_r4 = i0.ɵɵnextContext(); return ctx_r4.allLegends(true); });
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+    i0.ɵɵelement(4, "br");
+    i0.ɵɵelementEnd();
+} }
+function LayerControlComponent_div_2_div_1_div_2_div_1_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "div");
+    i0.ɵɵelement(1, "map-legend", 19);
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const l_r6 = i0.ɵɵnextContext(2).$implicit;
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("title", l_r6.title)("imageURL", l_r6.legendURL)("helpText", l_r6.description())("mapUnits", l_r6.flattenedSettings == null ? null : l_r6.flattenedSettings.units)("cbPalette", (l_r6.flattenedSettings == null ? null : l_r6.flattenedSettings.palette == null ? null : l_r6.flattenedSettings.palette.name) || (l_r6.flattenedSettings == null ? null : l_r6.flattenedSettings.palette))("cbCount", (l_r6.flattenedSettings == null ? null : l_r6.flattenedSettings.numcolorbands) || (l_r6.flattenedSettings == null ? null : l_r6.flattenedSettings.palette == null ? null : l_r6.flattenedSettings.palette.count))("cbReverse", l_r6.flattenedSettings == null ? null : l_r6.flattenedSettings.palette == null ? null : l_r6.flattenedSettings.palette.reverse)("cbRange", l_r6.flattenedSettings == null ? null : l_r6.flattenedSettings.colorscalerange);
+} }
+function LayerControlComponent_div_2_div_1_div_2_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "div");
+    i0.ɵɵtemplate(1, LayerControlComponent_div_2_div_1_div_2_div_1_Template, 2, 8, "div", 2);
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const l_r6 = i0.ɵɵnextContext().$implicit;
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngIf", (l_r6.flattenedSettings == null ? null : l_r6.flattenedSettings.palette) || l_r6.legendURL);
+} }
+function LayerControlComponent_div_2_div_1_div_3_Template(rf, ctx) { if (rf & 1) {
+    const _r29 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "div");
+    i0.ɵɵelementStart(1, "layer-properties", 20);
+    i0.ɵɵlistener("propertyChanged", function LayerControlComponent_div_2_div_1_div_3_Template_layer_properties_propertyChanged_1_listener($event) { i0.ɵɵrestoreView(_r29); const ctx_r28 = i0.ɵɵnextContext(3); return ctx_r28.layerPropertyChanged($event); });
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const l_r6 = i0.ɵɵnextContext().$implicit;
+    const ctx_r9 = i0.ɵɵnextContext(2);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("layer", l_r6)("map", ctx_r9.map);
+} }
+function LayerControlComponent_div_2_div_1_i_6_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelement(0, "i", 21);
+} }
+function LayerControlComponent_div_2_div_1_br_7_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelement(0, "br");
+} }
+function LayerControlComponent_div_2_div_1_i_8_Template(rf, ctx) { if (rf & 1) {
+    const _r33 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "i", 22);
+    i0.ɵɵlistener("click", function LayerControlComponent_div_2_div_1_i_8_Template_i_click_0_listener() { i0.ɵɵrestoreView(_r33); const l_r6 = i0.ɵɵnextContext().$implicit; const ctx_r31 = i0.ɵɵnextContext(2); return ctx_r31.layerLegend(l_r6, false); });
+    i0.ɵɵelementEnd();
+} }
+function LayerControlComponent_div_2_div_1_br_9_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelement(0, "br");
+} }
+function LayerControlComponent_div_2_div_1_i_10_Template(rf, ctx) { if (rf & 1) {
+    const _r36 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "i", 23);
+    i0.ɵɵlistener("click", function LayerControlComponent_div_2_div_1_i_10_Template_i_click_0_listener() { i0.ɵɵrestoreView(_r36); const l_r6 = i0.ɵɵnextContext().$implicit; const ctx_r34 = i0.ɵɵnextContext(2); return ctx_r34.layerLegend(l_r6, true); });
+    i0.ɵɵelementEnd();
+} }
+function LayerControlComponent_div_2_div_1_br_11_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelement(0, "br");
+} }
+function LayerControlComponent_div_2_div_1_i_12_Template(rf, ctx) { if (rf & 1) {
+    const _r39 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "i", 24);
+    i0.ɵɵlistener("click", function LayerControlComponent_div_2_div_1_i_12_Template_i_click_0_listener() { i0.ɵɵrestoreView(_r39); const i_r7 = i0.ɵɵnextContext().index; const ctx_r37 = i0.ɵɵnextContext(2); return ctx_r37.moveToTop(i_r7); });
+    i0.ɵɵelementEnd();
+} }
+function LayerControlComponent_div_2_div_1_br_13_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelement(0, "br");
+} }
+function LayerControlComponent_div_2_div_1_i_14_Template(rf, ctx) { if (rf & 1) {
+    const _r42 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "i", 25);
+    i0.ɵɵlistener("click", function LayerControlComponent_div_2_div_1_i_14_Template_i_click_0_listener() { i0.ɵɵrestoreView(_r42); const i_r7 = i0.ɵɵnextContext().index; const ctx_r40 = i0.ɵɵnextContext(2); return ctx_r40.moveUp(i_r7); });
+    i0.ɵɵelementEnd();
+} }
+function LayerControlComponent_div_2_div_1_br_15_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelement(0, "br");
+} }
+function LayerControlComponent_div_2_div_1_i_16_Template(rf, ctx) { if (rf & 1) {
+    const _r45 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "i", 26);
+    i0.ɵɵlistener("click", function LayerControlComponent_div_2_div_1_i_16_Template_i_click_0_listener() { i0.ɵɵrestoreView(_r45); const i_r7 = i0.ɵɵnextContext().index; const ctx_r43 = i0.ɵɵnextContext(2); return ctx_r43.moveDown(i_r7); });
+    i0.ɵɵelementEnd();
+} }
+function LayerControlComponent_div_2_div_1_br_17_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelement(0, "br");
+} }
+function LayerControlComponent_div_2_div_1_i_18_Template(rf, ctx) { if (rf & 1) {
+    const _r48 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "i", 27);
+    i0.ɵɵlistener("click", function LayerControlComponent_div_2_div_1_i_18_Template_i_click_0_listener() { i0.ɵɵrestoreView(_r48); const i_r7 = i0.ɵɵnextContext().index; const ctx_r46 = i0.ɵɵnextContext(2); return ctx_r46.moveToBottom(i_r7); });
+    i0.ɵɵelementEnd();
+} }
+function LayerControlComponent_div_2_div_1_br_19_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelement(0, "br");
+} }
+function LayerControlComponent_div_2_div_1_i_20_Template(rf, ctx) { if (rf & 1) {
+    const _r51 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "i", 28);
+    i0.ɵɵlistener("click", function LayerControlComponent_div_2_div_1_i_20_Template_i_click_0_listener() { i0.ɵɵrestoreView(_r51); const i_r7 = i0.ɵɵnextContext().index; const ctx_r49 = i0.ɵɵnextContext(2); return ctx_r49.removeLayer(i_r7); });
+    i0.ɵɵelementEnd();
+} }
+function LayerControlComponent_div_2_div_1_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "div", 8);
+    i0.ɵɵelementStart(1, "div", 9);
+    i0.ɵɵtemplate(2, LayerControlComponent_div_2_div_1_div_2_Template, 2, 1, "div", 2);
+    i0.ɵɵtemplate(3, LayerControlComponent_div_2_div_1_div_3_Template, 2, 2, "div", 2);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementStart(4, "div", 10);
+    i0.ɵɵelementStart(5, "div");
+    i0.ɵɵtemplate(6, LayerControlComponent_div_2_div_1_i_6_Template, 1, 0, "i", 11);
+    i0.ɵɵtemplate(7, LayerControlComponent_div_2_div_1_br_7_Template, 1, 0, "br", 2);
+    i0.ɵɵtemplate(8, LayerControlComponent_div_2_div_1_i_8_Template, 1, 0, "i", 12);
+    i0.ɵɵtemplate(9, LayerControlComponent_div_2_div_1_br_9_Template, 1, 0, "br", 2);
+    i0.ɵɵtemplate(10, LayerControlComponent_div_2_div_1_i_10_Template, 1, 0, "i", 13);
+    i0.ɵɵtemplate(11, LayerControlComponent_div_2_div_1_br_11_Template, 1, 0, "br", 2);
+    i0.ɵɵtemplate(12, LayerControlComponent_div_2_div_1_i_12_Template, 1, 0, "i", 14);
+    i0.ɵɵtemplate(13, LayerControlComponent_div_2_div_1_br_13_Template, 1, 0, "br", 2);
+    i0.ɵɵtemplate(14, LayerControlComponent_div_2_div_1_i_14_Template, 1, 0, "i", 15);
+    i0.ɵɵtemplate(15, LayerControlComponent_div_2_div_1_br_15_Template, 1, 0, "br", 2);
+    i0.ɵɵtemplate(16, LayerControlComponent_div_2_div_1_i_16_Template, 1, 0, "i", 16);
+    i0.ɵɵtemplate(17, LayerControlComponent_div_2_div_1_br_17_Template, 1, 0, "br", 2);
+    i0.ɵɵtemplate(18, LayerControlComponent_div_2_div_1_i_18_Template, 1, 0, "i", 17);
+    i0.ɵɵtemplate(19, LayerControlComponent_div_2_div_1_br_19_Template, 1, 0, "br", 2);
+    i0.ɵɵtemplate(20, LayerControlComponent_div_2_div_1_i_20_Template, 1, 0, "i", 18);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const l_r6 = ctx.$implicit;
+    const ctx_r5 = i0.ɵɵnextContext(2);
+    i0.ɵɵadvance(2);
+    i0.ɵɵproperty("ngIf", ctx_r5.showLegends && l_r6.options.legend);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngIf", !ctx_r5.showLegends || !l_r6.options.legend);
+    i0.ɵɵadvance(3);
+    i0.ɵɵproperty("ngIf", ctx_r5.allowReorder);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngIf", ctx_r5.allowReorder);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngIf", ctx_r5.showLegends);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngIf", ctx_r5.showLegends);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngIf", ctx_r5.showLegends);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngIf", ctx_r5.showLegends);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngIf", ctx_r5.allowReorder);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngIf", ctx_r5.allowReorder);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngIf", ctx_r5.allowReorder);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngIf", ctx_r5.allowReorder);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngIf", ctx_r5.allowReorder);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngIf", ctx_r5.allowReorder);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngIf", ctx_r5.allowReorder);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngIf", ctx_r5.allowReorder);
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngIf", ctx_r5.allowRemove);
+} }
+function LayerControlComponent_div_2_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "div");
+    i0.ɵɵtemplate(1, LayerControlComponent_div_2_div_1_Template, 21, 17, "div", 7);
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r1 = i0.ɵɵnextContext();
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngForOf", ctx_r1.layers);
+} }
+class LayerControlComponent {
     constructor(metadata) {
         this.metadata = metadata;
         this.allowRemove = true;
@@ -2954,38 +3817,25 @@ let LayerControlComponent = class LayerControlComponent {
             this.metadata.populateMetadata(ml);
         });
     }
-};
-LayerControlComponent.ctorParameters = () => [
-    { type: mapWald.MetadataService }
-];
-__decorate([
-    core.Input(),
-    __metadata("design:type", Array)
-], LayerControlComponent.prototype, "layers", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", layeredMap_component.LayeredMapComponent)
-], LayerControlComponent.prototype, "map", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], LayerControlComponent.prototype, "allowRemove", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], LayerControlComponent.prototype, "showLegends", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Object)
-], LayerControlComponent.prototype, "allowReorder", void 0);
-__decorate([
-    core.Output(),
-    __metadata("design:type", Object)
-], LayerControlComponent.prototype, "layersChange", void 0);
-LayerControlComponent = __decorate([
-    core.Component({
-        selector: 'layer-control',
-        template: `<div class="layers-control">
+}
+exports.LayerControlComponent = LayerControlComponent;
+LayerControlComponent.ɵfac = function LayerControlComponent_Factory(t) { return new (t || LayerControlComponent)(i0.ɵɵdirectiveInject(i1.MetadataService)); };
+LayerControlComponent.ɵcmp = i0.ɵɵdefineComponent({ type: LayerControlComponent, selectors: [["layer-control"]], inputs: { layers: "layers", map: "map", allowRemove: "allowRemove", showLegends: "showLegends", allowReorder: "allowReorder" }, outputs: { layersChange: "layersChange" }, features: [i0.ɵɵNgOnChangesFeature], decls: 3, vars: 2, consts: [[1, "layers-control"], ["class", "layers-control-header", 4, "ngIf"], [4, "ngIf"], [1, "layers-control-header"], [1, "float-right"], [1, "fa", "fa-lg", "fa-cog", "discrete-icon", 3, "click"], [1, "fa", "fa-lg", "fa-th-list", "discrete-icon", 3, "click"], ["class", "layer-control d-flex justify-content-between", 4, "ngFor", "ngForOf"], [1, "layer-control", "d-flex", "justify-content-between"], [1, "p-2", 2, "width", "100%"], [1, "p-2"], ["class", "fa fa-bars discrete-icon", 4, "ngIf"], ["class", "fa fa-cog discrete-icon", "ngbTooltip", "Show layer controls", "placement", "right", "data-container", "body", 3, "click", 4, "ngIf"], ["class", "fa fa-th-list discrete-icon", "ngbTooltip", "Show layer data", "placement", "right", "data-container", "body", 3, "click", 4, "ngIf"], ["class", "fa fa-angle-double-up discrete-icon", "ngbTooltip", "Move to top", "placement", "right", "data-container", "body", 3, "click", 4, "ngIf"], ["class", "fa fa-angle-up discrete-icon", "ngbTooltip", "Move up", "placement", "right", "data-container", "body", 3, "click", 4, "ngIf"], ["class", "fa fa-angle-down discrete-icon", "ngbTooltip", "Move down", "placement", "right", "data-container", "body", 3, "click", 4, "ngIf"], ["class", "fa fa-angle-double-down discrete-icon", "ngbTooltip", "Move to bottom", "placement", "right", "data-container", "body", 3, "click", 4, "ngIf"], ["class", "fa fa-times discrete-icon", "ngbTooltip", "Remove layer", "placement", "right", "data-container", "body", "data-toggle", "tooltip", "title", "Remove layer", 3, "click", 4, "ngIf"], [3, "title", "imageURL", "helpText", "mapUnits", "cbPalette", "cbCount", "cbReverse", "cbRange"], [3, "layer", "map", "propertyChanged"], [1, "fa", "fa-bars", "discrete-icon"], ["ngbTooltip", "Show layer controls", "placement", "right", "data-container", "body", 1, "fa", "fa-cog", "discrete-icon", 3, "click"], ["ngbTooltip", "Show layer data", "placement", "right", "data-container", "body", 1, "fa", "fa-th-list", "discrete-icon", 3, "click"], ["ngbTooltip", "Move to top", "placement", "right", "data-container", "body", 1, "fa", "fa-angle-double-up", "discrete-icon", 3, "click"], ["ngbTooltip", "Move up", "placement", "right", "data-container", "body", 1, "fa", "fa-angle-up", "discrete-icon", 3, "click"], ["ngbTooltip", "Move down", "placement", "right", "data-container", "body", 1, "fa", "fa-angle-down", "discrete-icon", 3, "click"], ["ngbTooltip", "Move to bottom", "placement", "right", "data-container", "body", 1, "fa", "fa-angle-double-down", "discrete-icon", 3, "click"], ["ngbTooltip", "Remove layer", "placement", "right", "data-container", "body", "data-toggle", "tooltip", "title", "Remove layer", 1, "fa", "fa-times", "discrete-icon", 3, "click"]], template: function LayerControlComponent_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 0);
+        i0.ɵɵtemplate(1, LayerControlComponent_div_1_Template, 5, 0, "div", 1);
+        i0.ɵɵtemplate(2, LayerControlComponent_div_2_Template, 2, 1, "div", 2);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx.showLegends);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx.layers);
+    } }, directives: [common.NgIf, common.NgForOf, mapLegend_component.MapLegendComponent, layerProperties_component.LayerPropertiesComponent, ngBootstrap.NgbTooltip], styles: [".layers-control[_ngcontent-%COMP%]{\n  width:200px;\n}\n\n\n.layers-control-header[_ngcontent-%COMP%], .layer-control[_ngcontent-%COMP%]{\n  border-bottom: 1.5px solid #aaa;\n}"] });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(LayerControlComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'layer-control',
+                template: `<div class="layers-control">
   <div *ngIf="showLegends" class="layers-control-header"> <!-- header -->
     <div class="float-right">
       <!-- TODO Attach handlers and tooltips to each icon -->
@@ -3053,8 +3903,7 @@ LayerControlComponent = __decorate([
 </div>
 
 <!-- Should this control be outside the map? eg to the left? -->
-`,
-        styles: [`.layers-control{
+`, styles: [`.layers-control{
   width:200px;
 }
 
@@ -3062,10 +3911,20 @@ LayerControlComponent = __decorate([
 .layers-control-header, .layer-control{
   border-bottom: 1.5px solid #aaa;
 }`]
-    }),
-    __metadata("design:paramtypes", [mapWald.MetadataService])
-], LayerControlComponent);
-exports.LayerControlComponent = LayerControlComponent;
+            }]
+    }], function () { return [{ type: i1.MetadataService }]; }, { layers: [{
+            type: core.Input
+        }], map: [{
+            type: core.Input
+        }], allowRemove: [{
+            type: core.Input
+        }], showLegends: [{
+            type: core.Input
+        }], allowReorder: [{
+            type: core.Input
+        }], layersChange: [{
+            type: core.Output
+        }] }); })();
 
 });
 
@@ -3074,19 +3933,54 @@ var layerControl_component_1 = layerControl_component.LayerControlComponent;
 
 var themeNavbar_component = createCommonjsModule(function (module, exports) {
 "use strict";
-var __decorate = (commonjsGlobal && commonjsGlobal.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (commonjsGlobal && commonjsGlobal.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ThemeNavbarComponent = void 0;
 
 
-let ThemeNavbarComponent = class ThemeNavbarComponent {
+const i0 = core;
+
+
+function ThemeNavbarComponent_li_1_a_4_Template(rf, ctx) { if (rf & 1) {
+    const _r5 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "a", 7);
+    i0.ɵɵlistener("click", function ThemeNavbarComponent_li_1_a_4_Template_a_click_0_listener($event) { i0.ɵɵrestoreView(_r5); const layer_r3 = ctx.$implicit; const ctx_r4 = i0.ɵɵnextContext(2); return ctx_r4.layerClick($event, layer_r3, "replace"); });
+    i0.ɵɵelementStart(1, "div");
+    i0.ɵɵelementStart(2, "span");
+    i0.ɵɵtext(3);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementStart(4, "span", 8);
+    i0.ɵɵelementStart(5, "i", 9);
+    i0.ɵɵlistener("click", function ThemeNavbarComponent_li_1_a_4_Template_i_click_5_listener($event) { i0.ɵɵrestoreView(_r5); const layer_r3 = ctx.$implicit; const ctx_r6 = i0.ɵɵnextContext(2); return ctx_r6.layerClick($event, layer_r3, "replace"); });
+    i0.ɵɵelementEnd();
+    i0.ɵɵelement(6, "br");
+    i0.ɵɵelementStart(7, "i", 10);
+    i0.ɵɵlistener("click", function ThemeNavbarComponent_li_1_a_4_Template_i_click_7_listener($event) { i0.ɵɵrestoreView(_r5); const layer_r3 = ctx.$implicit; const ctx_r7 = i0.ɵɵnextContext(2); return ctx_r7.layerClick($event, layer_r3, "add"); });
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const layer_r3 = ctx.$implicit;
+    i0.ɵɵadvance(3);
+    i0.ɵɵtextInterpolate(layer_r3.name);
+} }
+function ThemeNavbarComponent_li_1_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "li", 2);
+    i0.ɵɵelementStart(1, "a", 3);
+    i0.ɵɵelement(2, "i", 4);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementStart(3, "div", 5);
+    i0.ɵɵtemplate(4, ThemeNavbarComponent_li_1_a_4_Template, 8, 1, "a", 6);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const theme_r1 = ctx.$implicit;
+    i0.ɵɵadvance(2);
+    i0.ɵɵproperty("ngClass", theme_r1.icon);
+    i0.ɵɵadvance(2);
+    i0.ɵɵproperty("ngForOf", theme_r1.layers);
+} }
+class ThemeNavbarComponent {
     constructor() {
         this.layerSelected = new core.EventEmitter();
     }
@@ -3104,23 +3998,22 @@ let ThemeNavbarComponent = class ThemeNavbarComponent {
         event.preventDefault();
         event.stopPropagation();
     }
-};
-__decorate([
-    core.Input(),
-    __metadata("design:type", mapWald.Catalog)
-], ThemeNavbarComponent.prototype, "catalog", void 0);
-__decorate([
-    core.Input(),
-    __metadata("design:type", Boolean)
-], ThemeNavbarComponent.prototype, "includeSearch", void 0);
-__decorate([
-    core.Output(),
-    __metadata("design:type", core.EventEmitter)
-], ThemeNavbarComponent.prototype, "layerSelected", void 0);
-ThemeNavbarComponent = __decorate([
-    core.Component({
-        selector: 'theme-navbar',
-        template: `<ul class="navbar-nav">
+}
+exports.ThemeNavbarComponent = ThemeNavbarComponent;
+ThemeNavbarComponent.ɵfac = function ThemeNavbarComponent_Factory(t) { return new (t || ThemeNavbarComponent)(); };
+ThemeNavbarComponent.ɵcmp = i0.ɵɵdefineComponent({ type: ThemeNavbarComponent, selectors: [["theme-navbar"]], inputs: { catalog: "catalog", includeSearch: "includeSearch" }, outputs: { layerSelected: "layerSelected" }, decls: 2, vars: 1, consts: [[1, "navbar-nav"], ["class", "nav-item", "ngbDropdown", "", 4, "ngFor", "ngForOf"], ["ngbDropdown", "", 1, "nav-item"], ["ngbDropdownToggle", "", "href", "#", 1, "nav-link"], [1, "fa", 3, "ngClass"], ["ngbDropdownMenu", "", 1, "dropdown-menu"], ["class", "dropdown-item", "href", "#", 3, "click", 4, "ngFor", "ngForOf"], ["href", "#", 1, "dropdown-item", 3, "click"], [1, "float-right", "layer-select-icons"], ["placement", "right", "ngbTooltip", "Map this layer. (Replace any existing layers)", 1, "fa", "fa-map", "layer-select-icon", "discrete-icon", 3, "click"], ["placement", "right", "ngbTooltip", "Add this layer to the map.", 1, "fa", "fa-plus", "layer-select-icon", "discrete-icon", 3, "click"]], template: function ThemeNavbarComponent_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "ul", 0);
+        i0.ɵɵtemplate(1, ThemeNavbarComponent_li_1_Template, 5, 2, "li", 1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngForOf", ctx.catalog == null ? null : ctx.catalog.themes);
+    } }, directives: [common.NgForOf, ngBootstrap.NgbDropdown, ngBootstrap.NgbDropdownToggle, common.NgClass, ngBootstrap.NgbDropdownMenu, ngBootstrap.NgbTooltip], styles: [".layer-select-icons[_ngcontent-%COMP%]{\n  font-size:0.75em;\n  margin-right:-20px;\n}\n\n\n  .tooltip-inner {\n  width: 400px;\n}\n\n.dropdown-item[_ngcontent-%COMP%]{\n  border-bottom: 1px solid #aaa;\n  height: 40px;\n}"] });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ThemeNavbarComponent, [{
+        type: core.Component,
+        args: [{
+                selector: 'theme-navbar',
+                template: `<ul class="navbar-nav">
   <li class="nav-item" ngbDropdown *ngFor="let theme of catalog?.themes">
     <a class="nav-link" ngbDropdownToggle href="#"><i class="fa" [ngClass]="theme.icon"></i></a>
     <div ngbDropdownMenu class="dropdown-menu">
@@ -3149,8 +4042,7 @@ ThemeNavbarComponent = __decorate([
 [ng-reflect-ngb-tooltip].yellow + .tooltip {
     background-color: yellow;
 }
--->`,
-        styles: [`
+-->`, styles: [`
 .layer-select-icons{
   font-size:0.75em;
   margin-right:-20px;
@@ -3169,10 +4061,14 @@ ThemeNavbarComponent = __decorate([
   height: 40px;
 }
 `]
-    }),
-    __metadata("design:paramtypes", [])
-], ThemeNavbarComponent);
-exports.ThemeNavbarComponent = ThemeNavbarComponent;
+            }]
+    }], function () { return []; }, { catalog: [{
+            type: core.Input
+        }], includeSearch: [{
+            type: core.Input
+        }], layerSelected: [{
+            type: core.Output
+        }] }); })();
 
 });
 
@@ -3181,20 +4077,14 @@ var themeNavbar_component_1 = themeNavbar_component.ThemeNavbarComponent;
 
 var geocoding_service = createCommonjsModule(function (module, exports) {
 "use strict";
-var __decorate = (commonjsGlobal && commonjsGlobal.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (commonjsGlobal && commonjsGlobal.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.GeocodingService = void 0;
 
 
 
-let GeocodingService = class GeocodingService {
+const i0 = core;
+const i1 = core$1;
+class GeocodingService {
     constructor(_api) {
         this._api = _api;
     }
@@ -3226,15 +4116,13 @@ let GeocodingService = class GeocodingService {
         });
         return rxjs.from(promise);
     }
-};
-GeocodingService.ctorParameters = () => [
-    { type: core$1.MapsAPILoader }
-];
-GeocodingService = __decorate([
-    core.Injectable(),
-    __metadata("design:paramtypes", [core$1.MapsAPILoader])
-], GeocodingService);
+}
 exports.GeocodingService = GeocodingService;
+GeocodingService.ɵfac = function GeocodingService_Factory(t) { return new (t || GeocodingService)(i0.ɵɵinject(i1.MapsAPILoader)); };
+GeocodingService.ɵprov = i0.ɵɵdefineInjectable({ token: GeocodingService, factory: GeocodingService.ɵfac });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(GeocodingService, [{
+        type: core.Injectable
+    }], function () { return [{ type: i1.MapsAPILoader }]; }, null); })();
 
 });
 
@@ -3243,17 +4131,18 @@ var geocoding_service_1 = geocoding_service.GeocodingService;
 
 var esm2015 = createCommonjsModule(function (module, exports) {
 "use strict";
-var __decorate = (commonjsGlobal && commonjsGlobal.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
+var __createBinding = (commonjsGlobal && commonjsGlobal.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (commonjsGlobal && commonjsGlobal.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-var MapWaldBootstrapModule_1;
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.MapWaldBootstrapModule = void 0;
 
 
 
@@ -3290,34 +4179,35 @@ Object.defineProperty(exports, "__esModule", { value: true });
 
 
 
-__export(wmsLayer_component);
-__export(mapLegend_component);
-__export(dateShifter_component);
-__export(oneTimeSplash_component);
-__export(dateElement_component);
-__export(shareView_component);
-__export(locationSearch_component);
-__export(zoomLayer_component);
-__export(zoomFull_component);
-__export(zoomOut_component);
-__export(zoomIn_component);
-__export(cycleBaseMap_component);
-__export(cycleOpacity_component);
-__export(buttonBar_component);
-__export(timeseriesChart_component);
-__export(featureTable_component);
-__export(collapsibleMapControl_component);
-__export(baseMapSelection_component);
-__export(simpleTreeNode_component);
-__export(simpleTree_component);
-__export(catalog_component);
-__export(dateSelection_component);
-__export(layerProperties_component);
-__export(layerControl_component);
-__export(layeredMap_component);
-__export(themeNavbar_component);
-__export(mapControl_component);
-__export(geocoding_service);
+const i0 = core;
+__exportStar(wmsLayer_component, exports);
+__exportStar(mapLegend_component, exports);
+__exportStar(dateShifter_component, exports);
+__exportStar(oneTimeSplash_component, exports);
+__exportStar(dateElement_component, exports);
+__exportStar(shareView_component, exports);
+__exportStar(locationSearch_component, exports);
+__exportStar(zoomLayer_component, exports);
+__exportStar(zoomFull_component, exports);
+__exportStar(zoomOut_component, exports);
+__exportStar(zoomIn_component, exports);
+__exportStar(cycleBaseMap_component, exports);
+__exportStar(cycleOpacity_component, exports);
+__exportStar(buttonBar_component, exports);
+__exportStar(timeseriesChart_component, exports);
+__exportStar(featureTable_component, exports);
+__exportStar(collapsibleMapControl_component, exports);
+__exportStar(baseMapSelection_component, exports);
+__exportStar(simpleTreeNode_component, exports);
+__exportStar(simpleTree_component, exports);
+__exportStar(catalog_component, exports);
+__exportStar(dateSelection_component, exports);
+__exportStar(layerProperties_component, exports);
+__exportStar(layerControl_component, exports);
+__exportStar(layeredMap_component, exports);
+__exportStar(themeNavbar_component, exports);
+__exportStar(mapControl_component, exports);
+__exportStar(geocoding_service, exports);
 const components = [
     //$componentList
     dateShifter_component.DateShifterComponent,
@@ -3352,17 +4242,17 @@ const services = [
     //$serviceList
     geocoding_service.GeocodingService
 ];
-let MapWaldBootstrapModule = MapWaldBootstrapModule_1 = class MapWaldBootstrapModule {
+class MapWaldBootstrapModule {
     static forRoot(moduleInitialisation) {
         return {
-            ngModule: MapWaldBootstrapModule_1,
+            ngModule: MapWaldBootstrapModule,
             providers: services
         };
     }
-};
-MapWaldBootstrapModule = MapWaldBootstrapModule_1 = __decorate([
-    core.NgModule({
-        imports: [
+}
+exports.MapWaldBootstrapModule = MapWaldBootstrapModule;
+MapWaldBootstrapModule.ɵmod = i0.ɵɵdefineNgModule({ type: MapWaldBootstrapModule });
+MapWaldBootstrapModule.ɵinj = i0.ɵɵdefineInjector({ factory: function MapWaldBootstrapModule_Factory(t) { return new (t || MapWaldBootstrapModule)(); }, providers: services, imports: [[
             common.CommonModule,
             forms.FormsModule,
             core$1.AgmCoreModule,
@@ -3370,13 +4260,87 @@ MapWaldBootstrapModule = MapWaldBootstrapModule_1 = __decorate([
             ngxPipes.NgPipesModule,
             ngBootstrap.NgbModule,
             mapWald.MapWaldCoreModule
-        ],
-        declarations: components,
-        exports: components,
-        providers: services
-    })
-], MapWaldBootstrapModule);
-exports.MapWaldBootstrapModule = MapWaldBootstrapModule;
+        ]] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(MapWaldBootstrapModule, { declarations: [
+        //$componentList
+        dateShifter_component.DateShifterComponent,
+        oneTimeSplash_component.OneTimeSplashComponent,
+        dateElement_component.DateElementComponent,
+        shareView_component.ShareViewComponent,
+        locationSearch_component.LocationSearchComponent,
+        zoomLayer_component.ZoomLayerComponent,
+        zoomFull_component.ZoomFullComponent,
+        zoomOut_component.ZoomOutComponent,
+        zoomIn_component.ZoomInComponent,
+        cycleBaseMap_component.CycleBaseMapComponent,
+        cycleOpacity_component.CycleOpacityComponent,
+        buttonBar_component.ButtonBarComponent,
+        timeseriesChart_component.TimeseriesChartComponent,
+        featureTable_component.FeatureTableComponent,
+        collapsibleMapControl_component.CollapsibleMapControlComponent,
+        baseMapSelection_component.BaseMapSelectionComponent,
+        simpleTreeNode_component.SimpleTreeNodeComponent,
+        simpleTree_component.SimpleTreeComponent,
+        catalog_component.CatalogComponent,
+        dateSelection_component.DateSelectionComponent,
+        layerProperties_component.LayerPropertiesComponent,
+        layerControl_component.LayerControlComponent,
+        layeredMap_component.LayeredMapComponent,
+        themeNavbar_component.ThemeNavbarComponent,
+        wmsLayer_component.WMSLayerComponent,
+        mapLegend_component.MapLegendComponent,
+        mapControl_component.MapControlComponent], imports: [common.CommonModule,
+        forms.FormsModule,
+        core$1.AgmCoreModule,
+        http.HttpClientModule,
+        ngxPipes.NgPipesModule,
+        ngBootstrap.NgbModule,
+        mapWald.MapWaldCoreModule], exports: [
+        //$componentList
+        dateShifter_component.DateShifterComponent,
+        oneTimeSplash_component.OneTimeSplashComponent,
+        dateElement_component.DateElementComponent,
+        shareView_component.ShareViewComponent,
+        locationSearch_component.LocationSearchComponent,
+        zoomLayer_component.ZoomLayerComponent,
+        zoomFull_component.ZoomFullComponent,
+        zoomOut_component.ZoomOutComponent,
+        zoomIn_component.ZoomInComponent,
+        cycleBaseMap_component.CycleBaseMapComponent,
+        cycleOpacity_component.CycleOpacityComponent,
+        buttonBar_component.ButtonBarComponent,
+        timeseriesChart_component.TimeseriesChartComponent,
+        featureTable_component.FeatureTableComponent,
+        collapsibleMapControl_component.CollapsibleMapControlComponent,
+        baseMapSelection_component.BaseMapSelectionComponent,
+        simpleTreeNode_component.SimpleTreeNodeComponent,
+        simpleTree_component.SimpleTreeComponent,
+        catalog_component.CatalogComponent,
+        dateSelection_component.DateSelectionComponent,
+        layerProperties_component.LayerPropertiesComponent,
+        layerControl_component.LayerControlComponent,
+        layeredMap_component.LayeredMapComponent,
+        themeNavbar_component.ThemeNavbarComponent,
+        wmsLayer_component.WMSLayerComponent,
+        mapLegend_component.MapLegendComponent,
+        mapControl_component.MapControlComponent] }); })();
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(MapWaldBootstrapModule, [{
+        type: core.NgModule,
+        args: [{
+                imports: [
+                    common.CommonModule,
+                    forms.FormsModule,
+                    core$1.AgmCoreModule,
+                    http.HttpClientModule,
+                    ngxPipes.NgPipesModule,
+                    ngBootstrap.NgbModule,
+                    mapWald.MapWaldCoreModule
+                ],
+                declarations: components,
+                exports: components,
+                providers: services
+            }]
+    }], null, null); })();
 
 });
 
@@ -3388,11 +4352,18 @@ var mapWaldVisual = createCommonjsModule(function (module, exports) {
 /**
  * Generated bundle index. Do not edit.
  */
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
+var __createBinding = (commonjsGlobal && commonjsGlobal.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (commonjsGlobal && commonjsGlobal.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-__export(esm2015);
+__exportStar(esm2015, exports);
 
 });
 

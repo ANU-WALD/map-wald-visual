@@ -2,6 +2,7 @@ import { AfterViewInit, EventEmitter, OnDestroy } from '@angular/core';
 import { MappedLayer, Publication, LayerTagValue, LayerTagMap, PointSelectionService, PointSelection } from 'map-wald';
 import { LayeredMapComponent } from '../layered-map/layered-map.component';
 import { GeometryObject, Feature } from 'geojson';
+import * as i0 from "@angular/core";
 export declare class LayerPropertiesComponent implements AfterViewInit, OnDestroy {
     private pointSelectionService;
     getKeys: {
@@ -21,7 +22,7 @@ export declare class LayerPropertiesComponent implements AfterViewInit, OnDestro
     selectedFeature: Feature<GeometryObject>;
     selectedFeatureSubscription: any;
     constructor(pointSelectionService: PointSelectionService);
-    readonly publication: (Publication | null);
+    get publication(): (Publication | null);
     ngAfterViewInit(): void;
     ngOnDestroy(): void;
     featureSelected(evt: {
@@ -42,4 +43,6 @@ export declare class LayerPropertiesComponent implements AfterViewInit, OnDestro
     queryPointData(): void;
     updateVariables(): void;
     pointSelectionChanged(): void;
+    static ɵfac: i0.ɵɵFactoryDef<LayerPropertiesComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<LayerPropertiesComponent, "layer-properties", never, { "layer": "layer"; "map": "map"; "tooltipPlacement": "tooltipPlacement"; }, { "propertyChanged": "propertyChanged"; }, never, never>;
 }

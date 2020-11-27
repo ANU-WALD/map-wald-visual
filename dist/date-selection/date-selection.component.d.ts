@@ -1,6 +1,7 @@
 import { AfterViewInit, EventEmitter } from '@angular/core';
 import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 import { TimeUtilsService } from 'map-wald';
+import * as i0 from "@angular/core";
 export declare class DateSelectionComponent implements AfterViewInit {
     private timeUtils;
     date: Date;
@@ -30,4 +31,6 @@ export declare class DateSelectionComponent implements AfterViewInit {
     onDateChanged(): void;
     checkLimits(): void;
     checkReference(): any;
+    static ɵfac: i0.ɵɵFactoryDef<DateSelectionComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<DateSelectionComponent, "date-selection", never, { "date": "date"; "timestep": "timestep"; "minDate": "minDate"; "maxDate": "maxDate"; "style": "style"; "stepDays": "stepDays"; "referenceDate": "referenceDate"; }, { "dateChange": "dateChange"; }, never, never>;
 }

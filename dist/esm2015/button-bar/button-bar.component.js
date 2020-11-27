@@ -1,33 +1,33 @@
 "use strict";
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ButtonBarComponent = void 0;
 const core_1 = require("@angular/core");
-let ButtonBarComponent = class ButtonBarComponent {
+const i0 = require("@angular/core");
+const _c0 = ["*"];
+class ButtonBarComponent {
     constructor() {
     }
     ngAfterViewInit() {
     }
-};
-ButtonBarComponent = __decorate([
-    core_1.Component({
-        selector: 'button-bar',
-        template: `<div class="button-bar bb-vertical">
+}
+exports.ButtonBarComponent = ButtonBarComponent;
+ButtonBarComponent.ɵfac = function ButtonBarComponent_Factory(t) { return new (t || ButtonBarComponent)(); };
+ButtonBarComponent.ɵcmp = i0.ɵɵdefineComponent({ type: ButtonBarComponent, selectors: [["button-bar"]], ngContentSelectors: _c0, decls: 2, vars: 0, consts: [[1, "button-bar", "bb-vertical"]], template: function ButtonBarComponent_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵprojectionDef();
+        i0.ɵɵelementStart(0, "div", 0);
+        i0.ɵɵprojection(1);
+        i0.ɵɵelementEnd();
+    } }, styles: [""] });
+/*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ButtonBarComponent, [{
+        type: core_1.Component,
+        args: [{
+                selector: 'button-bar',
+                template: `<div class="button-bar bb-vertical">
   <ng-content></ng-content>
 </div>
 
-`,
-        styles: [`
+`, styles: [`
 `]
-    }),
-    __metadata("design:paramtypes", [])
-], ButtonBarComponent);
-exports.ButtonBarComponent = ButtonBarComponent;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYnV0dG9uLWJhci5jb21wb25lbnQuanMiLCJzb3VyY2VSb290Ijoibmc6Ly9tYXAtd2FsZC12aXN1YWwvIiwic291cmNlcyI6WyJidXR0b24tYmFyL2J1dHRvbi1iYXIuY29tcG9uZW50LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7O0FBQUEsd0NBQXVGO0FBYXZGLElBQWEsa0JBQWtCLEdBQS9CLE1BQWEsa0JBQWtCO0lBRTdCO0lBRUEsQ0FBQztJQUVELGVBQWU7SUFFZixDQUFDO0NBQ0YsQ0FBQTtBQVRZLGtCQUFrQjtJQVI5QixnQkFBUyxDQUFDO1FBQ1QsUUFBUSxFQUFFLFlBQVk7UUFDdEIsUUFBUSxFQUFFOzs7O0NBSVg7aUJBQVU7Q0FDVjtLQUFFLENBQUM7O0dBQ1Msa0JBQWtCLENBUzlCO0FBVFksZ0RBQWtCIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQ29tcG9uZW50LCBJbnB1dCwgVmlld0NoaWxkLCBBZnRlclZpZXdJbml0LCBFbGVtZW50UmVmIH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5cblxuZGVjbGFyZSB2YXIgUGxvdGx5OiBhbnk7XG5cbkBDb21wb25lbnQoe1xuICBzZWxlY3RvcjogJ2J1dHRvbi1iYXInLFxuICB0ZW1wbGF0ZTogYDxkaXYgY2xhc3M9XCJidXR0b24tYmFyIGJiLXZlcnRpY2FsXCI+XG4gIDxuZy1jb250ZW50PjwvbmctY29udGVudD5cbjwvZGl2PlxuXG5gLHN0eWxlczogW2BcbmBdfSlcbmV4cG9ydCBjbGFzcyBCdXR0b25CYXJDb21wb25lbnQgaW1wbGVtZW50cyBBZnRlclZpZXdJbml0ICB7XG5cbiAgY29uc3RydWN0b3IoKXtcblxuICB9XG5cbiAgbmdBZnRlclZpZXdJbml0KCl7XG5cbiAgfVxufSJdfQ==
+            }]
+    }], function () { return []; }, null); })();
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYnV0dG9uLWJhci5jb21wb25lbnQuanMiLCJzb3VyY2VSb290Ijoibmc6Ly9tYXAtd2FsZC12aXN1YWwvIiwic291cmNlcyI6WyJidXR0b24tYmFyL2J1dHRvbi1iYXIuY29tcG9uZW50LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7OztBQUFBLHdDQUF1Rjs7O0FBS3ZGLE1BUWEsa0JBQWtCO0lBRTdCO0lBRUEsQ0FBQztJQUVELGVBQWU7SUFFZixDQUFDOztBQWhCSCxnREFpQkM7b0ZBVFksa0JBQWtCO3VEQUFsQixrQkFBa0I7O1FBTmxCLDhCQUNYO1FBQUEsa0JBQXlCO1FBQzNCLGlCQUFNOztrREFJTyxrQkFBa0I7Y0FSOUIsZ0JBQVM7ZUFBQztnQkFDVCxRQUFRLEVBQUUsWUFBWTtnQkFDdEIsUUFBUSxFQUFFOzs7O0NBSVgsRUFBQyxNQUFNLEVBQUUsQ0FBQztDQUNWLENBQUM7YUFBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IENvbXBvbmVudCwgSW5wdXQsIFZpZXdDaGlsZCwgQWZ0ZXJWaWV3SW5pdCwgRWxlbWVudFJlZiB9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuXG5cbmRlY2xhcmUgdmFyIFBsb3RseTogYW55O1xuXG5AQ29tcG9uZW50KHtcbiAgc2VsZWN0b3I6ICdidXR0b24tYmFyJyxcbiAgdGVtcGxhdGU6IGA8ZGl2IGNsYXNzPVwiYnV0dG9uLWJhciBiYi12ZXJ0aWNhbFwiPlxuICA8bmctY29udGVudD48L25nLWNvbnRlbnQ+XG48L2Rpdj5cblxuYCxzdHlsZXM6IFtgXG5gXX0pXG5leHBvcnQgY2xhc3MgQnV0dG9uQmFyQ29tcG9uZW50IGltcGxlbWVudHMgQWZ0ZXJWaWV3SW5pdCAge1xuXG4gIGNvbnN0cnVjdG9yKCl7XG5cbiAgfVxuXG4gIG5nQWZ0ZXJWaWV3SW5pdCgpe1xuXG4gIH1cbn0iXX0=

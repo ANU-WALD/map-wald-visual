@@ -1,5 +1,6 @@
 import { AfterViewInit, OnChanges, EventEmitter, SimpleChanges } from '@angular/core';
 import { Catalog, Layer, LayerSelection, TreeModel, TreeFilterService, MetadataService } from 'map-wald';
+import * as i0 from "@angular/core";
 export interface CatalogNodeAction {
     action: string;
     icon: string;
@@ -27,4 +28,6 @@ export declare class CatalogComponent implements AfterViewInit, OnChanges {
     nodeSelected(e: TreeModel): void;
     activeLayers(layers: Layer[]): void;
     highlightLayers(layers: Layer[], tree: TreeModel): boolean;
+    static ɵfac: i0.ɵɵFactoryDef<CatalogComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<CatalogComponent, "catalog", never, { "catalog": "catalog"; "showPlaceholders": "showPlaceholders"; "defaultAction": "defaultAction"; "layerActions": "layerActions"; "collapsedIcon": "collapsedIcon"; "expandedIcon": "expandedIcon"; "leafIcon": "leafIcon"; }, { "layerSelected": "layerSelected"; }, never, never>;
 }
