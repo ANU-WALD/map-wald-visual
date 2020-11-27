@@ -120,7 +120,7 @@ const services = [
   providers: services
 })
 export class MapWaldBootstrapModule {
-  static forRoot(moduleInitialisation:any): ModuleWithProviders {
+  static forRoot(moduleInitialisation:any): ModuleWithProviders<MapWaldBootstrapModule> {
     return {
       ngModule: MapWaldBootstrapModule,
       providers: services
