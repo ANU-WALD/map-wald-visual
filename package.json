@@ -71,7 +71,7 @@
     "js-yaml": "^3.13.1",
     "map-wald": "github:ANU-WALD/map-wald",
     "merge": "^1.2.1",
-    "ng-packagr": "^5.5.1",
+    "ng-packagr": "^10.1.1",
     "ngx-pipes": "^2.7.5",
     "plotly.js": "git+https://github.com/arlowhite/plotly.js#no-polyfill",
     "proj4": "^2.3.17",
