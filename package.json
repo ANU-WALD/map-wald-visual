@@ -70,7 +70,7 @@
     "dap-query-js": "github:flowmatters/dap-query-js",
     "js-yaml": "^3.13.1",
     "map-wald": "github:ANU-WALD/map-wald",
-    "merge": "^1.2.1",
+    "merge": "^2.1.1",
     "ng-packagr": "^5.5.1",
     "ngx-pipes": "^2.7.5",
     "plotly.js": "git+https://github.com/arlowhite/plotly.js#no-polyfill",
